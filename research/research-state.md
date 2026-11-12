@@ -61,6 +61,6 @@ next_actions: ["researcher: review report v12 (SGLang and appendices removed; fi
 | `experiments/EXP-05-n150-vllm-tuning/result.md` | experiment-result | 1 | DRAFT | ANALYZED | - | - |
 | `integrity/gate4-2026-11-11.md` | integrity-report | 1 | READY | CHECKED | - | - |
 | `integrity/gate4-2026-11-10.md` | integrity-report | 2 | READY | CHECKED | yes (v3) | - |
-| `report-2026-11-15.md` | report | 12 | DRAFT | CHECKED (v4 gate4; v9 concise report, real YAML, subject ben-bao-gao; v10 one job per chapter, English terms and Taiwan usage, headings 1. 1.1. 1.1.1.; v11 log screenshots fig 2-5 from saved logs via scripts/logshot.py; v12 SGLang, ref 18 and appendices removed, fig 4 from queue-b; linted with research nstc-report-zh) | - | - |
+| `report-2026-11-15.md` | report | 12 | DRAFT | CHECKED (v4 gate4; v9 concise report, real YAML, subject ben-bao-gao; v10 one job per chapter, English terms and Taiwan usage, headings 1. 1.1. 1.1.1.; v11 log screenshots fig 2-5 from saved logs via scripts/logshot.py; v12 SGLang, ref 18 and appendices removed, fig 4 from queue-b; table 15 max batch 1 c32 filled from EXP-04 addendum 2026-11-12 (19.3 tok/s); table 17 links the public repos; linted with research nstc-report-zh) | - | - |
 | `research-state.md` | research-state | 1 | DRAFT | UNVERIFIED | - | - |
 <!-- artifact-index:end -->

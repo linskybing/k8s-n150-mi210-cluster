@@ -49,3 +49,17 @@ VLLM::EngineCore (both vLLM servers) and sglang::scheduler.
 The EXP-03 confounds are removed except the tool's own test request (Anomalies). Removing them changed TTFT little, so they did not
 drive EXP-03's TTFT comparison. Why SGLang is 7-10 % lower than in EXP-03 at concurrency 1 and 8 is not explained (greedy vs sampled
 decoding, run-to-run variance): not tested. Not VALIDATED (no run on another day).
+## Addendum 2026-11-12: max batch 1 at concurrency 32
+Run `seq.sh seq1-c32` on the node 05:35:00Z-06:04:57Z (exit 0): one fresh load of llm-seq1.yaml, n150 free before; device-fds:
+VLLM::EngineCore holds /dev/tenstorrent. hf-token and configmaps llm-spec, llm-spec-seq1 deleted after the run.
+Raw: raw/vllm-b-1112 (bench), raw/vllm-b-1112-run; processed rows server vllm-b-1112 (analyze.py asserts: every request
+completed with 128 tokens).
+
+| ID | Finding | Value | Source |
+|---|---|---|---|
+| EXP-04#R10 | max batch 1, concurrency 32, output tok/s | 19.35 (19.29-19.41); mean TTFT 154.0 s; TPOT 51.6 ms | processed/throughput-summary.csv |
+| EXP-04#R11 | max batch 1, concurrency 1, same day vs 2026-11-10 | 19.23 vs 19.28 (-0.3 %, within the 5 % set in plan.md) | same |
+| EXP-04#R12 | batching at concurrency 32 (max batch 32 on 2026-11-10 / max batch 1 on 2026-11-12) | 401.9 / 19.35 = 20.8x | same |
+
+With max batch 1 the output rate stays at one request at a time (about 19 tok/s at concurrency 1, 8 and 32); concurrency only
+adds queueing to TTFT.
