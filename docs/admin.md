@@ -4,7 +4,7 @@
 
 ## 新增使用者
 ```bash
-ssh sky@<node-ip>
+ssh <admin>@<node-ip>
 sudo bash n150/scripts/add-user.sh alice
 ```
 Hugging Face token 由使用者自己建立（README 有指令），不要把管理員的 token 放到 node 上：使用者有 sudo 和 cluster-admin，node 上的任何 secret 和檔案他們都讀得到。

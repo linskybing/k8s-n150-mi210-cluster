@@ -5,7 +5,7 @@ version: 1
 status: DRAFT
 created_at: 2026-11-12
 updated_at: 2026-11-12
-derived_from: [reply-2026-11-11-n150-pd.md (question 1: has Llama 3.1 8B Instruct run on this n150?)]
+derived_from: [question: has Llama 3.1 8B Instruct run on this n150?]
 source_files: [experiments/EXP-06-n150-llama31-8b/raw, scripts/llm-8b.yaml, scripts/llama-3.1-8b-n150.json, scripts/llama-3.1-8b-n150-kv32k.json, scripts/lc.sh, scripts/seq.sh, scripts/analyze.py]
 verification_status: ANALYZED
 produced_by: ai-draft

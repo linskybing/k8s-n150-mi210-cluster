@@ -54,7 +54,7 @@ items:
         trayID:
           int: 2
         uniqueID:
-          string: "72059265072934913"
+          string: "<masked>"
         vendor:
           string: tenstorrent
       capacity:

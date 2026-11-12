@@ -13,7 +13,7 @@ tenstorrent!0
 /sys/class/tenstorrent/tenstorrent!0/tt_aiclk: 500
 /sys/class/tenstorrent/tenstorrent!0/tt_arcclk: 540
 /sys/class/tenstorrent/tenstorrent!0/tt_arc_fw_ver: 2.44.0.0
-/sys/class/tenstorrent/tenstorrent!0/tt_asic_id: 5A53CE0BD3F4A5B3
+/sys/class/tenstorrent/tenstorrent!0/tt_asic_id: <masked>
 /sys/class/tenstorrent/tenstorrent!0/tt_axiclk: 900
 /sys/class/tenstorrent/tenstorrent!0/tt_card_type: n150
 /sys/class/tenstorrent/tenstorrent!0/tt_eth_fw_ver: 7.5.0
@@ -21,7 +21,7 @@ tenstorrent!0
 /sys/class/tenstorrent/tenstorrent!0/tt_heartbeat: 20319509
 /sys/class/tenstorrent/tenstorrent!0/tt_m3app_fw_ver: 5.12.0.0
 /sys/class/tenstorrent/tenstorrent!0/tt_m3bl_fw_ver: 129.2.0.0
-/sys/class/tenstorrent/tenstorrent!0/tt_serial: 010001851172B001
+/sys/class/tenstorrent/tenstorrent!0/tt_serial: <masked>
 /sys/class/tenstorrent/tenstorrent!0/tt_ttflash_ver: 0.3.10.0
 
 filename:       /lib/modules/7.0.0-38-generic/updates/dkms/tenstorrent.ko.zst
