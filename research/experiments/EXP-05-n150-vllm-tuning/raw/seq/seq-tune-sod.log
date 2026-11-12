@@ -1,0 +1,9 @@
+configmap/llm-spec-sod created
+== load vllm-sod 1 2026-11-11T08:46:20Z
+job.batch/n150-llm created
+pod/n150-llm-bg5pq condition met
+== query vllm-sod 1 2026-11-11T08:50:49Z
+== bench vllm-sod 1 2026-11-11T08:51:01Z
+== unload vllm-sod 1 2026-11-11T09:01:40Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== DONE 2026-11-11T09:01:43Z

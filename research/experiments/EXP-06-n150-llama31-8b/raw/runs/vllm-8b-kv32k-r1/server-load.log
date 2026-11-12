@@ -1,0 +1,356 @@
+INFO 11-11 17:05:54 [__init__.py:250] Automatically detected platform tt.
+2026-11-11 17:05:56,587 - __main__ - INFO - setting env var: VLLM_CONFIGURE_LOGGING=1
+2026-11-11 17:05:56,587 - __main__ - INFO - setting env var: VLLM_RPC_TIMEOUT=900000
+2026-11-11 17:05:56,587 - __main__ - WARNING - env var VLLM_TARGET_DEVICE is already set to tt, overriding with tt
+2026-11-11 17:05:56,587 - __main__ - INFO - setting env var: VLLM_TARGET_DEVICE=tt
+2026-11-11 17:05:56,587 - __main__ - INFO - setting env var: TORCHDYNAMO_DISABLE=1
+2026-11-11 17:05:56,587 - __main__ - INFO - setting env var: MESH_DEVICE=N150
+2026-11-11 17:05:56,587 - __main__ - WARNING - env var ARCH_NAME is already set to wormhole_b0, overriding with wormhole_b0
+2026-11-11 17:05:56,587 - __main__ - INFO - setting env var: ARCH_NAME=wormhole_b0
+2026-11-11 17:05:56,593 - utils.vllm_run_utils - WARNING - Commit 'HEAD' is not in the repository.
+2026-11-11 17:05:56,593 - __main__ - INFO - TT_METAL_HOME: /home/container_app_user/tt-metal
+2026-11-11 17:05:56,593 - __main__ - INFO - commit SHA: None
+2026-11-11 17:05:56,596 - utils.vllm_run_utils - WARNING - Commit 'HEAD' is not in the repository.
+2026-11-11 17:05:56,596 - __main__ - INFO - vllm_dir: /home/container_app_user/vllm
+2026-11-11 17:05:56,596 - __main__ - INFO - commit SHA: None
+2026-11-11 17:05:56,596 - __main__ - INFO - using model: id_tt-transformers_Llama-3.1-8B-Instruct_n150
+2026-11-11 17:05:56,596 - __main__ - INFO - HF_TOKEN is set
+2026-11-11 17:05:56,596 - __main__ - INFO - --no-auth is set: requests to vLLM API will not require authorization. HTTP Authorization header will not be checked.
+2026-11-11 17:05:56,596 - root - INFO - MODEL_WEIGHTS_PATH: /home/container_app_user/cache_root/weights/Llama-3.1-8B-Instruct
+2026-11-11 17:05:56,596 - root - INFO - TT_CACHE_PATH: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150
+2026-11-11 17:05:56,601 - __main__ - INFO - setting vllm logging config at: /home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-11 17:05:56,601 - __main__ - INFO - setting vllm logging file at: /home/container_app_user/cache_root/logs/vllm_2026-11-11_17-05-56.log
+2026-11-11 17:05:56,601 - root - INFO - HF model setup for meta-llama/Llama-3.1-8B-Instruct
+2026-11-11 17:05:56,601 - root - INFO - HF_MODEL: None
+2026-11-11 17:05:56,601 - __main__ - INFO - setting dynamic runtime environment variables:
+2026-11-11 17:05:56,601 - __main__ - INFO - setting env var: VLLM_LOGGING_CONFIG=/home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-11 17:05:56,601 - __main__ - INFO - setting env var: HF_MODEL=/home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 17:05:56,601 - __main__ - INFO - Starting background trace capture process...
+2026-11-11 17:05:56,625 - __main__ - INFO - Background trace capture process started (PID: 93, max_context: 32768)
+2026-11-11 17:05:56,626 - __main__ - INFO - vllm_args:
+2026-11-11 17:05:56,627 - utils.prompt_client - INFO - Starting background trace capture process...
+2026-11-11 17:05:56,627 - utils.prompt_client - INFO - Using 9 trace context lengths (max_context=32768)
+2026-11-11 17:05:56,628 - utils.prompt_client - WARNING - Neither VLLM_API_KEY nor JWT_SECRET environment variables are set. Proceeding without authorization.
+2026-11-11 17:05:56,628 - utils.prompt_client - INFO - Waiting for vLLM service to become healthy (base timeout: 1200.0s)
+2026-11-11 17:05:56,628 - utils.prompt_client - INFO - 📁 No active cache generation detected, using standard timeout:=1200.0s
+2026-11-11 17:05:56,634 - utils.prompt_client - INFO - ⏳ Service not ready after 0.0s, waiting 10.0s before polling (timeout: 1200.0s)
+{'block_size': '64',
+ 'max-log-len': '32',
+ 'max_model_len': '32768',
+ 'max_num_batched_tokens': '65536',
+ 'max_num_seqs': '32',
+ 'model': 'meta-llama/Llama-3.1-8B-Instruct',
+ 'num_gpu_blocks_override': '549',
+ 'override_tt_config': '{}',
+ 'seed': '9472'}
+DEBUG 11-11 17:05:56 utils.py:164] Setting VLLM_WORKER_MULTIPROC_METHOD to 'spawn'
+DEBUG 11-11 17:05:56 __init__.py:38] Available plugins for group vllm.general_plugins:
+DEBUG 11-11 17:05:56 __init__.py:40] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+DEBUG 11-11 17:05:56 __init__.py:43] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+DEBUG 11-11 17:05:58 config.py:2199] Disabled the custom all-reduce kernel because it is not supported on current platform.
+INFO 11-11 17:05:58 api_server.py:1756] vLLM API server version 0.1.dev8069+g6e67d2d8d
+INFO 11-11 17:05:58 cli_args.py:302] non-default args: {'max_log_len': 32, 'model': 'meta-llama/Llama-3.1-8B-Instruct', 'seed': 9472, 'max_model_len': 32768, 'block_size': 64, 'num_gpu_blocks_override': 549, 'max_num_batched_tokens': 65536, 'max_num_seqs': 32}
+DEBUG 11-11 17:06:06 config.py:573] Tasks supported by runner type: {'generate': ['generate'], 'pooling': ['encode', 'embed'], 'draft': ['draft']}
+DEBUG 11-11 17:06:06 config.py:580] Selected runner type: generate
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 11-11 17:06:06 config.py:1600] Using max model len 32768
+WARNING 11-11 17:06:06 arg_utils.py:1699] device type=tt is not supported by the V1 Engine. Falling back to V0. 
+INFO 11-11 17:06:06 arg_utils.py:1099] Using host IP 10.42.0.68 as TT data parallel address
+DEBUG 11-11 17:06:06 config.py:2199] Disabled the custom all-reduce kernel because it is not supported on current platform.
+DEBUG 11-11 17:06:06 config.py:2199] Disabled the custom all-reduce kernel because it is not supported on current platform.
+WARNING 11-11 17:06:06 registry.py:425] Model architecture TTLlamaForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:LlamaForCausalLM.
+WARNING 11-11 17:06:06 registry.py:425] Model architecture TTMllamaForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MllamaForConditionalGeneration.
+WARNING 11-11 17:06:06 registry.py:425] Model architecture TTQwen2ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 17:06:06 registry.py:425] Model architecture TTQwen3ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 17:06:06 registry.py:425] Model architecture TTQwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class models.demos.qwen25_vl.tt.generator_vllm:Qwen2_5_VLForConditionalGeneration.
+WARNING 11-11 17:06:06 registry.py:425] Model architecture TTMistralForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MistralForCausalLM.
+WARNING 11-11 17:06:06 registry.py:425] Model architecture TTGemma3ForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:Gemma3ForConditionalGeneration.
+INFO 11-11 17:06:06 importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-11 17:06:06 importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+DEBUG 11-11 17:06:06 decorators.py:110] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.llama.LlamaModel'>: ['input_ids', 'positions', 'intermediate_tensors', 'inputs_embeds']
+DEBUG 11-11 17:06:06 api_server.py:245] Multiprocessing frontend to use ipc:///tmp/75453815-7bba-40fa-917f-e700b9bbc2a3 for IPC Path.
+INFO 11-11 17:06:06 api_server.py:268] Started engine process with PID 170
+2026-11-11 17:06:06,640 - utils.prompt_client - INFO - ⏳ Service not ready after 10.0s, waiting 10.0s before polling (timeout: 1200.0s)
+INFO 11-11 17:06:10 [__init__.py:250] Automatically detected platform tt.
+INFO 11-11 17:06:11 [llm_engine.py:234] Initializing a V0 LLM engine (v0.1.dev8069+g6e67d2d8d) with config: model='meta-llama/Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={},override_tt_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=None, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=9472, served_model_name=meta-llama/Llama-3.1-8B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=True, 
+INFO 11-11 17:06:13 [importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-11 17:06:13 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 11-11 17:06:13 [registry.py:425] Model architecture TTLlamaForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:LlamaForCausalLM.
+WARNING 11-11 17:06:13 [registry.py:425] Model architecture TTMllamaForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MllamaForConditionalGeneration.
+WARNING 11-11 17:06:13 [registry.py:425] Model architecture TTQwen2ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 17:06:13 [registry.py:425] Model architecture TTQwen3ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 17:06:13 [registry.py:425] Model architecture TTQwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class models.demos.qwen25_vl.tt.generator_vllm:Qwen2_5_VLForConditionalGeneration.
+WARNING 11-11 17:06:13 [registry.py:425] Model architecture TTMistralForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MistralForCausalLM.
+WARNING 11-11 17:06:13 [registry.py:425] Model architecture TTGemma3ForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:Gemma3ForConditionalGeneration.
+INFO 11-11 17:06:14 [tt_model_runner.py:185] TTModelRunner: trace_mode=True, sample_on_device_mode=None
+2026-11-11 17:06:14.307 | info     |             UMD | Starting topology discovery. (topology_discovery.cpp:69)
+2026-11-11 17:06:14.315 | info     |             UMD | Established firmware bundle version: 19.13.0 (topology_discovery.cpp:369)
+2026-11-11 17:06:14.315 | warning  |             UMD | Firmware bundle version 19.13.0 on the system is newer than the maximum supported version 19.1.0 for wormhole_b0 architecture. New features may not be supported. (topology_discovery.cpp:395)
+2026-11-11 17:06:14.315 | info     |             UMD | Established ETH FW version: 7.5.0 (topology_discovery_wormhole.cpp:324)
+2026-11-11 17:06:14.316 | info     |             UMD | Completed topology discovery. (topology_discovery.cpp:73)
+2026-11-11 17:06:14.317 | info     |          Device | Opening user mode device driver (tt_cluster.cpp:213)
+2026-11-11 17:06:14.318 | info     |             UMD | Starting topology discovery. (topology_discovery.cpp:69)
+2026-11-11 17:06:14.324 | info     |             UMD | Established firmware bundle version: 19.13.0 (topology_discovery.cpp:369)
+2026-11-11 17:06:14.324 | warning  |             UMD | Firmware bundle version 19.13.0 on the system is newer than the maximum supported version 19.1.0 for wormhole_b0 architecture. New features may not be supported. (topology_discovery.cpp:395)
+2026-11-11 17:06:14.324 | info     |             UMD | Established ETH FW version: 7.5.0 (topology_discovery_wormhole.cpp:324)
+2026-11-11 17:06:14.324 | info     |             UMD | Completed topology discovery. (topology_discovery.cpp:73)
+2026-11-11 17:06:14.326 | info     |             UMD | Starting topology discovery. (topology_discovery.cpp:69)
+2026-11-11 17:06:14.339 | info     |             UMD | Established firmware bundle version: 19.13.0 (topology_discovery.cpp:369)
+2026-11-11 17:06:14.339 | warning  |             UMD | Firmware bundle version 19.13.0 on the system is newer than the maximum supported version 19.1.0 for wormhole_b0 architecture. New features may not be supported. (topology_discovery.cpp:395)
+2026-11-11 17:06:14.339 | info     |             UMD | Established ETH FW version: 7.5.0 (topology_discovery_wormhole.cpp:324)
+2026-11-11 17:06:14.339 | info     |             UMD | Completed topology discovery. (topology_discovery.cpp:73)
+2026-11-11 17:06:14.340 | info     |             UMD | Harvesting masks for chip 0 tensix: 0x1 dram: 0x0 eth: 0x0 pcie: 0x0 l2cpu: 0x0 (cluster.cpp:358)
+2026-11-11 17:06:14.442 | info     |             UMD | Opening local chip ids/PCIe ids: {0}/[0] and remote chip ids {} (cluster.cpp:202)
+2026-11-11 17:06:14.442 | info     |             UMD | IOMMU: disabled (cluster.cpp:178)
+2026-11-11 17:06:14.442 | info     |             UMD | KMD version: 2.11.0 (cluster.cpp:181)
+2026-11-11 17:06:14.444 | info     |             UMD | Mapped hugepage 0x280000000 to NOC address 0x800000000 (sysmem_manager.cpp:247)
+INFO 11-11 17:06:14 [tt_worker.py:622] Attempting to open mesh device with grid shape (1, 1)
+2026-11-11 17:06:14.479 | info     |          Fabric | TopologyMapper mapping start (mesh=0): n_log=1, n_phys=1, log_deg_hist={0:1}, phys_deg_hist={0:1} (topology_mapper_utils.cpp:167)
+2026-11-11 17:06:14.488 | info     |    BuildKernels | Skipping deleting built cache (build.cpp:111)
+2026-11-11 17:06:16,650 - utils.prompt_client - INFO - ⏳ Service not ready after 20.0s, waiting 10.0s before polling (timeout: 1200.0s)
+INFO 11-11 17:06:17 [tt_worker.py:636] multidevice with 1 devices and grid (1, 1) is created
+2026-11-11 17:06:17.208 | INFO     | models.tt_transformers.tt.model_config:__init__:464 - Inferring device name: N150
+2026-11-11 17:06:17.208 | INFO     | models.tt_transformers.tt.model_config:__init__:507 - Checkpoint directory: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 17:06:17.208 | INFO     | models.tt_transformers.tt.model_config:__init__:508 - Tokenizer file: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct/tokenizer.model
+2026-11-11 17:06:17.208 | INFO     | models.tt_transformers.tt.model_config:__init__:509 - Cache directory: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150/N150
+2026-11-11 17:06:17.208 | INFO     | models.tt_transformers.tt.model_config:__init__:510 - Model name: Llama-3.1-8B-Instruct
+2026-11-11 17:06:17.210 | INFO     | models.tt_transformers.tt.model_config:_set_params_from_dict:1566 - Model name from config: Llama-3.1-8B-Instruct
+2026-11-11 17:06:17.211 | INFO     | models.tt_transformers.tt.model_config:__init__:581 - Reducing prefill_len_cutoff to 512 for Llama-3.1-8B-Instruct on N150
+2026-11-11 17:06:17.211 | INFO     | models.tt_transformers.tt.model_config:_precision_factory:2871 - Model Llama-3.1-8B-Instruct requires specific TensorPrecision and OpFidelity configuration, using /home/container_app_user/tt-metal/models/tt_transformers/model_params/Llama-3.1-8B-Instruct/performance_decoder_config.json
+2026-11-11 17:06:17.211 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2259 - Tokenizer path: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 17:06:17.211 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2260 - Model name: Llama-3.1-8B-Instruct
+2026-11-11 17:06:17.211 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2261 - Base model name: Llama-3.1-8B
+2026-11-11 17:06:17.522 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2267 - Successfully loaded tokenizer from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 17:06:17.841 | INFO     | models.tt_transformers.tt.model_config:create_processor:2332 - Successfully loaded processor from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 17:06:17.842 | INFO     | models.tt_transformers.tt.model_config:__init__:1299 - Attention grid: ttnn.CoreGrid(x=8, y=4)
+2026-11-11 17:06:17.842 | INFO     | models.tt_transformers.tt.model_config:__init__:1300 - MLP grid: ttnn.CoreGrid(x=8, y=8)
+2026-11-11 17:06:17.842 | INFO     | models.tt_transformers.tt.model_config:__init__:1301 - MLP prefill grids @ 32: w1/w3: (8, 8), w2: (8, 8)
+2026-11-11 17:06:17.842 | INFO     | models.tt_transformers.tt.model_config:__init__:1302 - MLP prefill grids @ max_seq_len(32768): w1/w3: (8, 8), w2: (8, 8)
+2026-11-11 17:06:17.842 | INFO     | models.tt_transformers.tt.model_config:__init__:1305 - LM head grid: ttnn.CoreGrid(x=8, y=8)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 16.86it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 30.58it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]  3%|▎         | 1/32 [00:00<00:06,  5.07it/s]  6%|▋         | 2/32 [00:00<00:05,  5.16it/s]  9%|▉         | 3/32 [00:00<00:05,  5.08it/s] 12%|█▎        | 4/32 [00:00<00:05,  5.19it/s] 16%|█▌        | 5/32 [00:00<00:05,  5.22it/s] 19%|█▉        | 6/32 [00:01<00:04,  5.50it/s] 22%|██▏       | 7/32 [00:01<00:04,  5.43it/s] 25%|██▌       | 8/32 [00:01<00:04,  5.62it/s] 28%|██▊       | 9/32 [00:01<00:04,  5.74it/s] 31%|███▏      | 10/32 [00:01<00:03,  5.77it/s] 34%|███▍      | 11/32 [00:01<00:03,  5.74it/s] 38%|███▊      | 12/32 [00:02<00:03,  5.55it/s] 41%|████      | 13/32 [00:02<00:03,  5.35it/s] 44%|████▍     | 14/32 [00:02<00:03,  5.14it/s] 47%|████▋     | 15/32 [00:02<00:03,  5.11it/s] 50%|█████     | 16/32 [00:02<00:03,  5.14it/s] 53%|█████▎    | 17/32 [00:03<00:02,  5.22it/s] 56%|█████▋    | 18/32 [00:03<00:02,  5.23it/s] 59%|█████▉    | 19/32 [00:03<00:02,  5.14it/s] 62%|██████▎   | 20/32 [00:03<00:02,  5.31it/s] 66%|██████▌   | 21/32 [00:03<00:02,  5.41it/s] 69%|██████▉   | 22/32 [00:04<00:01,  5.33it/s] 72%|███████▏  | 23/32 [00:04<00:01,  5.12it/s] 75%|███████▌  | 24/32 [00:04<00:01,  5.13it/s] 78%|███████▊  | 25/32 [00:04<00:01,  5.28it/s] 81%|████████▏ | 26/32 [00:04<00:01,  5.28it/s] 84%|████████▍ | 27/32 [00:05<00:00,  5.42it/s] 88%|████████▊ | 28/32 [00:05<00:00,  5.32it/s] 91%|█████████ | 29/32 [00:05<00:00,  5.40it/s] 94%|█████████▍| 30/32 [00:05<00:00,  5.49it/s] 97%|█████████▋| 31/32 [00:05<00:00,  5.46it/s]100%|██████████| 32/32 [00:06<00:00,  4.95it/s]100%|██████████| 32/32 [00:06<00:00,  5.29it/s]
+2026-11-11 17:06:26,650 - utils.prompt_client - INFO - ⏳ Service not ready after 30.0s, waiting 10.0s before polling (timeout: 1200.0s)
+INFO 11-11 17:06:27 [llm_engine.py:423] Overriding num_gpu_blocks=1066 with num_gpu_blocks_override=549
+INFO 11-11 17:06:27 [executor_base.py:115] # tt blocks: 549, # CPU blocks: 0
+INFO 11-11 17:06:27 [executor_base.py:120] Maximum concurrency for 32768 tokens per request: 1.07x
+INFO 11-11 17:06:27 [tt_worker.py:69] Allocating kv caches
+Allocating TT kv caches for each layer (submesh 1):   0%|          | 0/32 [00:00<?, ?it/s]Allocating TT kv caches for each layer (submesh 1):   3%|▎         | 1/32 [00:01<00:39,  1.26s/it]Allocating TT kv caches for each layer (submesh 1):  41%|████      | 13/32 [00:01<00:01, 12.87it/s]Allocating TT kv caches for each layer (submesh 1):  81%|████████▏ | 26/32 [00:01<00:00, 27.40it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 32/32 [00:01<00:00, 21.00it/s]
+INFO 11-11 17:06:28 [llm_engine.py:434] init engine (profile, create kv cache, warmup model) took 1.54 seconds
+DEBUG 11-11 17:06:29 prometheus.py:47] Using multiprocess registry for prometheus metrics
+WARNING 11-11 17:06:29 config.py:1524] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+INFO 11-11 17:06:29 serving_responses.py:89] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+INFO 11-11 17:06:29 serving_chat.py:122] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+INFO 11-11 17:06:29 serving_completion.py:77] Using default completion sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+INFO 11-11 17:06:29 api_server.py:1819] Starting vLLM API server 0 on http://0.0.0.0:8000
+INFO 11-11 17:06:29 launcher.py:29] Available routes are:
+INFO 11-11 17:06:29 launcher.py:37] Route: /openapi.json, Methods: GET, HEAD
+INFO 11-11 17:06:29 launcher.py:37] Route: /docs, Methods: GET, HEAD
+INFO 11-11 17:06:29 launcher.py:37] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+INFO 11-11 17:06:29 launcher.py:37] Route: /redoc, Methods: GET, HEAD
+INFO 11-11 17:06:29 launcher.py:37] Route: /health, Methods: GET
+INFO 11-11 17:06:29 launcher.py:37] Route: /load, Methods: GET
+INFO 11-11 17:06:29 launcher.py:37] Route: /ping, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /ping, Methods: GET
+INFO 11-11 17:06:29 launcher.py:37] Route: /tokenize, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /detokenize, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/models, Methods: GET
+INFO 11-11 17:06:29 launcher.py:37] Route: /version, Methods: GET
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/responses, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/responses/{response_id}, Methods: GET
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/responses/{response_id}/cancel, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/chat/completions, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/completions, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/embeddings, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /pooling, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /classify, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /score, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/score, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/audio/transcriptions, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/audio/translations, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /rerank, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v1/rerank, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /v2/rerank, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /scale_elastic_ep, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /is_scaling_elastic_ep, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /invocations, Methods: POST
+INFO 11-11 17:06:29 launcher.py:37] Route: /metrics, Methods: GET
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:46314 - "GET /health HTTP/1.1" 200 OK
+2026-11-11 17:06:36,655 - utils.prompt_client - INFO - ✅ vLLM service is healthy. startup_time: 40.0 seconds
+2026-11-11 17:06:36,655 - utils.prompt_client - INFO - Capturing traces: 9 context lengths
+2026-11-11 17:06:36,655 - utils.prompt_client - INFO - Capturing traces for input configurations...
+2026-11-11 17:06:36,655 - utils.prompt_client - INFO - Capturing traces for input_seq_len=128, output_seq_len=4
+2026-11-11 17:06:36,655 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=128, max_prompt_length=128, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:06:36,655 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:06:38,105 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:06:38,127 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=128, output_seq_len=4
+2026-11-11 17:06:38,128 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:06:38,128 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:06:38 logger.py:43] Received request cmpl-bd1041d7b84b4e82881fa898efb88e5e-0: prompt: 'bias Continuous italianon Zika p', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 61542, 70067, 29048, 263, 82026, 11335, 82620, 123924, 14950, 85113, 39378, 77014, 123210, 106954, 6231, 51572, 9315, 104295, 124567, 24706, 89749, 109876, 99073, 33111, 17899, 77213, 117541, 16769, 4287, 12219, 4372], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:46330 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:06:38 [engine.py:339] Added request cmpl-bd1041d7b84b4e82881fa898efb88e5e-0.
+2026-11-11 17:06:38.145 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 128
+2026-11-11 17:06:38.156 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 128 tokens
+2026-11-11 17:06:38.157 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 128, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:06:50.420 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:159 - Done Compiling Model
+2026-11-11 17:06:50.446 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:174 - Done Capturing Prefill Trace
+2026-11-11 17:06:50.447 | warning  |           Metal | Allocating device buffers is unsafe due to the existence of an active trace. These buffers may be corrupted once a trace is executed. (allocator.cpp:107)
+2026-11-11 17:06:53.822 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-11 17:06:53.822 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 256
+2026-11-11 17:06:53.826 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 256 tokens
+2026-11-11 17:06:53.826 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 256, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:07:03.274 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:159 - Done Compiling Model
+2026-11-11 17:07:03.301 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:174 - Done Capturing Prefill Trace
+2026-11-11 17:07:03.425 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 256 tokens, Starting decode...
+2026-11-11 17:07:03.428 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 512
+2026-11-11 17:07:03.433 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 512 tokens
+2026-11-11 17:07:03.433 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 512, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:07:12.279 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:159 - Done Compiling Model
+2026-11-11 17:07:12.308 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:174 - Done Capturing Prefill Trace
+2026-11-11 17:07:12.481 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 512 tokens, Starting decode...
+2026-11-11 17:07:12.481 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 1024
+2026-11-11 17:07:12.487 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 1024 tokens
+2026-11-11 17:07:12.487 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 1024, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:07:21.294 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:159 - Done Compiling Model
+2026-11-11 17:07:21.321 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:174 - Done Capturing Prefill Trace
+2026-11-11 17:07:21.639 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-11 17:07:21.653 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 128 tokens
+2026-11-11 17:07:21.653 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 128, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:07:21.770 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-11 17:07:36.392 | INFO     | models.tt_transformers.tt.generator:_capture_decode_trace_text:608 - Done Compiling Model
+2026-11-11 17:07:36.441 | INFO     | models.tt_transformers.tt.generator:_capture_decode_trace_text:646 - Done Capturing Decode Trace
+INFO 11-11 17:07:36 [metrics.py:410] Avg prompt throughput: 1.9 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 0.5%, CPU KV cache usage: 0.0%.
+2026-11-11 17:07:36,634 - utils.prompt_client - INFO - Text trace completed: tokens_generated=2, TTFT=58381.444ms, TPOT=125.140ms
+
+2026-11-11 17:07:36,634 - utils.prompt_client - INFO - Capturing traces for input_seq_len=256, output_seq_len=4
+2026-11-11 17:07:36,635 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=256, max_prompt_length=256, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:07:36,635 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:07:37,951 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:07:37,970 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=256, output_seq_len=4
+2026-11-11 17:07:37,970 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:07:37,970 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:07:37 logger.py:43] Received request cmpl-7ebff41887504fd78b270fb253b7deef-0: prompt: ' disclosures.FromResultkaar不可лаз', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 75992, 76539, 88251, 109947, 127468, 80936, 37020, 33806, 56108, 64576, 85848, 55110, 127496, 30039, 3200, 5809, 106119, 37335, 56382, 44170, 5618, 25168, 86407, 53922, 114082, 68896, 435, 6748, 47611, 63977, 14566], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:55434 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:07:37 [engine.py:339] Added request cmpl-7ebff41887504fd78b270fb253b7deef-0.
+2026-11-11 17:07:37.987 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 256 tokens
+2026-11-11 17:07:37.988 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 256, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:07:38.113 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 256 tokens, Starting decode...
+2026-11-11 17:07:38,343 - utils.prompt_client - INFO - Text trace completed: tokens_generated=2, TTFT=233.324ms, TPOT=140.078ms
+
+2026-11-11 17:07:38,343 - utils.prompt_client - INFO - Capturing traces for input_seq_len=512, output_seq_len=4
+2026-11-11 17:07:38,344 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=512, max_prompt_length=512, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:07:38,344 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:07:39,675 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:07:39,696 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=512, output_seq_len=4
+2026-11-11 17:07:39,696 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:07:39,696 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:07:39 logger.py:43] Received request cmpl-282ff15d7af9463a97fc8e092104769d-0: prompt: 'ализ onPresseduffer提示 withd εμπ ', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 72331, 28100, 2084, 46239, 46074, 122870, 121864, 47336, 67682, 13970, 3887, 29903, 3202, 60819, 87191, 5173, 35959, 79520, 919, 53875, 34378, 89712, 46023, 335, 14611, 33, 23036, 66663, 48979, 78077, 77026], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:55450 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:07:39 [engine.py:339] Added request cmpl-282ff15d7af9463a97fc8e092104769d-0.
+2026-11-11 17:07:39.714 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 512 tokens
+2026-11-11 17:07:39.714 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 512, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:07:39.891 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 512 tokens, Starting decode...
+2026-11-11 17:07:40,158 - utils.prompt_client - INFO - Text trace completed: tokens_generated=2, TTFT=280.044ms, TPOT=182.376ms
+
+2026-11-11 17:07:40,159 - utils.prompt_client - INFO - Capturing traces for input_seq_len=1024, output_seq_len=4
+2026-11-11 17:07:40,159 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=1024, max_prompt_length=1024, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:07:40,159 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:07:41,614 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:07:41,643 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=1024, output_seq_len=4
+2026-11-11 17:07:41,643 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:07:41,643 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:07:41 logger.py:43] Received request cmpl-3c9b1f1c3f854a5fb64b8d3b78c9a257-0: prompt: '_equals<i_DEFINE.deepAPPLE追 node', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 62764, 22659, 47907, 22597, 79099, 104862, 7954, 92604, 20331, 119989, 90278, 67674, 102089, 26457, 55826, 21542, 100477, 96706, 20652, 123532, 41713, 82139, 57981, 28729, 122515, 3862, 509, 75437, 100807, 67388, 33662], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:45576 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:07:41 [engine.py:339] Added request cmpl-3c9b1f1c3f854a5fb64b8d3b78c9a257-0.
+2026-11-11 17:07:41.663 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 1024 tokens
+2026-11-11 17:07:41.663 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 1024, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:07:41.975 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 1024 tokens, Starting decode...
+INFO 11-11 17:07:41 [metrics.py:410] Avg prompt throughput: 323.1 tokens/s, Avg generation throughput: 2.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.1%, CPU KV cache usage: 0.0%.
+2026-11-11 17:07:42,209 - utils.prompt_client - INFO - Text trace completed: tokens_generated=3, TTFT=412.877ms, TPOT=76.525ms
+
+2026-11-11 17:07:42,209 - utils.prompt_client - INFO - Capturing traces for input_seq_len=2048, output_seq_len=4
+2026-11-11 17:07:42,209 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=2048, max_prompt_length=2048, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:07:42,209 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:07:43,612 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:07:43,640 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=2048, output_seq_len=4
+2026-11-11 17:07:43,641 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:07:43,641 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:07:43 logger.py:43] Received request cmpl-fc732573743b49b29968e5f196d3d244-0: prompt: ' disruptedrepo SiliconItemSelect', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 69627, 24373, 38250, 59072, 33586, 26292, 54563, 127346, 70425, 10268, 75924, 90890, 122151, 99338, 50687, 69283, 22640, 80058, 96038, 100071, 49378, 57653, 76897, 44086, 13934, 108183, 101109, 114069, 5188, 15671, 25888], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:45582 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:07:43 [engine.py:339] Added request cmpl-fc732573743b49b29968e5f196d3d244-0.
+2026-11-11 17:07:43.664 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 2048 tokens
+2026-11-11 17:07:43.664 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 2048, max_prefill_chunk_size: 4096, trace: False
+2026-11-11 17:07:52.488 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 2048 tokens, Starting decode...
+INFO 11-11 17:07:52 [metrics.py:410] Avg prompt throughput: 194.7 tokens/s, Avg generation throughput: 0.4 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.0%, CPU KV cache usage: 0.0%.
+2026-11-11 17:07:52,727 - utils.prompt_client - INFO - Text trace completed: tokens_generated=2, TTFT=8943.055ms, TPOT=143.465ms
+
+2026-11-11 17:07:52,727 - utils.prompt_client - INFO - Capturing traces for input_seq_len=4096, output_seq_len=4
+2026-11-11 17:07:52,728 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=4096, max_prompt_length=4096, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:07:52,730 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:07:54,025 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:07:54,055 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=4096, output_seq_len=4
+2026-11-11 17:07:54,055 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:07:54,055 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:07:54 logger.py:43] Received request cmpl-1c4f4099e4d44590af45e4d81ebd720b-0: prompt: 'perform DakASICcapabilities degr', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 29588, 25673, 45759, 95492, 8547, 108101, 73305, 68867, 53885, 75494, 38182, 60401, 9122, 35456, 77591, 30008, 110179, 44869, 808, 9397, 32429, 97083, 45419, 93371, 91704, 18600, 49855, 9542, 15088, 11859, 96919], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:40690 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:07:54 [engine.py:339] Added request cmpl-1c4f4099e4d44590af45e4d81ebd720b-0.
+2026-11-11 17:07:54.078 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 4096 tokens
+2026-11-11 17:07:54.078 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 4096, max_prefill_chunk_size: 4096, trace: False
+2026-11-11 17:08:03.408 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 4096 tokens, Starting decode...
+INFO 11-11 17:08:03 [metrics.py:410] Avg prompt throughput: 375.3 tokens/s, Avg generation throughput: 0.4 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 11.8%, CPU KV cache usage: 0.0%.
+2026-11-11 17:08:03,668 - utils.prompt_client - INFO - Text trace completed: tokens_generated=3, TTFT=9448.430ms, TPOT=82.006ms
+
+2026-11-11 17:08:03,668 - utils.prompt_client - INFO - Capturing traces for input_seq_len=8192, output_seq_len=4
+2026-11-11 17:08:03,668 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=8192, max_prompt_length=8192, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:08:03,669 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:08:04,944 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:08:04,992 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=8192, output_seq_len=4
+2026-11-11 17:08:04,992 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:08:04,992 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:08:05 logger.py:43] Received request cmpl-946df48f25674f4287174a7bf171f463-0: prompt: ' Patreon versatile bold comunic ', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 66212, 33045, 14265, 46915, 38876, 91435, 78625, 44620, 66345, 114312, 32361, 26206, 115846, 34371, 9362, 98793, 14813, 79006, 72063, 76962, 126392, 110420, 69820, 55710, 125266, 124510, 99508, 126239, 35649, 96442, 33651], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:57404 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:08:05 [engine.py:339] Added request cmpl-946df48f25674f4287174a7bf171f463-0.
+2026-11-11 17:08:05.032 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 8192 tokens
+2026-11-11 17:08:05.032 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 8192, max_prefill_chunk_size: 4096, trace: False
+2026-11-11 17:08:09.141 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 8192 tokens, Starting decode...
+INFO 11-11 17:08:09 [metrics.py:410] Avg prompt throughput: 1428.1 tokens/s, Avg generation throughput: 0.7 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 23.5%, CPU KV cache usage: 0.0%.
+2026-11-11 17:08:09,483 - utils.prompt_client - INFO - Text trace completed: tokens_generated=2, TTFT=4269.788ms, TPOT=221.045ms
+
+2026-11-11 17:08:09,483 - utils.prompt_client - INFO - Capturing traces for input_seq_len=16384, output_seq_len=4
+2026-11-11 17:08:09,484 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=16384, max_prompt_length=16384, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:08:09,484 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:08:10,742 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:08:10,823 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=16384, output_seq_len=4
+2026-11-11 17:08:10,824 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:08:10,824 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:08:10 logger.py:43] Received request cmpl-e95497d226654be1bb3f13eeb5d75894-0: prompt: ' till780 багать-brand oportun св', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 12222, 19423, 122269, 34220, 63098, 119513, 52088, 75836, 75363, 79154, 56673, 30433, 87243, 12, 2727, 13797, 19972, 41405, 16068, 29875, 3071, 123221, 115844, 30138, 109379, 43260, 45320, 61532, 25237, 124314, 81033], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:34596 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:08:10 [engine.py:339] Added request cmpl-e95497d226654be1bb3f13eeb5d75894-0.
+2026-11-11 17:08:10.885 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 16384 tokens
+2026-11-11 17:08:10.885 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 16384, max_prefill_chunk_size: 4096, trace: False
+2026-11-11 17:08:18.383 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 16384 tokens, Starting decode...
+INFO 11-11 17:08:18 [metrics.py:410] Avg prompt throughput: 1773.7 tokens/s, Avg generation throughput: 0.4 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 46.8%, CPU KV cache usage: 0.0%.
+2026-11-11 17:08:18,844 - utils.prompt_client - INFO - Text trace completed: tokens_generated=2, TTFT=7721.428ms, TPOT=299.190ms
+
+2026-11-11 17:08:18,844 - utils.prompt_client - INFO - Capturing traces for input_seq_len=32640, output_seq_len=4
+2026-11-11 17:08:18,845 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=32640, max_prompt_length=32640, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:08:18,845 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:08:20,104 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:08:20,263 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=32640, output_seq_len=4
+2026-11-11 17:08:20,264 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:08:20,264 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:08:20 logger.py:43] Received request cmpl-9ddd6e3211e546899a6ddf77c40828ba-0: prompt: " suiv '</ cosm Aspen iOS_run ),-", params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 46932, 8217, 56754, 94328, 16433, 14334, 7026, 12, 6906, 42019, 62, 16241, 35104, 99706, 60515, 39235, 33545, 5809, 12, 62582, 116417, 26844, 70422, 45893, 91702, 13, 34854, 90083, 31741, 97389, 6292], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:34606 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:08:20 [engine.py:339] Added request cmpl-9ddd6e3211e546899a6ddf77c40828ba-0.
+2026-11-11 17:08:20.386 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 32640 tokens
+2026-11-11 17:08:20.386 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 32768, max_prefill_chunk_size: 4096, trace: False
+2026-11-11 17:08:39.565 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 32640 tokens, Starting decode...
+INFO 11-11 17:08:39 [metrics.py:410] Avg prompt throughput: 1540.3 tokens/s, Avg generation throughput: 0.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 93.1%, CPU KV cache usage: 0.0%.
+2026-11-11 17:08:40,285 - utils.prompt_client - INFO - Text trace completed: tokens_generated=2, TTFT=19552.334ms, TPOT=469.270ms
+
+2026-11-11 17:08:40,286 - utils.prompt_client - INFO - ✅ Background trace capture completed successfully
+2026-11-11 17:08:40,286 - utils.prompt_client - INFO - Creating readiness signal file at /tmp/ready...
+2026-11-11 17:08:40,286 - utils.prompt_client - INFO - ✅ Readiness file created. Pod will now become ready.

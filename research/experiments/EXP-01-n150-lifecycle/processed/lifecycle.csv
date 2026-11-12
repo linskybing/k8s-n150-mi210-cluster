@@ -1,0 +1,7 @@
+framework,rep,submit_to_admitted_s,admitted_to_allocated_s,allocated_to_running_s,running_to_ready_s,submit_to_ready_s,weights_download_s,engine_init_s,delete_to_quota_released_s,delete_to_pod_gone_s,delete_to_claim_gone_s,submit_to_server_up_s,dra_prepare_ms,dra_unprepare_ms
+sglang-tt,1,0.0,0.0,1.0,52.68,53.526,,,0.126,5.412,5.478,45.846,1.262,1.56
+sglang-tt,2,0.0,0.0,2.0,51.98,53.456,,,0.12,8.303,8.365,45.476,1.3,1.686
+sglang-tt,3,0.0,0.0,2.0,52.305,53.669,,,0.126,6.225,6.287,44.364,1.943,1.76
+vllm,1,0.0,0.0,1.0,203.181,204.178,66.0,67.58,0.136,2.317,2.384,198.997,1.241,1.768
+vllm,2,0.0,0.0,1.0,204.177,204.842,66.0,67.12,0.123,2.017,2.08,198.665,1.849,1.422
+vllm,3,0.0,0.0,2.0,203.176,204.761,69.0,67.57,0.125,2.293,2.363,201.585,1.485,2.059

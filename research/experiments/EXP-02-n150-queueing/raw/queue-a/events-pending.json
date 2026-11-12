@@ -1,0 +1,270 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:21:03.946088Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-exp-helper-82f2d",
+                "namespace": "u-testuser",
+                "resourceVersion": "6924143",
+                "uid": "53fdfaee-77c3-4891-a402-fa0fb0a16267"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:21:03Z",
+                "name": "job-exp-helper-82f2d.18e690f072c9ac2b",
+                "namespace": "u-testuser",
+                "resourceVersion": "6924145",
+                "uid": "a155716a-e61f-4397-8056-dd3861b331a0"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:21:03.946131Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-exp-helper-82f2d",
+                "namespace": "u-testuser",
+                "resourceVersion": "6924143",
+                "uid": "53fdfaee-77c3-4891-a402-fa0fb0a16267"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:21:03Z",
+                "name": "job-exp-helper-82f2d.18e690f072ca4d75",
+                "namespace": "u-testuser",
+                "resourceVersion": "6924144",
+                "uid": "2bda0478-7df2-4d85-b3a5-5a6bc7fcab45"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:30:03.460395Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-08bbe",
+                "namespace": "u-testuser",
+                "resourceVersion": "6926984",
+                "uid": "b04c47b5-bf41-4554-9c9a-4378f63258f0"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:30:03Z",
+                "name": "job-n150-llm-08bbe.18e6916e1058ab40",
+                "namespace": "u-testuser",
+                "resourceVersion": "6926986",
+                "uid": "6a7c3558-e73b-44ad-87b1-43d3447dc56c"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:30:03.460417Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-08bbe",
+                "namespace": "u-testuser",
+                "resourceVersion": "6926984",
+                "uid": "b04c47b5-bf41-4554-9c9a-4378f63258f0"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:30:03Z",
+                "name": "job-n150-llm-08bbe.18e6916e1058fbcc",
+                "namespace": "u-testuser",
+                "resourceVersion": "6926985",
+                "uid": "d737c958-d7cf-4a39-8a48-aaee7652f26e"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:34:49.531815Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-18138",
+                "namespace": "u-testuser",
+                "resourceVersion": "6928505",
+                "uid": "ef467d16-b946-49a8-8aff-5aa928bcd31c"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:34:49Z",
+                "name": "job-n150-llm-18138.18e691b0ab881b9d",
+                "namespace": "u-testuser",
+                "resourceVersion": "6928507",
+                "uid": "52a5e57b-0f15-4516-9e2f-0a0de9bdb98a"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:34:49.531832Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-18138",
+                "namespace": "u-testuser",
+                "resourceVersion": "6928505",
+                "uid": "ef467d16-b946-49a8-8aff-5aa928bcd31c"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:34:49Z",
+                "name": "job-n150-llm-18138.18e691b0ab885b3f",
+                "namespace": "u-testuser",
+                "resourceVersion": "6928506",
+                "uid": "b725a889-43b4-4f33-9289-d49667060eee"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:26:22.115557Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-1a9c4",
+                "namespace": "u-testuser",
+                "resourceVersion": "6925793",
+                "uid": "350a325a-4427-42aa-b74c-76d4b63289ae"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:26:22Z",
+                "name": "job-n150-llm-1a9c4.18e6913a872a7ddb",
+                "namespace": "u-testuser",
+                "resourceVersion": "6925794",
+                "uid": "e3297e05-0495-4459-b71d-cbdddf052002"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:26:22.115585Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-1a9c4",
+                "namespace": "u-testuser",
+                "resourceVersion": "6925793",
+                "uid": "350a325a-4427-42aa-b74c-76d4b63289ae"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:26:22Z",
+                "name": "job-n150-llm-1a9c4.18e6913a872ae1b3",
+                "namespace": "u-testuser",
+                "resourceVersion": "6925795",
+                "uid": "e24290da-5310-4027-8b98-220fa362a7e9"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "WaitingForQuota",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-10T03:45:57.245066Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-sglang-custom-0e0b3",
+                "namespace": "u-testuser",
+                "resourceVersion": "6931922",
+                "uid": "db4c88cc-189f-4e6d-b70e-a5bdd3764416"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "couldn't assign flavors to pod set main: insufficient unused quota for tenstorrent.com/chip in flavor default, 1 more needed",
+            "metadata": {
+                "creationTimestamp": "2026-11-10T03:45:57Z",
+                "name": "job-n150-sglang-custom-0e0b3.18e6924c2257cb4d",
+                "namespace": "u-testuser",
+                "resourceVersion": "6931926",
+                "uid": "ecca411e-6550-4e2a-8398-c9c78b71ae09"
+            },
+            "reason": "WaitingForQuota",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Warning"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

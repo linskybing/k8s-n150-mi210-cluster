@@ -1,0 +1,14 @@
+# Own unit instead of nftables.service: that one runs "nft flush ruleset" on stop/restart, wiping kube-proxy and Cilium rules
+[Unit]
+Description=n150 host firewall
+Wants=network-pre.target
+Before=network-pre.target kubelet.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/nft -f /etc/n150-firewall.nft
+ExecStop=/usr/sbin/nft delete table inet n150
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+== https://www.usenix.org/conference/osdi24/presentation/agrawal
+citation_title" content="Taming {Throughput-Latency} Tradeoff in {LLM} Inference with {Sarathi-Serve}"
+citation_author" content="Amey Agrawal"
+citation_author" content="Nitin Kedia"
+citation_author" content="Ashish Panwar"
+citation_author" content="Jayashree Mohan"
+citation_author" content="Nipun Kwatra"
+citation_author" content="Bhargav Gulavani"
+citation_author" content="Alexey Tumanov"
+== https://www.usenix.org/conference/osdi22/presentation/yu
+citation_title" content="Orca: A Distributed Serving System for {Transformer-Based} Generative Models"
+citation_author" content="Gyeong-In Yu"
+citation_author" content="Joo Seong Jeong"
+citation_author" content="Geon-Woo Kim"
+citation_author" content="Soojeong Kim"
+citation_author" content="Byung-Gon Chun"
+citation_conference_title" content="16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 22)"
+citation_firstpage" content="521"

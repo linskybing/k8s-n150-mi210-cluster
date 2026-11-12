@@ -1,0 +1,216 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "kueue.x-k8s.io/v1beta2",
+            "kind": "Workload",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "finalizers": [
+                    "kueue.x-k8s.io/resource-in-use"
+                ],
+                "generation": 1,
+                "labels": {
+                    "kueue.x-k8s.io/job-uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+                },
+                "name": "job-n150-llm-3d5b6",
+                "namespace": "u-testuser",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "batch/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Job",
+                        "name": "n150-llm",
+                        "uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+                    }
+                ],
+                "resourceVersion": "7475871",
+                "uid": "7f3fd874-d920-4e19-a3e7-2470bde08172"
+            },
+            "spec": {
+                "active": true,
+                "podSets": [
+                    {
+                        "count": 1,
+                        "name": "main",
+                        "template": {
+                            "metadata": {
+                                "annotations": {
+                                    "kubectl.kubernetes.io/default-container": "vllm"
+                                },
+                                "labels": {
+                                    "batch.kubernetes.io/job-name": "n150-llm"
+                                }
+                            },
+                            "spec": {
+                                "containers": [
+                                    {
+                                        "args": [
+                                            "--tt-device",
+                                            "n150",
+                                            "--no-auth"
+                                        ],
+                                        "env": [
+                                            {
+                                                "name": "RUNTIME_MODEL_SPEC_JSON_PATH",
+                                                "value": "/spec/spec.json"
+                                            },
+                                            {
+                                                "name": "HF_TOKEN",
+                                                "valueFrom": {
+                                                    "secretKeyRef": {
+                                                        "key": "token",
+                                                        "name": "hf-token"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06",
+                                        "imagePullPolicy": "IfNotPresent",
+                                        "name": "vllm",
+                                        "readinessProbe": {
+                                            "failureThreshold": 3,
+                                            "httpGet": {
+                                                "path": "/health",
+                                                "port": 8000,
+                                                "scheme": "HTTP"
+                                            },
+                                            "periodSeconds": 10,
+                                            "successThreshold": 1,
+                                            "timeoutSeconds": 1
+                                        },
+                                        "resources": {
+                                            "claims": [
+                                                {
+                                                    "name": "n150"
+                                                }
+                                            ],
+                                            "limits": {
+                                                "hugepages-1Gi": "1Gi"
+                                            },
+                                            "requests": {
+                                                "hugepages-1Gi": "1Gi",
+                                                "memory": "8Gi"
+                                            }
+                                        },
+                                        "terminationMessagePath": "/dev/termination-log",
+                                        "terminationMessagePolicy": "File",
+                                        "volumeMounts": [
+                                            {
+                                                "mountPath": "/spec",
+                                                "name": "spec"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "dnsPolicy": "ClusterFirst",
+                                "initContainers": [
+                                    {
+                                        "command": [
+                                            "sh",
+                                            "-c",
+                                            "rm -f /dev/hugepages-1G/tenstorrent /dev/hugepages-1G/device_0_*tenstorrent"
+                                        ],
+                                        "image": "busybox:1.37",
+                                        "imagePullPolicy": "IfNotPresent",
+                                        "name": "cleanup-hugepages",
+                                        "resources": {
+                                            "claims": [
+                                                {
+                                                    "name": "n150"
+                                                }
+                                            ]
+                                        },
+                                        "terminationMessagePath": "/dev/termination-log",
+                                        "terminationMessagePolicy": "File"
+                                    }
+                                ],
+                                "resourceClaims": [
+                                    {
+                                        "name": "n150",
+                                        "resourceClaimTemplateName": "n150"
+                                    }
+                                ],
+                                "restartPolicy": "Never",
+                                "schedulerName": "default-scheduler",
+                                "securityContext": {
+                                    "supplementalGroups": [
+                                        2150,
+                                        993
+                                    ]
+                                },
+                                "terminationGracePeriodSeconds": 30,
+                                "volumes": [
+                                    {
+                                        "configMap": {
+                                            "defaultMode": 420,
+                                            "name": "llm-spec-nowarm"
+                                        },
+                                        "name": "spec"
+                                    }
+                                ]
+                            }
+                        },
+                        "topologyRequest": {
+                            "podIndexLabel": "batch.kubernetes.io/job-completion-index"
+                        }
+                    }
+                ],
+                "priority": 0,
+                "queueName": "default"
+            },
+            "status": {
+                "admission": {
+                    "clusterQueue": "default",
+                    "podSetAssignments": [
+                        {
+                            "count": 1,
+                            "flavors": {
+                                "hugepages-1Gi": "default",
+                                "memory": "default",
+                                "tenstorrent.com/chip": "default"
+                            },
+                            "name": "main",
+                            "resourceUsage": {
+                                "hugepages-1Gi": "1Gi",
+                                "memory": "8Gi",
+                                "tenstorrent.com/chip": "1"
+                            }
+                        }
+                    ]
+                },
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-11-11T09:40:07Z",
+                        "message": "Quota reserved in ClusterQueue default",
+                        "observedGeneration": 1,
+                        "reason": "QuotaReserved",
+                        "status": "True",
+                        "type": "QuotaReserved"
+                    },
+                    {
+                        "lastTransitionTime": "2026-11-11T09:40:07Z",
+                        "message": "The workload is admitted",
+                        "observedGeneration": 1,
+                        "reason": "Admitted",
+                        "status": "True",
+                        "type": "Admitted"
+                    },
+                    {
+                        "lastTransitionTime": "2026-11-11T09:40:07Z",
+                        "message": "Not all pods are ready or succeeded",
+                        "observedGeneration": 1,
+                        "reason": "WaitForStart",
+                        "status": "False",
+                        "type": "PodsReady"
+                    }
+                ]
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

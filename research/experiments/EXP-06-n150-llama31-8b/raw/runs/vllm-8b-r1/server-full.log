@@ -1,0 +1,404 @@
+INFO 11-11 16:57:44 [__init__.py:250] Automatically detected platform tt.
+2026-11-11 16:57:45,975 - __main__ - INFO - setting env var: VLLM_CONFIGURE_LOGGING=1
+2026-11-11 16:57:45,975 - __main__ - INFO - setting env var: VLLM_RPC_TIMEOUT=900000
+2026-11-11 16:57:45,975 - __main__ - WARNING - env var VLLM_TARGET_DEVICE is already set to tt, overriding with tt
+2026-11-11 16:57:45,975 - __main__ - INFO - setting env var: VLLM_TARGET_DEVICE=tt
+2026-11-11 16:57:45,975 - __main__ - INFO - setting env var: TORCHDYNAMO_DISABLE=1
+2026-11-11 16:57:45,975 - __main__ - INFO - setting env var: MESH_DEVICE=N150
+2026-11-11 16:57:45,975 - __main__ - WARNING - env var ARCH_NAME is already set to wormhole_b0, overriding with wormhole_b0
+2026-11-11 16:57:45,975 - __main__ - INFO - setting env var: ARCH_NAME=wormhole_b0
+2026-11-11 16:57:45,982 - utils.vllm_run_utils - WARNING - Commit 'HEAD' is not in the repository.
+2026-11-11 16:57:45,982 - __main__ - INFO - TT_METAL_HOME: /home/container_app_user/tt-metal
+2026-11-11 16:57:45,982 - __main__ - INFO - commit SHA: None
+2026-11-11 16:57:45,985 - utils.vllm_run_utils - WARNING - Commit 'HEAD' is not in the repository.
+2026-11-11 16:57:45,985 - __main__ - INFO - vllm_dir: /home/container_app_user/vllm
+2026-11-11 16:57:45,985 - __main__ - INFO - commit SHA: None
+2026-11-11 16:57:45,985 - __main__ - INFO - using model: id_tt-transformers_Llama-3.1-8B-Instruct_n150
+2026-11-11 16:57:45,985 - __main__ - INFO - HF_TOKEN is set
+2026-11-11 16:57:45,985 - __main__ - INFO - --no-auth is set: requests to vLLM API will not require authorization. HTTP Authorization header will not be checked.
+2026-11-11 16:57:45,986 - root - INFO - MODEL_WEIGHTS_PATH: /home/container_app_user/cache_root/weights/Llama-3.1-8B-Instruct
+2026-11-11 16:57:45,986 - root - INFO - TT_CACHE_PATH: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150
+2026-11-11 16:57:45,990 - __main__ - INFO - setting vllm logging config at: /home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-11 16:57:45,990 - __main__ - INFO - setting vllm logging file at: /home/container_app_user/cache_root/logs/vllm_2026-11-11_16-57-45.log
+2026-11-11 16:57:45,990 - root - INFO - HF model setup for meta-llama/Llama-3.1-8B-Instruct
+2026-11-11 16:57:45,990 - root - INFO - HF_MODEL: None
+2026-11-11 16:57:45,990 - __main__ - INFO - setting dynamic runtime environment variables:
+2026-11-11 16:57:45,990 - __main__ - INFO - setting env var: VLLM_LOGGING_CONFIG=/home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-11 16:57:45,990 - __main__ - INFO - setting env var: HF_MODEL=/home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 16:57:45,990 - __main__ - INFO - Starting background trace capture process...
+2026-11-11 16:57:46,015 - __main__ - INFO - Background trace capture process started (PID: 93, max_context: 65536)
+2026-11-11 16:57:46,016 - __main__ - INFO - vllm_args:
+2026-11-11 16:57:46,018 - utils.prompt_client - INFO - Starting background trace capture process...
+2026-11-11 16:57:46,018 - utils.prompt_client - INFO - Using 10 trace context lengths (max_context=65536)
+2026-11-11 16:57:46,018 - utils.prompt_client - WARNING - Neither VLLM_API_KEY nor JWT_SECRET environment variables are set. Proceeding without authorization.
+2026-11-11 16:57:46,018 - utils.prompt_client - INFO - Waiting for vLLM service to become healthy (base timeout: 1200.0s)
+2026-11-11 16:57:46,019 - utils.cache_monitor - INFO - 🔍 No cache content found - treating as first run
+2026-11-11 16:57:46,019 - utils.cache_monitor - INFO - Creating cache directory: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150
+2026-11-11 16:57:46,019 - utils.cache_monitor - INFO - ✅ Created cache first run marker: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150/TT_METAL_CACHE_FIRST_RUN_STARTED
+2026-11-11 16:57:46,019 - utils.prompt_client - INFO - 🔄 Cache generation in progress - this may take 40-60 minutes for new models
+2026-11-11 16:57:46,019 - utils.prompt_client - INFO - ⏰ using extended timeout:=5400.0s due to cache generation
+2026-11-11 16:57:46,026 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 0.0s, next check in 10.0s (timeout: 5400.0s)
+{'block_size': '64',
+ 'max-log-len': '32',
+ 'max_model_len': '65536',
+ 'max_num_batched_tokens': '65536',
+ 'max_num_seqs': '32',
+ 'model': 'meta-llama/Llama-3.1-8B-Instruct',
+ 'override_tt_config': '{}',
+ 'seed': '9472'}
+DEBUG 11-11 16:57:46 utils.py:164] Setting VLLM_WORKER_MULTIPROC_METHOD to 'spawn'
+DEBUG 11-11 16:57:46 __init__.py:38] Available plugins for group vllm.general_plugins:
+DEBUG 11-11 16:57:46 __init__.py:40] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+DEBUG 11-11 16:57:46 __init__.py:43] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+DEBUG 11-11 16:57:47 config.py:2199] Disabled the custom all-reduce kernel because it is not supported on current platform.
+INFO 11-11 16:57:47 api_server.py:1756] vLLM API server version 0.1.dev8069+g6e67d2d8d
+INFO 11-11 16:57:47 cli_args.py:302] non-default args: {'max_log_len': 32, 'model': 'meta-llama/Llama-3.1-8B-Instruct', 'seed': 9472, 'max_model_len': 65536, 'block_size': 64, 'max_num_batched_tokens': 65536, 'max_num_seqs': 32}
+DEBUG 11-11 16:57:55 config.py:573] Tasks supported by runner type: {'generate': ['generate'], 'pooling': ['encode', 'embed'], 'draft': ['draft']}
+DEBUG 11-11 16:57:55 config.py:580] Selected runner type: generate
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 11-11 16:57:55 config.py:1600] Using max model len 65536
+WARNING 11-11 16:57:55 arg_utils.py:1699] device type=tt is not supported by the V1 Engine. Falling back to V0. 
+WARNING 11-11 16:57:55 arg_utils.py:1496] The model has a long context length (65536). This may causeOOM during the initial memory profiling phase, or result in low performance due to small KV cache size. Consider setting --max-model-len to a smaller value.
+INFO 11-11 16:57:55 arg_utils.py:1099] Using host IP 10.42.0.201 as TT data parallel address
+DEBUG 11-11 16:57:55 config.py:2199] Disabled the custom all-reduce kernel because it is not supported on current platform.
+DEBUG 11-11 16:57:55 config.py:2199] Disabled the custom all-reduce kernel because it is not supported on current platform.
+WARNING 11-11 16:57:55 registry.py:425] Model architecture TTLlamaForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:LlamaForCausalLM.
+WARNING 11-11 16:57:55 registry.py:425] Model architecture TTMllamaForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MllamaForConditionalGeneration.
+WARNING 11-11 16:57:55 registry.py:425] Model architecture TTQwen2ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 16:57:55 registry.py:425] Model architecture TTQwen3ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 16:57:55 registry.py:425] Model architecture TTQwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class models.demos.qwen25_vl.tt.generator_vllm:Qwen2_5_VLForConditionalGeneration.
+WARNING 11-11 16:57:55 registry.py:425] Model architecture TTMistralForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MistralForCausalLM.
+WARNING 11-11 16:57:55 registry.py:425] Model architecture TTGemma3ForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:Gemma3ForConditionalGeneration.
+INFO 11-11 16:57:55 importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-11 16:57:55 importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+DEBUG 11-11 16:57:55 decorators.py:110] Inferred dynamic dimensions for forward method of <class 'vllm.model_executor.models.llama.LlamaModel'>: ['input_ids', 'positions', 'intermediate_tensors', 'inputs_embeds']
+DEBUG 11-11 16:57:55 api_server.py:245] Multiprocessing frontend to use ipc:///tmp/5013b66d-32a1-4c1d-99c4-a208bc0fbc58 for IPC Path.
+INFO 11-11 16:57:55 api_server.py:268] Started engine process with PID 170
+2026-11-11 16:57:56,026 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 10.0s, next check in 10.0s (timeout: 5400.0s)
+INFO 11-11 16:57:59 [__init__.py:250] Automatically detected platform tt.
+INFO 11-11 16:58:00 [llm_engine.py:234] Initializing a V0 LLM engine (v0.1.dev8069+g6e67d2d8d) with config: model='meta-llama/Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={},override_tt_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=65536, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=None, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=9472, served_model_name=meta-llama/Llama-3.1-8B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=True, 
+INFO 11-11 16:58:02 [importing.py:43] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-11 16:58:02 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 11-11 16:58:02 [registry.py:425] Model architecture TTLlamaForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:LlamaForCausalLM.
+WARNING 11-11 16:58:02 [registry.py:425] Model architecture TTMllamaForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MllamaForConditionalGeneration.
+WARNING 11-11 16:58:02 [registry.py:425] Model architecture TTQwen2ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 16:58:02 [registry.py:425] Model architecture TTQwen3ForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:QwenForCausalLM.
+WARNING 11-11 16:58:02 [registry.py:425] Model architecture TTQwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class models.demos.qwen25_vl.tt.generator_vllm:Qwen2_5_VLForConditionalGeneration.
+WARNING 11-11 16:58:02 [registry.py:425] Model architecture TTMistralForCausalLM is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:MistralForCausalLM.
+WARNING 11-11 16:58:02 [registry.py:425] Model architecture TTGemma3ForConditionalGeneration is already registered, and will be overwritten by the new model class models.tt_transformers.tt.generator_vllm:Gemma3ForConditionalGeneration.
+INFO 11-11 16:58:03 [tt_model_runner.py:185] TTModelRunner: trace_mode=True, sample_on_device_mode=None
+2026-11-11 16:58:03.028 | info     |             UMD | Starting topology discovery. (topology_discovery.cpp:69)
+2026-11-11 16:58:03.048 | info     |             UMD | Established firmware bundle version: 19.13.0 (topology_discovery.cpp:369)
+2026-11-11 16:58:03.048 | warning  |             UMD | Firmware bundle version 19.13.0 on the system is newer than the maximum supported version 19.1.0 for wormhole_b0 architecture. New features may not be supported. (topology_discovery.cpp:395)
+2026-11-11 16:58:03.048 | info     |             UMD | Established ETH FW version: 7.5.0 (topology_discovery_wormhole.cpp:324)
+2026-11-11 16:58:03.048 | info     |             UMD | Completed topology discovery. (topology_discovery.cpp:73)
+2026-11-11 16:58:03.050 | info     |          Device | Opening user mode device driver (tt_cluster.cpp:213)
+2026-11-11 16:58:03.051 | info     |             UMD | Starting topology discovery. (topology_discovery.cpp:69)
+2026-11-11 16:58:03.057 | info     |             UMD | Established firmware bundle version: 19.13.0 (topology_discovery.cpp:369)
+2026-11-11 16:58:03.057 | warning  |             UMD | Firmware bundle version 19.13.0 on the system is newer than the maximum supported version 19.1.0 for wormhole_b0 architecture. New features may not be supported. (topology_discovery.cpp:395)
+2026-11-11 16:58:03.057 | info     |             UMD | Established ETH FW version: 7.5.0 (topology_discovery_wormhole.cpp:324)
+2026-11-11 16:58:03.057 | info     |             UMD | Completed topology discovery. (topology_discovery.cpp:73)
+2026-11-11 16:58:03.059 | info     |             UMD | Starting topology discovery. (topology_discovery.cpp:69)
+2026-11-11 16:58:03.071 | info     |             UMD | Established firmware bundle version: 19.13.0 (topology_discovery.cpp:369)
+2026-11-11 16:58:03.071 | warning  |             UMD | Firmware bundle version 19.13.0 on the system is newer than the maximum supported version 19.1.0 for wormhole_b0 architecture. New features may not be supported. (topology_discovery.cpp:395)
+2026-11-11 16:58:03.071 | info     |             UMD | Established ETH FW version: 7.5.0 (topology_discovery_wormhole.cpp:324)
+2026-11-11 16:58:03.072 | info     |             UMD | Completed topology discovery. (topology_discovery.cpp:73)
+2026-11-11 16:58:03.073 | info     |             UMD | Harvesting masks for chip 0 tensix: 0x1 dram: 0x0 eth: 0x0 pcie: 0x0 l2cpu: 0x0 (cluster.cpp:358)
+2026-11-11 16:58:03.134 | info     |             UMD | Opening local chip ids/PCIe ids: {0}/[0] and remote chip ids {} (cluster.cpp:202)
+2026-11-11 16:58:03.134 | info     |             UMD | IOMMU: disabled (cluster.cpp:178)
+2026-11-11 16:58:03.134 | info     |             UMD | KMD version: 2.11.0 (cluster.cpp:181)
+2026-11-11 16:58:03.136 | info     |             UMD | Mapped hugepage 0x280000000 to NOC address 0x800000000 (sysmem_manager.cpp:247)
+INFO 11-11 16:58:03 [tt_worker.py:622] Attempting to open mesh device with grid shape (1, 1)
+2026-11-11 16:58:03.168 | info     |          Fabric | TopologyMapper mapping start (mesh=0): n_log=1, n_phys=1, log_deg_hist={0:1}, phys_deg_hist={0:1} (topology_mapper_utils.cpp:167)
+2026-11-11 16:58:03.176 | info     |    BuildKernels | Skipping deleting built cache (build.cpp:111)
+2026-11-11 16:58:06,031 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 20.0s, next check in 10.0s (timeout: 5400.0s)
+INFO 11-11 16:58:06 [tt_worker.py:636] multidevice with 1 devices and grid (1, 1) is created
+2026-11-11 16:58:06.032 | INFO     | models.tt_transformers.tt.model_config:__init__:464 - Inferring device name: N150
+2026-11-11 16:58:06.033 | INFO     | models.tt_transformers.tt.model_config:__init__:507 - Checkpoint directory: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 16:58:06.033 | INFO     | models.tt_transformers.tt.model_config:__init__:508 - Tokenizer file: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct/tokenizer.model
+2026-11-11 16:58:06.033 | INFO     | models.tt_transformers.tt.model_config:__init__:509 - Cache directory: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150/N150
+2026-11-11 16:58:06.033 | INFO     | models.tt_transformers.tt.model_config:__init__:510 - Model name: Llama-3.1-8B-Instruct
+2026-11-11 16:58:06.035 | INFO     | models.tt_transformers.tt.model_config:_set_params_from_dict:1566 - Model name from config: Llama-3.1-8B-Instruct
+2026-11-11 16:58:06.035 | INFO     | models.tt_transformers.tt.model_config:__init__:581 - Reducing prefill_len_cutoff to 512 for Llama-3.1-8B-Instruct on N150
+2026-11-11 16:58:06.036 | INFO     | models.tt_transformers.tt.model_config:_precision_factory:2871 - Model Llama-3.1-8B-Instruct requires specific TensorPrecision and OpFidelity configuration, using /home/container_app_user/tt-metal/models/tt_transformers/model_params/Llama-3.1-8B-Instruct/performance_decoder_config.json
+2026-11-11 16:58:06.036 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2259 - Tokenizer path: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 16:58:06.036 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2260 - Model name: Llama-3.1-8B-Instruct
+2026-11-11 16:58:06.036 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2261 - Base model name: Llama-3.1-8B
+2026-11-11 16:58:06.347 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:2267 - Successfully loaded tokenizer from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 16:58:06.659 | INFO     | models.tt_transformers.tt.model_config:create_processor:2332 - Successfully loaded processor from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.1-8B-Instruct
+2026-11-11 16:58:06.660 | INFO     | models.tt_transformers.tt.model_config:__init__:1299 - Attention grid: ttnn.CoreGrid(x=8, y=4)
+2026-11-11 16:58:06.660 | INFO     | models.tt_transformers.tt.model_config:__init__:1300 - MLP grid: ttnn.CoreGrid(x=8, y=8)
+2026-11-11 16:58:06.660 | INFO     | models.tt_transformers.tt.model_config:__init__:1301 - MLP prefill grids @ 32: w1/w3: (8, 8), w2: (8, 8)
+2026-11-11 16:58:06.660 | INFO     | models.tt_transformers.tt.model_config:__init__:1302 - MLP prefill grids @ max_seq_len(65536): w1/w3: (8, 8), w2: (8, 8)
+2026-11-11 16:58:06.660 | INFO     | models.tt_transformers.tt.model_config:__init__:1305 - LM head grid: ttnn.CoreGrid(x=8, y=8)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  3.56it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  3.25it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.14it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.09it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]2026-11-11 16:58:16,039 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 30.0s, next check in 10.0s (timeout: 5400.0s)
+  3%|▎         | 1/32 [00:05<02:36,  5.05s/it]  6%|▋         | 2/32 [00:09<02:27,  4.92s/it]  9%|▉         | 3/32 [00:14<02:21,  4.87s/it]2026-11-11 16:58:26,050 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 40.0s, next check in 10.0s (timeout: 5400.0s)
+ 12%|█▎        | 4/32 [00:19<02:16,  4.88s/it] 16%|█▌        | 5/32 [00:24<02:11,  4.86s/it]2026-11-11 16:58:36,060 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 50.0s, next check in 10.0s (timeout: 5400.0s)
+ 19%|█▉        | 6/32 [00:29<02:06,  4.87s/it] 22%|██▏       | 7/32 [00:34<02:03,  4.94s/it]2026-11-11 16:58:46,068 - utils.prompt_client - INFO - 🔄 Cache generation in progress - this may take 40-60 minutes for new models
+2026-11-11 16:58:46,070 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 60.1s, next check in 10.0s (timeout: 5400.0s)
+ 25%|██▌       | 8/32 [00:39<01:59,  4.98s/it] 28%|██▊       | 9/32 [00:44<01:52,  4.91s/it]2026-11-11 16:58:56,080 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 70.1s, next check in 10.0s (timeout: 5400.0s)
+ 31%|███▏      | 10/32 [00:49<01:48,  4.94s/it] 34%|███▍      | 11/32 [00:54<01:44,  4.98s/it]2026-11-11 16:59:06,089 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 80.1s, next check in 10.0s (timeout: 5400.0s)
+ 38%|███▊      | 12/32 [00:59<01:38,  4.93s/it] 41%|████      | 13/32 [01:03<01:32,  4.88s/it]2026-11-11 16:59:16,100 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 90.1s, next check in 10.0s (timeout: 5400.0s)
+ 44%|████▍     | 14/32 [01:08<01:27,  4.87s/it] 47%|████▋     | 15/32 [01:13<01:23,  4.89s/it]2026-11-11 16:59:26,105 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 100.1s, next check in 10.0s (timeout: 5400.0s)
+ 50%|█████     | 16/32 [01:18<01:17,  4.86s/it] 53%|█████▎    | 17/32 [01:23<01:12,  4.82s/it]2026-11-11 16:59:36,108 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 110.1s, next check in 10.0s (timeout: 5400.0s)
+ 56%|█████▋    | 18/32 [01:28<01:08,  4.88s/it] 59%|█████▉    | 19/32 [01:32<01:03,  4.86s/it]2026-11-11 16:59:46,113 - utils.prompt_client - INFO - 🔄 Cache generation in progress - this may take 40-60 minutes for new models
+2026-11-11 16:59:46,115 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 120.1s, next check in 10.0s (timeout: 5400.0s)
+ 62%|██████▎   | 20/32 [01:37<00:58,  4.90s/it] 66%|██████▌   | 21/32 [01:42<00:53,  4.88s/it]2026-11-11 16:59:56,125 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 130.1s, next check in 10.0s (timeout: 5400.0s)
+ 69%|██████▉   | 22/32 [01:47<00:48,  4.85s/it] 72%|███████▏  | 23/32 [01:52<00:43,  4.89s/it]2026-11-11 17:00:06,135 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 140.1s, next check in 10.0s (timeout: 5400.0s)
+ 75%|███████▌  | 24/32 [01:57<00:39,  4.90s/it] 78%|███████▊  | 25/32 [02:02<00:34,  4.90s/it]2026-11-11 17:00:16,138 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 150.1s, next check in 10.0s (timeout: 5400.0s)
+ 81%|████████▏ | 26/32 [02:07<00:29,  4.88s/it] 84%|████████▍ | 27/32 [02:12<00:24,  4.94s/it]2026-11-11 17:00:26,148 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 160.1s, next check in 10.0s (timeout: 5400.0s)
+ 88%|████████▊ | 28/32 [02:17<00:19,  4.92s/it] 91%|█████████ | 29/32 [02:22<00:14,  4.94s/it]2026-11-11 17:00:36,150 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 170.1s, next check in 10.0s (timeout: 5400.0s)
+ 94%|█████████▍| 30/32 [02:27<00:09,  4.93s/it] 97%|█████████▋| 31/32 [02:31<00:04,  4.90s/it]2026-11-11 17:00:46,160 - utils.prompt_client - INFO - 🔄 Cache generation in progress - this may take 40-60 minutes for new models
+2026-11-11 17:00:46,162 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 180.1s, next check in 10.0s (timeout: 5400.0s)
+100%|██████████| 32/32 [02:36<00:00,  4.90s/it]100%|██████████| 32/32 [02:36<00:00,  4.90s/it]
+2026-11-11 17:00:56,171 - utils.prompt_client - INFO - 🔄 Cache generation in progress. Waited 190.2s, next check in 10.0s (timeout: 5400.0s)
+INFO 11-11 17:01:01 [executor_base.py:115] # tt blocks: 1066, # CPU blocks: 0
+INFO 11-11 17:01:01 [executor_base.py:120] Maximum concurrency for 65536 tokens per request: 1.04x
+INFO 11-11 17:01:01 [tt_worker.py:69] Allocating kv caches
+Allocating TT kv caches for each layer (submesh 1):   0%|          | 0/32 [00:00<?, ?it/s]Allocating TT kv caches for each layer (submesh 1):   3%|▎         | 1/32 [00:02<01:09,  2.25s/it]Allocating TT kv caches for each layer (submesh 1):  38%|███▊      | 12/32 [00:02<00:02,  6.95it/s]Allocating TT kv caches for each layer (submesh 1):  69%|██████▉   | 22/32 [00:02<00:00, 14.14it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 32/32 [00:02<00:00, 22.52it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 32/32 [00:02<00:00, 12.42it/s]
+INFO 11-11 17:01:03 [llm_engine.py:434] init engine (profile, create kv cache, warmup model) took 2.61 seconds
+DEBUG 11-11 17:01:03 prometheus.py:47] Using multiprocess registry for prometheus metrics
+WARNING 11-11 17:01:04 config.py:1524] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+INFO 11-11 17:01:04 serving_responses.py:89] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+INFO 11-11 17:01:04 serving_chat.py:122] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+INFO 11-11 17:01:04 serving_completion.py:77] Using default completion sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+INFO 11-11 17:01:04 api_server.py:1819] Starting vLLM API server 0 on http://0.0.0.0:8000
+INFO 11-11 17:01:04 launcher.py:29] Available routes are:
+INFO 11-11 17:01:04 launcher.py:37] Route: /openapi.json, Methods: HEAD, GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /docs, Methods: HEAD, GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /redoc, Methods: HEAD, GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /health, Methods: GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /load, Methods: GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /ping, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /ping, Methods: GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /tokenize, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /detokenize, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/models, Methods: GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /version, Methods: GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/responses, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/responses/{response_id}, Methods: GET
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/responses/{response_id}/cancel, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/chat/completions, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/completions, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/embeddings, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /pooling, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /classify, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /score, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/score, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/audio/transcriptions, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/audio/translations, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /rerank, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v1/rerank, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /v2/rerank, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /scale_elastic_ep, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /is_scaling_elastic_ep, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /invocations, Methods: POST
+INFO 11-11 17:01:04 launcher.py:37] Route: /metrics, Methods: GET
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:59004 - "GET /health HTTP/1.1" 200 OK
+2026-11-11 17:01:06,180 - utils.prompt_client - INFO - ✅ vLLM service is healthy. startup_time: 200.2 seconds
+2026-11-11 17:01:06,181 - utils.cache_monitor - INFO - Created cache completed marker: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150/TT_METAL_CACHE_COMPLETED
+2026-11-11 17:01:06,181 - utils.prompt_client - INFO - 🎯 Marked cache generation as completed
+2026-11-11 17:01:06,181 - utils.prompt_client - INFO - Capturing traces: 10 context lengths
+2026-11-11 17:01:06,181 - utils.prompt_client - INFO - Capturing traces for input configurations...
+2026-11-11 17:01:06,181 - utils.prompt_client - INFO - Capturing traces for input_seq_len=128, output_seq_len=4
+2026-11-11 17:01:06,181 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=128, max_prompt_length=128, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:01:06,181 - utils.prompt_generation - INFO - Generating random prompts...
+2026-11-11 17:01:07,696 - root - INFO - No template applied to generated prompts.
+2026-11-11 17:01:07,728 - utils.prompt_client - INFO - Starting text trace capture: input_seq_len=128, output_seq_len=4
+2026-11-11 17:01:07,728 - utils.prompt_client - INFO - calling: http://127.0.0.1:8000/v1/completions, response_idx=0
+2026-11-11 17:01:07,728 - utils.prompt_client - INFO - model: meta-llama/Llama-3.1-8B-Instruct
+INFO 11-11 17:01:07 logger.py:43] Received request cmpl-62547c0fb74b47979238925282ed214b-0: prompt: 'bias Continuous italianon Zika p', params: SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=True, max_tokens=4, min_tokens=4, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, guided_decoding=None, extra_args=None), prompt_token_ids: [128000, 61542, 70067, 29048, 263, 82026, 11335, 82620, 123924, 14950, 85113, 39378, 77014, 123210, 106954, 6231, 51572, 9315, 104295, 124567, 24706, 89749, 109876, 99073, 33111, 17899, 77213, 117541, 16769, 4287, 12219, 4372], prompt_embeds shape: None, lora_request: None, prompt_adapter_request: None.
+INFO:     127.0.0.1:59014 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO 11-11 17:01:07 [engine.py:339] Added request cmpl-62547c0fb74b47979238925282ed214b-0.
+2026-11-11 17:01:07.746 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 128
+2026-11-11 17:01:07.753 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 128 tokens
+2026-11-11 17:01:07.753 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 128, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:01:20.256 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:159 - Done Compiling Model
+2026-11-11 17:01:20.284 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:174 - Done Capturing Prefill Trace
+2026-11-11 17:01:20.285 | warning  |           Metal | Allocating device buffers is unsafe due to the existence of an active trace. These buffers may be corrupted once a trace is executed. (allocator.cpp:107)
+2026-11-11 17:01:23.800 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-11 17:01:23.800 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 256
+2026-11-11 17:01:23.806 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 256 tokens
+2026-11-11 17:01:23.806 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 256, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:01:33.260 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:159 - Done Compiling Model
+2026-11-11 17:01:33.286 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:174 - Done Capturing Prefill Trace
+2026-11-11 17:01:33.414 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 256 tokens, Starting decode...
+2026-11-11 17:01:33.414 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 512
+2026-11-11 17:01:33.419 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 512 tokens
+2026-11-11 17:01:33.419 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 512, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:01:42.324 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:159 - Done Compiling Model
+2026-11-11 17:01:42.352 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:174 - Done Capturing Prefill Trace
+2026-11-11 17:01:42.522 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:361 - Finished prefill for all users up to 512 tokens, Starting decode...
+2026-11-11 17:01:42.523 | INFO     | models.tt_transformers.tt.generator:warmup_prefill_traces:124 - Warming up prefill traces for sequence length: 1024
+2026-11-11 17:01:42.528 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:278 - Prefilling User 1 up to 1024 tokens
+2026-11-11 17:01:42.529 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:288 - Prefill seq len: 1024, max_prefill_chunk_size: 4096, trace: True
+2026-11-11 17:01:49.379 | critical |          Always | TT_FATAL: Out of Memory: Not enough space to allocate 29360128 B DRAM buffer across 12 banks, where each bank needs to store 2447360 B, but bank size is only 1021821792 B (assert.hpp:103)
+2026-11-11 17:01:49,388 - utils.prompt_client - INFO - Text trace completed: tokens_generated=0, TTFT=41659.413ms, TPOT=0.123ms
+
+2026-11-11 17:01:49,388 - utils.prompt_client - INFO - Capturing traces for input_seq_len=256, output_seq_len=4
+2026-11-11 17:01:49,388 - root - INFO - generate_prompts args=PromptConfig(input_seq_len=256, max_prompt_length=256, num_prompts=1, distribution='fixed', dataset='random', tokenizer_model='meta-llama/Llama-3.1-8B-Instruct', template=None, save_path=None, print_prompts=False, include_images=False, images_per_prompt=1, image_width=256, image_height=256, use_chat_api=False)
+2026-11-11 17:01:49,388 - utils.prompt_generation - INFO - Generating random prompts...
+ERROR 11-11 17:01:49 [engine.py:187] RuntimeError('TT_FATAL @ /home/container_app_user/tt-metal/tt_metal/impl/allocator/bank_manager.cpp:431: address.has_value()\ninfo:\nOut of Memory: Not enough space to allocate 29360128 B DRAM buffer across 12 banks, where each bank needs to store 2447360 B, but bank size is only 1021821792 B\nbacktrace:\n --- /home/container_app_user/tt-metal/build/lib/libtt_metal.so(+0x5b0f9d) [0x7a0250ab7f9d]\n --- tt::tt_metal::BankManager::allocate_buffer(unsigned long, unsigned long, bool, tt::tt_metal::CoreRangeSet const&, std::optional<unsigned int>, ttsl::StrongType<unsigned int, tt::tt_metal::AllocatorIDTag>)\n --- tt::tt_metal::AllocatorImpl::allocate_buffer(tt::tt_metal::Buffer*)\n --- tt::tt_metal::Buffer::allocate_impl()\n --- tt::tt_metal::Buffer::create(tt::tt_metal::IDevice*, unsigned long, unsigned long, tt::tt_metal::BufferType, tt::tt_metal::BufferShardingArgs const&, std::optional<bool>, std::optional<ttsl::StrongType<unsigned char, tt::tt_metal::SubDeviceIdTag> >)\n --- tt::tt_metal::distributed::MeshBuffer::create(std::variant<tt::tt_metal::distributed::ReplicatedBufferConfig, tt::tt_metal::distributed::ShardedBufferConfig> const&, tt::tt_metal::distributed::DeviceLocalBufferConfig const&, tt::tt_metal::distributed::MeshDevice*, std::optional<unsigned long>)\n --- tt::tt_metal::tensor_impl::allocate_device_buffer(tt::tt_metal::distributed::MeshDevice*, tt::tt_metal::TensorSpec const&)\n --- tt::tt_metal::allocate_tensor_on_device(tt::tt_metal::TensorSpec const&, tt::tt_metal::distributed::MeshDevice*)\n --- tt::tt_metal::create_device_tensor(tt::tt_metal::TensorSpec const&, tt::tt_metal::IDevice*)\n --- tt::tt_metal::operation::program_output_helper<ttnn::operations::matmul::Matmul, has_create_program<ttnn::operations::matmul::Matmul>::value>::type tt::tt_metal::operation::default_create_output_tensors<ttnn::operations::matmul::Matmul>(ttnn::operations::matmul::Matmul const&, std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > const&, std::vector<std::optional<tt::tt_metal::Tensor>, std::allocator<std::optional<tt::tt_metal::Tensor> > > const&)\n --- /home/container_app_user/tt-metal/build/lib/_ttnncpp.so(+0x129cade) [0x7a025245eade]\n --- tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::create_output_tensors(tt::tt_metal::operation::DeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > > const&, tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_args_t const&)\n --- tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_return_value_t ttnn::device_operation::detail::launch_on_device<tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > > >(tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::operation_attributes_t const&, tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_args_t const&)\n --- tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_return_value_t ttnn::device_operation::detail::invoke<tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > > >(tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::operation_attributes_t const&, tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_args_t const&)\n --- /home/container_app_user/tt-metal/build/lib/_ttnncpp.so(+0x87336e) [0x7a0251a3536e]\n --- std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > tt::tt_metal::operation::run<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >(tt::tt_metal::operation::DeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >&&, std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > const&, std::vector<std::optional<tt::tt_metal::Tensor const>, std::allocator<std::optional<tt::tt_metal::Tensor const> > > const&, std::vector<std::optional<tt::tt_metal::Tensor>, std::allocator<std::optional<tt::tt_metal::Tensor> > > const&)\n --- ttnn::operations::matmul::matmul(tt::tt_metal::Tensor const&, tt::tt_metal::Tensor const&, std::optional<tt::tt_metal::Tensor const> const&, ttnn::operations::matmul::Matmul const&, std::optional<tt::tt_metal::Tensor> const&)\n --- ttnn::operations::matmul::bound_matmul(tt::tt_metal::Tensor const&, tt::tt_metal::Tensor const&, std::optional<tt::tt_metal::Tensor const> const&, ttnn::operations::matmul::Matmul const&, std::optional<tt::tt_metal::Tensor>&)\n --- /home/container_app_user/tt-metal/build/lib/_ttnncpp.so(_ZN4ttnn10operations6matmul15LinearOperation6invokeERKN2tt8tt_metal6TensorES7_RKSt8optionalIS6_EbbRKS8_IKNS4_12MemoryConfigEES8_IKNS4_8DataTypeEERKS8_IKSt7variantIJNS1_28MatmulMultiCoreProgramConfigENS1_33MatmulMultiCoreReuseProgramConfigENS1_42MatmulMultiCoreReuseMultiCastProgramConfigENS1_44MatmulMultiCoreReuseMultiCast1DProgramConfigENS1_53MatmulMultiCoreReuseMultiCastDRAMShardedProgramConfigEEEERKS8_IKSK_IJNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_5unary19BasicUnaryWithParamIJfEEEEEES8_IKSK_IJNS_28GrayskullComputeKernelConfigENS_27WormholeComputeKernelConfigEEEES8_IKNS_5types8CoreGridEERKS8_IKNS4_4TileEES8_IS5_ERKS8_IKNS4_12experimental20GlobalCircularBufferEERKS8_IN4ttsl10StrongTypeIhNS4_14SubDeviceIdTagEEEE+0x21c) [0x7a025244da2c]\n --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x9152b0) [0x7a02532ed2b0]\n --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x8ed687) [0x7a02532c5687]\n --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x8ed371) [0x7a02532c5371]\n --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x529fbe) [0x7a0252f01fbe]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x18a942) [0x5d6657254942]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_MakeTpCall+0x25b) [0x5d665724b23b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x19867b) [0x5d665726267b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_Call+0x118) [0x5d66572631e8]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x29d58f) [0x5d665736758f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0xbb) [0x5d6657262fdb]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_FastCallDictTstate+0x16d) [0x5d665724a4ad]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_Call_Prepend+0x5c) [0x5d665725f4bc]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x29d564) [0x5d6657367564]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_MakeTpCall+0x25b) [0x5d665724b23b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6803) [0x5d66572456f3]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_FastCallDictTstate+0x16d) [0x5d665724a4ad]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_Call_Prepend+0x5c) [0x5d665725f4bc]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x29d564) [0x5d6657367564]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_MakeTpCall+0x25b) [0x5d665724b23b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6803) [0x5d66572456f3]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1984ee) [0x5d66572624ee]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6c0) [0x5d665723f5b0]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]\n --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]\n --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6c0) [0x5d665723f5b0]\n')
+ERROR 11-11 17:01:49 [engine.py:187] Traceback (most recent call last):
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/engine/multiprocessing/engine.py", line 185, in start
+ERROR 11-11 17:01:49 [engine.py:187]     self.run_engine_loop()
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/engine/multiprocessing/engine.py", line 248, in run_engine_loop
+ERROR 11-11 17:01:49 [engine.py:187]     request_outputs = self.engine_step()
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/engine/multiprocessing/engine.py", line 274, in engine_step
+ERROR 11-11 17:01:49 [engine.py:187]     raise e
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/engine/multiprocessing/engine.py", line 257, in engine_step
+ERROR 11-11 17:01:49 [engine.py:187]     return self.engine.step()
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/engine/llm_engine.py", line 1384, in step
+ERROR 11-11 17:01:49 [engine.py:187]     outputs = self.model_executor.execute_model(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/executor/executor_base.py", line 148, in execute_model
+ERROR 11-11 17:01:49 [engine.py:187]     output = self.collective_rpc("execute_model",
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/executor/uniproc_executor.py", line 58, in collective_rpc
+ERROR 11-11 17:01:49 [engine.py:187]     answer = run_method(self.driver_worker, method, args, kwargs)
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/utils/__init__.py", line 2990, in run_method
+ERROR 11-11 17:01:49 [engine.py:187]     return func(*args, **kwargs)
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/worker/tt_worker.py", line 356, in execute_model
+ERROR 11-11 17:01:49 [engine.py:187]     output = self.model_runner.execute_model(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+ERROR 11-11 17:01:49 [engine.py:187]     return func(*args, **kwargs)
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/worker/tt_model_runner.py", line 834, in execute_model
+ERROR 11-11 17:01:49 [engine.py:187]     next_token_ids = self._execute_model_single_step(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/vllm/vllm/worker/tt_model_runner.py", line 1023, in _execute_model_single_step
+ERROR 11-11 17:01:49 [engine.py:187]     outputs = self.model.prefill_forward(**execute_model_kwargs)
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/generator_vllm.py", line 403, in prefill_forward
+ERROR 11-11 17:01:49 [engine.py:187]     return super().prefill_forward_text(*args, **kwargs)
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/generator.py", line 252, in prefill_forward_text
+ERROR 11-11 17:01:49 [engine.py:187]     self.warmup_prefill_traces(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/generator.py", line 125, in warmup_prefill_traces
+ERROR 11-11 17:01:49 [engine.py:187]     self.prefill_forward_text(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/generator.py", line 312, in prefill_forward_text
+ERROR 11-11 17:01:49 [engine.py:187]     logits = self._easy_trace_prefill(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/generator.py", line 191, in _easy_trace_prefill
+ERROR 11-11 17:01:49 [engine.py:187]     trace_id, tt_out_trace, *device_inputs = self._capture_trace_prefill(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/generator.py", line 150, in _capture_trace_prefill
+ERROR 11-11 17:01:49 [engine.py:187]     tt_out_trace = self.model[model_id].ttnn_prefill_forward(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/model.py", line 386, in ttnn_prefill_forward
+ERROR 11-11 17:01:49 [engine.py:187]     return self.forward(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/model.py", line 493, in forward
+ERROR 11-11 17:01:49 [engine.py:187]     x = layer(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/common/lightweightmodule.py", line 12, in __call__
+ERROR 11-11 17:01:49 [engine.py:187]     return self.forward(*args, **kwargs)
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/decoder.py", line 272, in forward
+ERROR 11-11 17:01:49 [engine.py:187]     hidden_states = self.feed_forward.forward(hidden_states, mode)
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/models/tt_transformers/tt/mlp.py", line 125, in forward
+ERROR 11-11 17:01:49 [engine.py:187]     w1_out = ttnn.linear(
+ERROR 11-11 17:01:49 [engine.py:187]   File "/home/container_app_user/tt-metal/ttnn/ttnn/decorators.py", line 377, in __call__
+ERROR 11-11 17:01:49 [engine.py:187]     result = self.function(*function_args, **function_kwargs)
+ERROR 11-11 17:01:49 [engine.py:187] RuntimeError: TT_FATAL @ /home/container_app_user/tt-metal/tt_metal/impl/allocator/bank_manager.cpp:431: address.has_value()
+ERROR 11-11 17:01:49 [engine.py:187] info:
+ERROR 11-11 17:01:49 [engine.py:187] Out of Memory: Not enough space to allocate 29360128 B DRAM buffer across 12 banks, where each bank needs to store 2447360 B, but bank size is only 1021821792 B
+ERROR 11-11 17:01:49 [engine.py:187] backtrace:
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/build/lib/libtt_metal.so(+0x5b0f9d) [0x7a0250ab7f9d]
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::BankManager::allocate_buffer(unsigned long, unsigned long, bool, tt::tt_metal::CoreRangeSet const&, std::optional<unsigned int>, ttsl::StrongType<unsigned int, tt::tt_metal::AllocatorIDTag>)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::AllocatorImpl::allocate_buffer(tt::tt_metal::Buffer*)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::Buffer::allocate_impl()
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::Buffer::create(tt::tt_metal::IDevice*, unsigned long, unsigned long, tt::tt_metal::BufferType, tt::tt_metal::BufferShardingArgs const&, std::optional<bool>, std::optional<ttsl::StrongType<unsigned char, tt::tt_metal::SubDeviceIdTag> >)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::distributed::MeshBuffer::create(std::variant<tt::tt_metal::distributed::ReplicatedBufferConfig, tt::tt_metal::distributed::ShardedBufferConfig> const&, tt::tt_metal::distributed::DeviceLocalBufferConfig const&, tt::tt_metal::distributed::MeshDevice*, std::optional<unsigned long>)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::tensor_impl::allocate_device_buffer(tt::tt_metal::distributed::MeshDevice*, tt::tt_metal::TensorSpec const&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::allocate_tensor_on_device(tt::tt_metal::TensorSpec const&, tt::tt_metal::distributed::MeshDevice*)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::create_device_tensor(tt::tt_metal::TensorSpec const&, tt::tt_metal::IDevice*)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::operation::program_output_helper<ttnn::operations::matmul::Matmul, has_create_program<ttnn::operations::matmul::Matmul>::value>::type tt::tt_metal::operation::default_create_output_tensors<ttnn::operations::matmul::Matmul>(ttnn::operations::matmul::Matmul const&, std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > const&, std::vector<std::optional<tt::tt_metal::Tensor>, std::allocator<std::optional<tt::tt_metal::Tensor> > > const&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/build/lib/_ttnncpp.so(+0x129cade) [0x7a025245eade]
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::create_output_tensors(tt::tt_metal::operation::DeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > > const&, tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_args_t const&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_return_value_t ttnn::device_operation::detail::launch_on_device<tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > > >(tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::operation_attributes_t const&, tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_args_t const&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_return_value_t ttnn::device_operation::detail::invoke<tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > > >(tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::operation_attributes_t const&, tt::tt_metal::operation::OldInfraDeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >::tensor_args_t const&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/build/lib/_ttnncpp.so(+0x87336e) [0x7a0251a3536e]
+ERROR 11-11 17:01:49 [engine.py:187]  --- std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > tt::tt_metal::operation::run<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >(tt::tt_metal::operation::DeviceOperation<std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > >&&, std::vector<tt::tt_metal::Tensor, std::allocator<tt::tt_metal::Tensor> > const&, std::vector<std::optional<tt::tt_metal::Tensor const>, std::allocator<std::optional<tt::tt_metal::Tensor const> > > const&, std::vector<std::optional<tt::tt_metal::Tensor>, std::allocator<std::optional<tt::tt_metal::Tensor> > > const&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- ttnn::operations::matmul::matmul(tt::tt_metal::Tensor const&, tt::tt_metal::Tensor const&, std::optional<tt::tt_metal::Tensor const> const&, ttnn::operations::matmul::Matmul const&, std::optional<tt::tt_metal::Tensor> const&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- ttnn::operations::matmul::bound_matmul(tt::tt_metal::Tensor const&, tt::tt_metal::Tensor const&, std::optional<tt::tt_metal::Tensor const> const&, ttnn::operations::matmul::Matmul const&, std::optional<tt::tt_metal::Tensor>&)
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/build/lib/_ttnncpp.so(_ZN4ttnn10operations6matmul15LinearOperation6invokeERKN2tt8tt_metal6TensorES7_RKSt8optionalIS6_EbbRKS8_IKNS4_12MemoryConfigEES8_IKNS4_8DataTypeEERKS8_IKSt7variantIJNS1_28MatmulMultiCoreProgramConfigENS1_33MatmulMultiCoreReuseProgramConfigENS1_42MatmulMultiCoreReuseMultiCastProgramConfigENS1_44MatmulMultiCoreReuseMultiCast1DProgramConfigENS1_53MatmulMultiCoreReuseMultiCastDRAMShardedProgramConfigEEEERKS8_IKSK_IJNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_5unary19BasicUnaryWithParamIJfEEEEEES8_IKSK_IJNS_28GrayskullComputeKernelConfigENS_27WormholeComputeKernelConfigEEEES8_IKNS_5types8CoreGridEERKS8_IKNS4_4TileEES8_IS5_ERKS8_IKNS4_12experimental20GlobalCircularBufferEERKS8_IN4ttsl10StrongTypeIhNS4_14SubDeviceIdTagEEEE+0x21c) [0x7a025244da2c]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x9152b0) [0x7a02532ed2b0]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x8ed687) [0x7a02532c5687]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x8ed371) [0x7a02532c5371]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/ttnn/ttnn/_ttnn.so(+0x529fbe) [0x7a0252f01fbe]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x18a942) [0x5d6657254942]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_MakeTpCall+0x25b) [0x5d665724b23b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x19867b) [0x5d665726267b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_Call+0x118) [0x5d66572631e8]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x29d58f) [0x5d665736758f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0xbb) [0x5d6657262fdb]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_FastCallDictTstate+0x16d) [0x5d665724a4ad]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_Call_Prepend+0x5c) [0x5d665725f4bc]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x29d564) [0x5d6657367564]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_MakeTpCall+0x25b) [0x5d665724b23b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6803) [0x5d66572456f3]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_FastCallDictTstate+0x16d) [0x5d665724a4ad]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_Call_Prepend+0x5c) [0x5d665725f4bc]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x29d564) [0x5d6657367564]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyObject_MakeTpCall+0x25b) [0x5d665724b23b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6803) [0x5d66572456f3]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(PyObject_Call+0x122) [0x5d6657263042]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1984ee) [0x5d66572624ee]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6c0) [0x5d665723f5b0]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(+0x1983a1) [0x5d66572623a1]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x1987) [0x5d6657240877]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x285b) [0x5d665724174b]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x8af) [0x5d665723f79f]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyFunction_Vectorcall+0x7c) [0x5d66572551ac]
+ERROR 11-11 17:01:49 [engine.py:187]  --- /home/container_app_user/tt-metal/python_env/bin/python(_PyEval_EvalFrameDefault+0x6c0) [0x5d665723f5b0]
+ERROR 11-11 17:01:49 [engine.py:187] 
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1]
+DEBUG 11-11 17:01:49 client.py:176] Shutting down MQLLMEngineClient check health loop.
+DEBUG 11-11 17:01:49 client.py:261] Shutting down MQLLMEngineClient output handler.

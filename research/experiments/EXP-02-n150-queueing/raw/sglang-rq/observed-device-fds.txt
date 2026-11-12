@@ -1,0 +1,7 @@
+# NOT captured by lc.sh (device-fds.txt was added to lc.sh later): transcribed verbatim from the agent's ssh session,
+# 2026-11-10T03:48:21Z, pod n150-sglang-custom-pbgdz (k8s-llm-example n150/sglang-custom.yaml, unmodified), Ready since 03:47:41Z.
+# Per process in the pod: pid, number of open fds pointing to /dev/tenstorrent, command line (first 80 chars).
+1 tt_fds=0 python -c import sys / from models.tt_transformers.tt.generator import Generator / ... launch_tt_server import main / main() --model-path meta-llama/Llama-3.2-1B-Instruct --port 8000 --context-lengt
+80 tt_fds=0 /home/container_app_user/tt-metal/python_env/bin/python -c from multiprocessing.
+81 tt_fds=0 sglang::scheduler
+82 tt_fds=0 sglang::detokenizer

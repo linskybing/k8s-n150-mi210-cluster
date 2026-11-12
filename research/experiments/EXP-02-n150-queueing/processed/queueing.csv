@@ -1,0 +1,13 @@
+case,job,event,t_s
+a,n150-sglang-custom,submit,0.0
+a,n150-sglang-custom,admitted (Kueue event),61.546
+a,n150-sglang-custom,claim prepared (DRA plugin),62.084
+a,n150-sglang-custom,ready,104.623
+a,n150-llm,delete,60.457
+a,n150-llm,quota released,60.582
+a,n150-llm,claim gone,62.82
+a,n150-llm,claim unprepared (DRA plugin),61.733
+b,n150-job-a,start,0.0
+b,n150-job-a,complete,34.0
+b,n150-job-b,start,35.0
+b,n150-job-b,complete,68.0

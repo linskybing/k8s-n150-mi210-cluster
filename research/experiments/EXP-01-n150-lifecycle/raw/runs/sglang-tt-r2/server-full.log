@@ -1,0 +1,309 @@
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+WARNING:sglang.srt.server_args:The current platform does not support Intel AMX, will fallback to torch_native backend.
+[2026-11-10 04:25:29] server_args=ServerArgs(model_path='meta-llama/Llama-3.2-1B-Instruct', tokenizer_path='meta-llama/Llama-3.2-1B-Instruct', tokenizer_mode='auto', tokenizer_worker_num=1, skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=True, context_length=8192, is_embedding=False, enable_multimodal=None, revision=None, model_impl='auto', host='0.0.0.0', port=8000, fastapi_root_path='', grpc_mode=False, skip_server_warmup=False, warmups=None, nccl_port=None, checkpoint_engine_wait_weights_before_ready=False, dtype='auto', quantization=None, quantization_param_path=None, kv_cache_dtype='auto', enable_fp32_lm_head=False, modelopt_quant=None, modelopt_checkpoint_restore_path=None, modelopt_checkpoint_save_path=None, modelopt_export_path=None, quantize_and_serve=False, rl_quant_profile=None, mem_fraction_static=0.791, max_running_requests=32, max_queued_requests=None, max_total_tokens=131072, chunked_prefill_size=8192, enable_dynamic_chunking=False, max_prefill_tokens=16384, prefill_max_requests=None, schedule_policy='fcfs', enable_priority_scheduling=False, abort_on_priority_when_disabled=False, schedule_low_priority_values_first=False, priority_scheduling_preemption_threshold=10, schedule_conservativeness=1.0, page_size=64, swa_full_tokens_ratio=0.8, disable_hybrid_swa_memory=False, radix_eviction_policy='lru', enable_prefill_delayer=False, prefill_delayer_max_delay_passes=30, prefill_delayer_token_usage_low_watermark=None, prefill_delayer_forward_passes_buckets=None, prefill_delayer_wait_seconds_buckets=None, device='cpu', tp_size=1, pp_size=1, pp_max_micro_batch_size=None, pp_async_batch_depth=0, stream_interval=1, stream_output=False, random_seed=339793857, constrained_json_whitespace_pattern=None, constrained_json_disable_any_whitespace=False, watchdog_timeout=300, soft_watchdog_timeout=None, dist_timeout=None, download_dir=None, model_checksum=None, base_gpu_id=0, gpu_id_step=1, sleep_on_idle=False, custom_sigquit_handler=None, log_level='info', log_level_http=None, log_requests=False, log_requests_level=2, log_requests_format='text', log_requests_target=None, uvicorn_access_log_exclude_prefixes=[], crash_dump_folder=None, show_time_cost=False, enable_metrics=True, enable_metrics_for_all_schedulers=False, tokenizer_metrics_custom_labels_header='x-custom-labels', tokenizer_metrics_allowed_custom_labels=None, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, collect_tokens_histogram=False, prompt_tokens_buckets=None, generation_tokens_buckets=None, gc_warning_threshold_secs=0.0, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', export_metrics_to_file=False, export_metrics_to_file_dir=None, api_key=None, admin_api_key=None, served_model_name='meta-llama/Llama-3.2-1B-Instruct', weight_version='default', chat_template=None, hf_chat_template_name=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser=None, tool_call_parser=None, tool_server=None, sampling_defaults='model', dp_size=1, load_balance_method='round_robin', dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', preferred_sampling_params=None, enable_lora=None, enable_lora_overlap_loading=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loaded_loras=None, max_loras_per_batch=8, lora_eviction_policy='lru', lora_backend='csgmv', max_lora_chunk_size=16, attention_backend='torch_native', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='pytorch', grammar_backend='xgrammar', mm_attention_backend=None, fp8_gemm_runner_backend='auto', fp4_gemm_runner_backend='auto', nsa_prefill_backend='flashmla_sparse', nsa_decode_backend='fa3', disable_flashinfer_autotune=False, speculative_algorithm=None, speculative_draft_model_path=None, speculative_draft_model_revision=None, speculative_draft_load_format=None, speculative_num_steps=None, speculative_eagle_topk=None, speculative_num_draft_tokens=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, speculative_attention_mode='prefill', speculative_draft_attention_backend=None, speculative_moe_runner_backend='auto', speculative_moe_a2a_backend=None, speculative_draft_model_quantization=None, speculative_ngram_min_match_window_size=1, speculative_ngram_max_match_window_size=12, speculative_ngram_min_bfs_breadth=1, speculative_ngram_max_bfs_breadth=10, speculative_ngram_match_type='BFS', speculative_ngram_branch_length=18, speculative_ngram_capacity=10000000, enable_multi_layer_eagle=False, ep_size=1, moe_a2a_backend='none', moe_runner_backend='auto', flashinfer_mxfp4_moe_precision='default', enable_flashinfer_allreduce_fusion=False, deepep_mode='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm=None, init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, eplb_min_rebalancing_utilization_threshold=1.0, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, elastic_ep_backend=None, mooncake_ib_device=None, max_mamba_cache_size=None, mamba_ssm_dtype='float32', mamba_full_memory_ratio=0.9, mamba_scheduler_strategy='no_buffer', mamba_track_interval=256, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through', hicache_io_backend='kernel', hicache_mem_layout='layer_first', disable_hicache_numa_detect=False, hicache_storage_backend=None, hicache_storage_prefetch_policy='best_effort', hicache_storage_backend_extra_config=None, hierarchical_sparse_attention_extra_config=None, enable_lmcache=False, kt_weight_path=None, kt_method='AMXINT4', kt_cpuinfer=None, kt_threadpool_count=2, kt_num_gpu_experts=None, kt_max_deferred_experts_per_token=None, dllm_algorithm=None, dllm_algorithm_config=None, enable_double_sparsity=False, ds_channel_config_path=None, ds_heavy_channel_num=32, ds_heavy_token_num=256, ds_heavy_channel_type='qk', ds_sparse_decode_threshold=4096, cpu_offload_gb=0, offload_group_size=-1, offload_num_in_group=1, offload_prefetch_step=1, offload_mode='cpu', multi_item_scoring_delimiter=None, disable_radix_cache=False, cuda_graph_max_bs=256, cuda_graph_bs=[1, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256], disable_cuda_graph=False, disable_cuda_graph_padding=False, enable_profile_cuda_graph=False, enable_cudagraph_gc=False, enable_layerwise_nvtx_marker=False, enable_nccl_nvls=False, enable_symm_mem=False, disable_flashinfer_cutlass_moe_fp4_allgather=False, enable_tokenizer_batch_encode=False, disable_tokenizer_batch_decode=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=False, enable_mscclpp=False, enable_torch_symm_mem=False, disable_overlap_schedule=True, enable_mixed_chunk=False, enable_dp_attention=False, enable_dp_lm_head=False, enable_two_batch_overlap=False, enable_single_batch_overlap=False, tbo_token_distribution_threshold=0.48, enable_torch_compile=False, enable_piecewise_cuda_graph=False, enable_torch_compile_debug_mode=False, torch_compile_max_bs=32, piecewise_cuda_graph_max_tokens=8192, piecewise_cuda_graph_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192], piecewise_cuda_graph_compiler='eager', torchao_config='', enable_nan_detection=False, enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, triton_attention_split_tile_size=None, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, enable_weights_cpu_backup=False, enable_draft_weights_cpu_backup=False, allow_auto_truncate=False, enable_custom_logit_processor=False, flashinfer_mla_disable_ragged=False, disable_shared_experts_fusion=False, disable_chunked_prefix_cache=False, disable_fast_image_processor=False, keep_mm_feature_on_device=False, enable_return_hidden_states=False, enable_return_routed_experts=False, scheduler_recv_interval=1, numa_node=None, enable_deterministic_inference=False, rl_on_policy_target=None, enable_attn_tp_input_scattered=False, enable_nsa_prefill_context_parallel=False, nsa_prefill_cp_mode='in-seq-split', enable_fused_qk_norm_rope=False, enable_precise_embedding_interpolation=False, enable_dynamic_batch_tokenizer=False, dynamic_batch_tokenizer_batch_size=32, dynamic_batch_tokenizer_batch_timeout=0.002, debug_tensor_dump_output_folder=None, debug_tensor_dump_layers=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, disaggregation_mode='null', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=8998, disaggregation_decode_tp=None, disaggregation_decode_dp=None, disaggregation_prefill_pp=1, disaggregation_ib_device=None, disaggregation_decode_enable_offload_kvcache=False, disaggregation_decode_enable_fake_auto=False, num_reserved_decode_tokens=512, disaggregation_decode_polling_interval=1, encoder_only=False, language_only=False, encoder_transfer_backend='zmq_to_scheduler', encoder_urls=[], custom_weight_loader=[], weight_loader_disable_mmap=False, remote_instance_weight_loader_seed_instance_ip=None, remote_instance_weight_loader_seed_instance_service_port=None, remote_instance_weight_loader_send_weights_group_ports=None, remote_instance_weight_loader_backend='nccl', remote_instance_weight_loader_start_seed_via_transfer_engine=False, enable_pdmux=False, pdmux_config_path=None, sm_group_num=8, mm_max_concurrent_calls=32, mm_per_request_timeout=10.0, enable_broadcast_mm_inputs_process=False, enable_prefix_mm_cache=False, mm_enable_dp_encoder=False, mm_process_config={}, limit_mm_data_per_request=None, decrypted_config_file=None, decrypted_draft_config_file=None, forward_hooks=None)
+[2026-11-10 04:25:30] Using default HuggingFace chat template with detected content format: string
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+[2026-11-10 04:25:39] Init torch distributed begin.
+[2026-11-10 04:25:39] init_cpu_threads_env and shared memory based AllReduce is disabled, only intel amx backend and arm64 are supported
+[2026-11-10 04:25:39] Init torch distributed ends. mem usage=0.00 GB
+[2026-11-10 04:25:39] Load weight begin. avail mem=29.82 GB
+[2026-11-10 04:25:39] [TT-Plugin] Worker 0: TT_METAL_CACHE=/home/testuser/.cache/tt-metal-cache, TT_CACHE_PATH=/home/testuser/.cache/tt-metal-model-cache
+[2026-11-10 04:25:39] [TT-Plugin] Worker environment setup complete for dp_rank=0
+[2026-11-10 04:25:39] [TT-SGLANG] Model init: max_batch_size=32, max_seq_len=8192, page_size=64
+2026-11-10 04:25:39.617 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 04:25:39.617 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 04:25:39.621 | info     |          Device | Opening user mode device driver (tt_cluster.cpp:222)
+2026-11-10 04:25:39.624 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 04:25:39.624 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 04:25:39.636 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 04:25:39.637 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 04:25:39.640 | info     |             UMD | Harvesting masks for chip 0 tensix: 0x1 dram: 0x0 eth: 0x0 pcie: 0x0 l2cpu: 0x0 (cluster.cpp:331)
+2026-11-10 04:25:39.726 | info     |             UMD | Opening local chip ids/PCIe ids: {0}/[0] and remote chip ids {} (cluster.cpp:180)
+2026-11-10 04:25:39.726 | info     |             UMD | IOMMU: disabled (cluster.cpp:155)
+2026-11-10 04:25:39.726 | info     |             UMD | KMD version: 2.11.0 (cluster.cpp:158)
+2026-11-10 04:25:39.727 | info     |             UMD | Starting devices in cluster (cluster.cpp:964)
+2026-11-10 04:25:39.727 | info     |             UMD | Mapped hugepage 0x280000000 to NOC address 0x800000000 (silicon_sysmem_manager.cpp:217)
+[2026-11-10 04:25:39] Device 0: Found 1 available TTNN devices: [0]
+[2026-11-10 04:25:39] Device 0: Using default mesh shape (1, 1)
+[2026-11-10 04:25:39] Device 0: Single device, no fabric config needed
+2026-11-10 04:25:39.762 | info     |     Distributed | Using auto discovery to generate mesh graph. (metal_context.cpp:1061)
+2026-11-10 04:25:39.762 | info     |     Distributed | Constructing control plane using auto-discovery (no mesh graph descriptor). (metal_context.cpp:1028)
+2026-11-10 04:25:39.762 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 04:25:39.762 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 04:25:39.762 | info     |          Fabric | Starting multi-mesh mapping: 1 logical mesh(es) to 1 physical mesh(es) (topology_mapper_utils.cpp:936)
+2026-11-10 04:25:39.762 | info     |          Fabric | Multi-mesh mapping attempt 1/2: Trying inter-mesh mapping (topology_mapper_utils.cpp:989)
+2026-11-10 04:25:39.762 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 04:25:39.762 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 04:25:39.762 | info     |          Fabric | Attempt 1: Inter-mesh mapping succeeded, found 1 mesh pair(s) (topology_mapper_utils.cpp:1018)
+2026-11-10 04:25:39.762 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 04:25:39.762 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 1, backtracks: 0, memoization hits: 0. Required constraints satisfied: 0, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 04:25:39.762 | info     |          Fabric | Multi-mesh mapping succeeded after 1 attempt(s): 1 mesh pair(s) mapped (topology_mapper_utils.cpp:1155)
+2026-11-10 04:25:39.769 | info     |    BuildKernels | Skipping deleting built cache (build.cpp:123)
+[2026-11-10 04:25:39] Device 0: Successfully created multidevice with 1 devices
+2026-11-10T04:25:39.894699+0000 | __init__ | INFO - Inferring device name: N150
+2026-11-10T04:25:39.894996+0000 | __init__ | INFO - Checkpoint directory: meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:25:39.895040+0000 | __init__ | INFO - Tokenizer file: meta-llama/Llama-3.2-1B-Instruct/tokenizer.model
+2026-11-10T04:25:39.895063+0000 | __init__ | INFO - Cache directory: /home/testuser/.cache/tt-metal-model-cache/N150
+2026-11-10T04:25:39.895085+0000 | __init__ | INFO - Model name: Llama-3.2-1B-Instruct
+2026-11-10T04:25:40.105018+0000 | _set_params_from_dict | INFO - Model name from config: Llama-3.2-1B-Instruct
+2026-11-10T04:25:40.105609+0000 | create_tokenizer | INFO - Tokenizer path: meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:25:40.105658+0000 | create_tokenizer | INFO - Model name: Llama-3.2-1B-Instruct
+2026-11-10T04:25:40.105684+0000 | create_tokenizer | INFO - Base model name: Llama-3.2-1B
+2026-11-10T04:25:40.831446+0000 | create_tokenizer | INFO - Successfully loaded tokenizer from meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:25:42.990987+0000 | create_processor | INFO - Successfully loaded processor from meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:25:42.991772+0000 | __init__ | INFO - Attention grid: ttnn.CoreGrid(x=8, y=4)
+2026-11-10T04:25:42.991827+0000 | __init__ | INFO - MLP grid: ttnn.CoreGrid(x=8, y=8)
+2026-11-10T04:25:42.991863+0000 | __init__ | INFO - MLP prefill grids @ 32: w1/w3: (8, 8), w2: (8, 8)
+2026-11-10T04:25:42.991894+0000 | __init__ | INFO - MLP prefill grids @ max_seq_len(8192): w1/w3: (8, 8), w2: (8, 8)
+2026-11-10T04:25:42.991920+0000 | __init__ | INFO - LM head grid: ttnn.CoreGrid(x=8, y=8)
+`torch_dtype` is deprecated! Use `dtype` instead!
+  0%|          | 0/16 [00:00<?, ?it/s] 12%|█▎        | 2/16 [00:00<00:00, 18.69it/s] 25%|██▌       | 4/16 [00:00<00:00, 17.53it/s] 38%|███▊      | 6/16 [00:00<00:00, 17.24it/s] 50%|█████     | 8/16 [00:00<00:00, 17.05it/s] 62%|██████▎   | 10/16 [00:00<00:00, 16.98it/s] 75%|███████▌  | 12/16 [00:00<00:00, 17.04it/s] 88%|████████▊ | 14/16 [00:00<00:00, 17.14it/s]100%|██████████| 16/16 [00:00<00:00, 17.19it/s]100%|██████████| 16/16 [00:00<00:00, 17.20it/s]
+[2026-11-10 04:25:47] LlamaForCausalLM.initialize_sglang_model executed
+2026-11-10T04:25:47.860232+0000 | allocate_sglang_kv_cache | WARNING - [TT-METAL-SGLANG-LOG] allocate_sglang_kv_cache called in generator
+Allocating TT kv caches for each layer (submesh 1):   0%|          | 0/16 [00:00<?, ?it/s]Allocating TT kv caches for each layer (submesh 1):  31%|███▏      | 5/16 [00:00<00:00, 45.14it/s]Allocating TT kv caches for each layer (submesh 1):  62%|██████▎   | 10/16 [00:00<00:00, 45.86it/s]Allocating TT kv caches for each layer (submesh 1):  94%|█████████▍| 15/16 [00:00<00:00, 46.28it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 16/16 [00:00<00:00, 46.10it/s]
+[2026-11-10 04:25:48] Load weight end. type=TTLlamaForCausalLM, dtype=torch.bfloat16, avail mem=29.06 GB, mem usage=0.76 GB.
+[2026-11-10 04:25:48] Using KV cache dtype: torch.bfloat16
+[2026-11-10 04:25:50] KV Cache is allocated. #tokens: 131072, K size: 2.00 GB, V size: 2.00 GB
+[2026-11-10 04:25:50] Memory pool end. avail mem=25.18 GB
+[2026-11-10 04:25:51] max_total_num_tokens=131072, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=32, context_len=8192, available_cpu_mem=25.16 GB
+[2026-11-10 04:25:51] INFO:     Started server process [1]
+[2026-11-10 04:25:51] INFO:     Waiting for application startup.
+[2026-11-10 04:25:51] Using default chat sampling params from model generation config: {'repetition_penalty': 1.0, 'temperature': 0.6, 'top_k': 50, 'top_p': 0.9}
+[2026-11-10 04:25:51] Using default chat sampling params from model generation config: {'repetition_penalty': 1.0, 'temperature': 0.6, 'top_k': 50, 'top_p': 0.9}
+[2026-11-10 04:25:51] INFO:     Application startup complete.
+[2026-11-10 04:25:51] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-11-10 04:25:52] INFO:     127.0.0.1:50784 - "GET /model_info HTTP/1.1" 200 OK
+[2026-11-10 04:25:52] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:25:52.673328+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128
+2026-11-10T04:25:52.673593+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:25:52.673724+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:25:52.673808+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:25:52.900057+0000 | _capture_trace_prefill | INFO - Done Compiling Model
+2026-11-10T04:25:52.909596+0000 | _capture_trace_prefill | INFO - Done Capturing Prefill Trace
+2026-11-10 04:25:52.910 | warning  |           Metal | Allocating device buffers is unsafe due to the existence of an active trace. These buffers may be corrupted once a trace is executed. (allocator.cpp:105)
+2026-11-10T04:25:53.167500+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:25:53.167781+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:25:53.167965+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:25:53.168101+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:25:53.269596+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:25:53.269905+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:25:53.270106+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:25:53.270241+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:25:53.363220+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:25:53.363550+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:25:53.363748+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:25:53.363884+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:25:53.456861+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:25:53.457153+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:25:53.457339+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:25:53.457504+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:25:53.550425+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:25:53.550722+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: None
+2026-11-10T04:25:53.550916+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:25:53.551052+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:25:53.575051+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:25:53.575427+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024
+2026-11-10T04:25:53.575566+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:25:53.575719+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:25:53.575826+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:53.830452+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:25:53.830781+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:25:53.830982+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:25:53.831116+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:53.968119+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:25:53.968429+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:25:53.968641+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:25:53.968781+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:54.096965+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:25:54.097277+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:25:54.097499+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:25:54.097641+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:54.225941+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:25:54.226246+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:25:54.226452+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:25:54.226618+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:54.354746+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:25:54.355033+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: None
+2026-11-10T04:25:54.355223+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:25:54.355371+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:54.414295+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:25:54.414625+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048
+2026-11-10T04:25:54.414720+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:25:54.414829+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:25:54.414930+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:54.715941+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:25:54.716141+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:25:54.716281+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:25:54.716428+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:54.901413+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:25:54.901628+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:25:54.901769+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:25:54.901876+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:55.077828+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:25:55.078033+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:25:55.078176+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:25:55.078286+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:55.255000+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:25:55.255310+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:25:55.255549+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:25:55.255694+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:55.432401+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:25:55.432703+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: None
+2026-11-10T04:25:55.432923+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:25:55.433066+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:55.539767+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:25:55.540132+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096
+2026-11-10T04:25:55.540224+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:25:55.540337+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:25:55.540455+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:55.955072+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:25:55.955404+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:25:55.955627+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:25:55.955772+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:56.262432+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:25:56.262746+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:25:56.262944+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:25:56.263085+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:56.559590+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:25:56.559901+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:25:56.560099+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:25:56.560244+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:56.856874+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:25:56.857188+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:25:56.857398+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:25:56.857559+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:57.154172+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:25:57.154455+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: None
+2026-11-10T04:25:57.154665+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:25:57.154806+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:57.381791+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:25:57.382157+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192
+2026-11-10T04:25:57.382250+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:25:57.382376+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:25:57.382503+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:58.068096+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:25:58.068429+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:25:58.068643+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:25:58.068791+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:58.669877+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:25:58.670191+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:25:58.670406+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:25:58.670578+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[2026-11-10 04:25:58] INFO:     10.42.0.23:51244 - "GET /health HTTP/1.1" 503 Service Unavailable
+2026-11-10T04:25:59.260440+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:25:59.260763+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:25:59.260957+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:25:59.261100+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:25:59.853352+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:25:59.853684+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:25:59.853881+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:25:59.854024+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:26:00.444611+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:26:00.444886+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: None
+2026-11-10T04:26:00.445078+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:26:00.445225+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:26:00.966072+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:26:00.966452+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 7 tokens
+2026-11-10T04:26:00.967154+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:26:00.998286+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 7 tokens, Starting decode...
+2026-11-10T04:26:01.211316+0000 | _capture_decode_trace_text | INFO - Done Compiling Model
+2026-11-10T04:26:01.230929+0000 | _capture_decode_trace_text | INFO - Done Capturing Decode Trace
+[2026-11-10 04:26:02] INFO:     127.0.0.1:50792 - "POST /generate HTTP/1.1" 200 OK
+[2026-11-10 04:26:02] The server is fired up and ready to roll!
+[2026-11-10 04:26:08] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:26:08.968438+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:26:08.968661+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:26:08.994148+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:26:09] INFO:     10.42.0.23:58518 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:26:11] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:26:11.687097+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:26:11.687292+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:26:11.712084+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:26:12] INFO:     127.0.0.1:34994 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:26:12] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:26:12.702204+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:26:12.702404+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:26:12.726432+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:26:13] INFO:     127.0.0.1:34998 - "GET /health HTTP/1.1" 200 OK
+/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/fastapi/routing.py:120: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+  response = await f(request)
+[2026-11-10 04:26:13] INFO:     127.0.0.1:35004 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-11-10 04:26:13] Endpoint '/get_model_info' is deprecated and will be removed in a future version. Please use '/model_info' instead.
+[2026-11-10 04:26:13] INFO:     127.0.0.1:35008 - "GET /get_model_info HTTP/1.1" 200 OK
+[2026-11-10 04:26:13] Endpoint '/get_server_info' is deprecated and will be removed in a future version. Please use '/server_info' instead.
+[2026-11-10 04:26:13] INFO:     127.0.0.1:35010 - "GET /get_server_info HTTP/1.1" 200 OK
+[2026-11-10 04:26:14] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:26:14.021794+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 43 tokens
+2026-11-10T04:26:14.021988+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:26:14.046234+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 43 tokens, Starting decode...
+[2026-11-10 04:26:15] Decode batch, #running-req: 1, #token: 128, token usage: 0.00, cpu graph: False, gen throughput (token/s): 1.08, #queue-req: 0, 
+[2026-11-10 04:26:15] INFO:     127.0.0.1:35032 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-11-10 04:26:15] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:26:15.901771+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 43 tokens
+2026-11-10T04:26:15.901972+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:26:15.925933+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 43 tokens, Starting decode...
+[2026-11-10 04:26:16] Decode batch, #running-req: 1, #token: 128, token usage: 0.00, cpu graph: False, gen throughput (token/s): 27.00, #queue-req: 0, 
+[2026-11-10 04:26:18] INFO:     127.0.0.1:35044 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-11-10 04:26:18] INFO:     127.0.0.1:35048 - "GET /metrics HTTP/1.1" 200 OK
+[2026-11-10 04:26:18] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:26:18.968287+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:26:18.968521+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:26:18.999170+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...

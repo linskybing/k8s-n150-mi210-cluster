@@ -1,0 +1,171 @@
+{
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": {
+        "creationTimestamp": "2026-11-11T09:40:07Z",
+        "generation": 2,
+        "labels": {
+            "kueue.x-k8s.io/queue-name": "default"
+        },
+        "name": "n150-llm",
+        "namespace": "u-testuser",
+        "resourceVersion": "7475876",
+        "uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+    },
+    "spec": {
+        "backoffLimit": 0,
+        "completionMode": "NonIndexed",
+        "completions": 1,
+        "manualSelector": false,
+        "parallelism": 1,
+        "podReplacementPolicy": "TerminatingOrFailed",
+        "selector": {
+            "matchLabels": {
+                "batch.kubernetes.io/controller-uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+            }
+        },
+        "suspend": false,
+        "template": {
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/default-container": "vllm",
+                    "kueue.x-k8s.io/workload": "job-n150-llm-3d5b6"
+                },
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36",
+                    "batch.kubernetes.io/job-name": "n150-llm",
+                    "controller-uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36",
+                    "job-name": "n150-llm",
+                    "kueue.x-k8s.io/cluster-queue-name": "default",
+                    "kueue.x-k8s.io/local-queue-name": "default",
+                    "kueue.x-k8s.io/podset": "main"
+                }
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "args": [
+                            "--tt-device",
+                            "n150",
+                            "--no-auth"
+                        ],
+                        "env": [
+                            {
+                                "name": "RUNTIME_MODEL_SPEC_JSON_PATH",
+                                "value": "/spec/spec.json"
+                            },
+                            {
+                                "name": "HF_TOKEN",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "token",
+                                        "name": "hf-token"
+                                    }
+                                }
+                            }
+                        ],
+                        "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "vllm",
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/health",
+                                "port": 8000,
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "claims": [
+                                {
+                                    "name": "n150"
+                                }
+                            ],
+                            "limits": {
+                                "hugepages-1Gi": "1Gi"
+                            },
+                            "requests": {
+                                "hugepages-1Gi": "1Gi",
+                                "memory": "8Gi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/spec",
+                                "name": "spec"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "initContainers": [
+                    {
+                        "command": [
+                            "sh",
+                            "-c",
+                            "rm -f /dev/hugepages-1G/tenstorrent /dev/hugepages-1G/device_0_*tenstorrent"
+                        ],
+                        "image": "busybox:1.37",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "cleanup-hugepages",
+                        "resources": {
+                            "claims": [
+                                {
+                                    "name": "n150"
+                                }
+                            ]
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "resourceClaims": [
+                    {
+                        "name": "n150",
+                        "resourceClaimTemplateName": "n150"
+                    }
+                ],
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "supplementalGroups": [
+                        2150,
+                        993
+                    ]
+                },
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "configMap": {
+                            "defaultMode": 420,
+                            "name": "llm-spec-nowarm"
+                        },
+                        "name": "spec"
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "active": 1,
+        "conditions": [
+            {
+                "lastProbeTime": "2026-11-11T09:40:07Z",
+                "lastTransitionTime": "2026-11-11T09:40:07Z",
+                "message": "Job resumed",
+                "reason": "JobResumed",
+                "status": "False",
+                "type": "Suspended"
+            }
+        ],
+        "ready": 0,
+        "startTime": "2026-11-11T09:40:07Z",
+        "terminating": 0,
+        "uncountedTerminatedPods": {}
+    }
+}

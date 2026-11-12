@@ -1,0 +1,31 @@
+02:00.0 Processing accelerators [1200]: Tenstorrent Inc Wormhole [1e52:401e] (rev 01)
+	Region 0: Memory at 387800000000 (64-bit, prefetchable) [size=512M]
+	Region 2: Memory at 82000000 (32-bit, non-prefetchable) [size=1M]
+	Region 4: Memory at 387820000000 (64-bit, prefetchable) [size=32M]
+	Kernel driver in use: tenstorrent
+	Kernel modules: tenstorrent
+
+total 0
+crw-rw---- 1 root tenstorrent 235, 0 Oct 18 08:38 0
+drwxr-xr-x 2 root root            60 Oct 18 07:02 by-id
+
+tenstorrent!0
+/sys/class/tenstorrent/tenstorrent!0/tt_aiclk: 500
+/sys/class/tenstorrent/tenstorrent!0/tt_arcclk: 540
+/sys/class/tenstorrent/tenstorrent!0/tt_arc_fw_ver: 2.44.0.0
+/sys/class/tenstorrent/tenstorrent!0/tt_asic_id: 5A53CE0BD3F4A5B3
+/sys/class/tenstorrent/tenstorrent!0/tt_axiclk: 900
+/sys/class/tenstorrent/tenstorrent!0/tt_card_type: n150
+/sys/class/tenstorrent/tenstorrent!0/tt_eth_fw_ver: 7.5.0
+/sys/class/tenstorrent/tenstorrent!0/tt_fw_bundle_ver: 19.13.1.0
+/sys/class/tenstorrent/tenstorrent!0/tt_heartbeat: 20319509
+/sys/class/tenstorrent/tenstorrent!0/tt_m3app_fw_ver: 5.12.0.0
+/sys/class/tenstorrent/tenstorrent!0/tt_m3bl_fw_ver: 129.2.0.0
+/sys/class/tenstorrent/tenstorrent!0/tt_serial: 010001851172B001
+/sys/class/tenstorrent/tenstorrent!0/tt_ttflash_ver: 0.3.10.0
+
+filename:       /lib/modules/7.0.0-38-generic/updates/dkms/tenstorrent.ko.zst
+version:        2.11.0
+srcversion:     28CFF5A6678E4F2D87F6383
+vermagic:       7.0.0-38-generic SMP preempt mod_unload modversions 
+2.11.0

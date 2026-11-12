@@ -1,0 +1,1489 @@
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+WARNING:sglang.srt.server_args:The current platform does not support Intel AMX, will fallback to torch_native backend.
+[2026-11-10 04:26:40] server_args=ServerArgs(model_path='meta-llama/Llama-3.2-1B-Instruct', tokenizer_path='meta-llama/Llama-3.2-1B-Instruct', tokenizer_mode='auto', tokenizer_worker_num=1, skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=True, context_length=8192, is_embedding=False, enable_multimodal=None, revision=None, model_impl='auto', host='0.0.0.0', port=8000, fastapi_root_path='', grpc_mode=False, skip_server_warmup=False, warmups=None, nccl_port=None, checkpoint_engine_wait_weights_before_ready=False, dtype='auto', quantization=None, quantization_param_path=None, kv_cache_dtype='auto', enable_fp32_lm_head=False, modelopt_quant=None, modelopt_checkpoint_restore_path=None, modelopt_checkpoint_save_path=None, modelopt_export_path=None, quantize_and_serve=False, rl_quant_profile=None, mem_fraction_static=0.791, max_running_requests=32, max_queued_requests=None, max_total_tokens=131072, chunked_prefill_size=8192, enable_dynamic_chunking=False, max_prefill_tokens=16384, prefill_max_requests=None, schedule_policy='fcfs', enable_priority_scheduling=False, abort_on_priority_when_disabled=False, schedule_low_priority_values_first=False, priority_scheduling_preemption_threshold=10, schedule_conservativeness=1.0, page_size=64, swa_full_tokens_ratio=0.8, disable_hybrid_swa_memory=False, radix_eviction_policy='lru', enable_prefill_delayer=False, prefill_delayer_max_delay_passes=30, prefill_delayer_token_usage_low_watermark=None, prefill_delayer_forward_passes_buckets=None, prefill_delayer_wait_seconds_buckets=None, device='cpu', tp_size=1, pp_size=1, pp_max_micro_batch_size=None, pp_async_batch_depth=0, stream_interval=1, stream_output=False, random_seed=1021856869, constrained_json_whitespace_pattern=None, constrained_json_disable_any_whitespace=False, watchdog_timeout=300, soft_watchdog_timeout=None, dist_timeout=None, download_dir=None, model_checksum=None, base_gpu_id=0, gpu_id_step=1, sleep_on_idle=False, custom_sigquit_handler=None, log_level='info', log_level_http=None, log_requests=False, log_requests_level=2, log_requests_format='text', log_requests_target=None, uvicorn_access_log_exclude_prefixes=[], crash_dump_folder=None, show_time_cost=False, enable_metrics=True, enable_metrics_for_all_schedulers=False, tokenizer_metrics_custom_labels_header='x-custom-labels', tokenizer_metrics_allowed_custom_labels=None, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, collect_tokens_histogram=False, prompt_tokens_buckets=None, generation_tokens_buckets=None, gc_warning_threshold_secs=0.0, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', export_metrics_to_file=False, export_metrics_to_file_dir=None, api_key=None, admin_api_key=None, served_model_name='meta-llama/Llama-3.2-1B-Instruct', weight_version='default', chat_template=None, hf_chat_template_name=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser=None, tool_call_parser=None, tool_server=None, sampling_defaults='model', dp_size=1, load_balance_method='round_robin', dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', preferred_sampling_params=None, enable_lora=None, enable_lora_overlap_loading=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loaded_loras=None, max_loras_per_batch=8, lora_eviction_policy='lru', lora_backend='csgmv', max_lora_chunk_size=16, attention_backend='torch_native', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='pytorch', grammar_backend='xgrammar', mm_attention_backend=None, fp8_gemm_runner_backend='auto', fp4_gemm_runner_backend='auto', nsa_prefill_backend='flashmla_sparse', nsa_decode_backend='fa3', disable_flashinfer_autotune=False, speculative_algorithm=None, speculative_draft_model_path=None, speculative_draft_model_revision=None, speculative_draft_load_format=None, speculative_num_steps=None, speculative_eagle_topk=None, speculative_num_draft_tokens=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, speculative_attention_mode='prefill', speculative_draft_attention_backend=None, speculative_moe_runner_backend='auto', speculative_moe_a2a_backend=None, speculative_draft_model_quantization=None, speculative_ngram_min_match_window_size=1, speculative_ngram_max_match_window_size=12, speculative_ngram_min_bfs_breadth=1, speculative_ngram_max_bfs_breadth=10, speculative_ngram_match_type='BFS', speculative_ngram_branch_length=18, speculative_ngram_capacity=10000000, enable_multi_layer_eagle=False, ep_size=1, moe_a2a_backend='none', moe_runner_backend='auto', flashinfer_mxfp4_moe_precision='default', enable_flashinfer_allreduce_fusion=False, deepep_mode='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm=None, init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, eplb_min_rebalancing_utilization_threshold=1.0, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, elastic_ep_backend=None, mooncake_ib_device=None, max_mamba_cache_size=None, mamba_ssm_dtype='float32', mamba_full_memory_ratio=0.9, mamba_scheduler_strategy='no_buffer', mamba_track_interval=256, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through', hicache_io_backend='kernel', hicache_mem_layout='layer_first', disable_hicache_numa_detect=False, hicache_storage_backend=None, hicache_storage_prefetch_policy='best_effort', hicache_storage_backend_extra_config=None, hierarchical_sparse_attention_extra_config=None, enable_lmcache=False, kt_weight_path=None, kt_method='AMXINT4', kt_cpuinfer=None, kt_threadpool_count=2, kt_num_gpu_experts=None, kt_max_deferred_experts_per_token=None, dllm_algorithm=None, dllm_algorithm_config=None, enable_double_sparsity=False, ds_channel_config_path=None, ds_heavy_channel_num=32, ds_heavy_token_num=256, ds_heavy_channel_type='qk', ds_sparse_decode_threshold=4096, cpu_offload_gb=0, offload_group_size=-1, offload_num_in_group=1, offload_prefetch_step=1, offload_mode='cpu', multi_item_scoring_delimiter=None, disable_radix_cache=False, cuda_graph_max_bs=256, cuda_graph_bs=[1, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256], disable_cuda_graph=False, disable_cuda_graph_padding=False, enable_profile_cuda_graph=False, enable_cudagraph_gc=False, enable_layerwise_nvtx_marker=False, enable_nccl_nvls=False, enable_symm_mem=False, disable_flashinfer_cutlass_moe_fp4_allgather=False, enable_tokenizer_batch_encode=False, disable_tokenizer_batch_decode=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=False, enable_mscclpp=False, enable_torch_symm_mem=False, disable_overlap_schedule=True, enable_mixed_chunk=False, enable_dp_attention=False, enable_dp_lm_head=False, enable_two_batch_overlap=False, enable_single_batch_overlap=False, tbo_token_distribution_threshold=0.48, enable_torch_compile=False, enable_piecewise_cuda_graph=False, enable_torch_compile_debug_mode=False, torch_compile_max_bs=32, piecewise_cuda_graph_max_tokens=8192, piecewise_cuda_graph_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192], piecewise_cuda_graph_compiler='eager', torchao_config='', enable_nan_detection=False, enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, triton_attention_split_tile_size=None, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, enable_weights_cpu_backup=False, enable_draft_weights_cpu_backup=False, allow_auto_truncate=False, enable_custom_logit_processor=False, flashinfer_mla_disable_ragged=False, disable_shared_experts_fusion=False, disable_chunked_prefix_cache=False, disable_fast_image_processor=False, keep_mm_feature_on_device=False, enable_return_hidden_states=False, enable_return_routed_experts=False, scheduler_recv_interval=1, numa_node=None, enable_deterministic_inference=False, rl_on_policy_target=None, enable_attn_tp_input_scattered=False, enable_nsa_prefill_context_parallel=False, nsa_prefill_cp_mode='in-seq-split', enable_fused_qk_norm_rope=False, enable_precise_embedding_interpolation=False, enable_dynamic_batch_tokenizer=False, dynamic_batch_tokenizer_batch_size=32, dynamic_batch_tokenizer_batch_timeout=0.002, debug_tensor_dump_output_folder=None, debug_tensor_dump_layers=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, disaggregation_mode='null', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=8998, disaggregation_decode_tp=None, disaggregation_decode_dp=None, disaggregation_prefill_pp=1, disaggregation_ib_device=None, disaggregation_decode_enable_offload_kvcache=False, disaggregation_decode_enable_fake_auto=False, num_reserved_decode_tokens=512, disaggregation_decode_polling_interval=1, encoder_only=False, language_only=False, encoder_transfer_backend='zmq_to_scheduler', encoder_urls=[], custom_weight_loader=[], weight_loader_disable_mmap=False, remote_instance_weight_loader_seed_instance_ip=None, remote_instance_weight_loader_seed_instance_service_port=None, remote_instance_weight_loader_send_weights_group_ports=None, remote_instance_weight_loader_backend='nccl', remote_instance_weight_loader_start_seed_via_transfer_engine=False, enable_pdmux=False, pdmux_config_path=None, sm_group_num=8, mm_max_concurrent_calls=32, mm_per_request_timeout=10.0, enable_broadcast_mm_inputs_process=False, enable_prefix_mm_cache=False, mm_enable_dp_encoder=False, mm_process_config={}, limit_mm_data_per_request=None, decrypted_config_file=None, decrypted_draft_config_file=None, forward_hooks=None)
+[2026-11-10 04:26:41] Using default HuggingFace chat template with detected content format: string
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/awq.py:76: UserWarning: Only CUDA, HIP and XPU support AWQ currently.
+  warnings.warn(f"Only CUDA, HIP and XPU support AWQ currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/quantization/gguf.py:47: UserWarning: Only CUDA support GGUF quantization currently.
+  warnings.warn(f"Only CUDA support GGUF quantization currently.")
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.falcon_h1: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.glmasr: cannot import name 'GlmAsrConfig' from 'transformers' (/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/transformers/__init__.py)
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_nemotron: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.jet_vlm: No module named 'cuda'
+/home/testuser/tt-sglang/python/sglang/srt/layers/attention/fla/utils.py:215: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  warnings.warn(
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nano_nemotron_vl: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h: No module named 'cuda'
+WARNING:sglang.srt.models.registry:Ignore import error when loading sglang.srt.models.nemotron_h_mtp: No module named 'cuda'
+[2026-11-10 04:26:50] Init torch distributed begin.
+[2026-11-10 04:26:50] init_cpu_threads_env and shared memory based AllReduce is disabled, only intel amx backend and arm64 are supported
+[2026-11-10 04:26:50] Init torch distributed ends. mem usage=0.00 GB
+[2026-11-10 04:26:50] Load weight begin. avail mem=29.81 GB
+[2026-11-10 04:26:50] [TT-Plugin] Worker 0: TT_METAL_CACHE=/home/testuser/.cache/tt-metal-cache, TT_CACHE_PATH=/home/testuser/.cache/tt-metal-model-cache
+[2026-11-10 04:26:50] [TT-Plugin] Worker environment setup complete for dp_rank=0
+[2026-11-10 04:26:50] [TT-SGLANG] Model init: max_batch_size=32, max_seq_len=8192, page_size=64
+2026-11-10 04:26:50.967 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 04:26:50.967 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 04:26:50.971 | info     |          Device | Opening user mode device driver (tt_cluster.cpp:222)
+2026-11-10 04:26:50.974 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 04:26:50.974 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 04:26:50.986 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 04:26:50.986 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 04:26:50.990 | info     |             UMD | Harvesting masks for chip 0 tensix: 0x1 dram: 0x0 eth: 0x0 pcie: 0x0 l2cpu: 0x0 (cluster.cpp:331)
+2026-11-10 04:26:51.182 | info     |             UMD | Opening local chip ids/PCIe ids: {0}/[0] and remote chip ids {} (cluster.cpp:180)
+2026-11-10 04:26:51.182 | info     |             UMD | IOMMU: disabled (cluster.cpp:155)
+2026-11-10 04:26:51.182 | info     |             UMD | KMD version: 2.11.0 (cluster.cpp:158)
+2026-11-10 04:26:51.183 | info     |             UMD | Starting devices in cluster (cluster.cpp:964)
+2026-11-10 04:26:51.183 | info     |             UMD | Mapped hugepage 0x280000000 to NOC address 0x800000000 (silicon_sysmem_manager.cpp:217)
+[2026-11-10 04:26:51] Device 0: Found 1 available TTNN devices: [0]
+[2026-11-10 04:26:51] Device 0: Using default mesh shape (1, 1)
+[2026-11-10 04:26:51] Device 0: Single device, no fabric config needed
+2026-11-10 04:26:51.219 | info     |     Distributed | Using auto discovery to generate mesh graph. (metal_context.cpp:1061)
+2026-11-10 04:26:51.219 | info     |     Distributed | Constructing control plane using auto-discovery (no mesh graph descriptor). (metal_context.cpp:1028)
+2026-11-10 04:26:51.219 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 04:26:51.219 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 04:26:51.219 | info     |          Fabric | Starting multi-mesh mapping: 1 logical mesh(es) to 1 physical mesh(es) (topology_mapper_utils.cpp:936)
+2026-11-10 04:26:51.219 | info     |          Fabric | Multi-mesh mapping attempt 1/2: Trying inter-mesh mapping (topology_mapper_utils.cpp:989)
+2026-11-10 04:26:51.219 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 04:26:51.219 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 04:26:51.219 | info     |          Fabric | Attempt 1: Inter-mesh mapping succeeded, found 1 mesh pair(s) (topology_mapper_utils.cpp:1018)
+2026-11-10 04:26:51.219 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 04:26:51.219 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 1, backtracks: 0, memoization hits: 0. Required constraints satisfied: 0, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 04:26:51.219 | info     |          Fabric | Multi-mesh mapping succeeded after 1 attempt(s): 1 mesh pair(s) mapped (topology_mapper_utils.cpp:1155)
+2026-11-10 04:26:51.226 | info     |    BuildKernels | Skipping deleting built cache (build.cpp:123)
+[2026-11-10 04:26:51] Device 0: Successfully created multidevice with 1 devices
+2026-11-10T04:26:51.353141+0000 | __init__ | INFO - Inferring device name: N150
+2026-11-10T04:26:51.353435+0000 | __init__ | INFO - Checkpoint directory: meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:26:51.353508+0000 | __init__ | INFO - Tokenizer file: meta-llama/Llama-3.2-1B-Instruct/tokenizer.model
+2026-11-10T04:26:51.353533+0000 | __init__ | INFO - Cache directory: /home/testuser/.cache/tt-metal-model-cache/N150
+2026-11-10T04:26:51.353555+0000 | __init__ | INFO - Model name: Llama-3.2-1B-Instruct
+2026-11-10T04:26:51.557451+0000 | _set_params_from_dict | INFO - Model name from config: Llama-3.2-1B-Instruct
+2026-11-10T04:26:51.558023+0000 | create_tokenizer | INFO - Tokenizer path: meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:26:51.558071+0000 | create_tokenizer | INFO - Model name: Llama-3.2-1B-Instruct
+2026-11-10T04:26:51.558105+0000 | create_tokenizer | INFO - Base model name: Llama-3.2-1B
+2026-11-10T04:26:52.283589+0000 | create_tokenizer | INFO - Successfully loaded tokenizer from meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:26:54.204585+0000 | create_processor | INFO - Successfully loaded processor from meta-llama/Llama-3.2-1B-Instruct
+2026-11-10T04:26:54.205357+0000 | __init__ | INFO - Attention grid: ttnn.CoreGrid(x=8, y=4)
+2026-11-10T04:26:54.205410+0000 | __init__ | INFO - MLP grid: ttnn.CoreGrid(x=8, y=8)
+2026-11-10T04:26:54.205455+0000 | __init__ | INFO - MLP prefill grids @ 32: w1/w3: (8, 8), w2: (8, 8)
+2026-11-10T04:26:54.205501+0000 | __init__ | INFO - MLP prefill grids @ max_seq_len(8192): w1/w3: (8, 8), w2: (8, 8)
+2026-11-10T04:26:54.205525+0000 | __init__ | INFO - LM head grid: ttnn.CoreGrid(x=8, y=8)
+`torch_dtype` is deprecated! Use `dtype` instead!
+  0%|          | 0/16 [00:00<?, ?it/s] 12%|█▎        | 2/16 [00:00<00:00, 18.01it/s] 25%|██▌       | 4/16 [00:00<00:00, 17.32it/s] 38%|███▊      | 6/16 [00:00<00:00, 17.09it/s] 50%|█████     | 8/16 [00:00<00:00, 16.97it/s] 62%|██████▎   | 10/16 [00:00<00:00, 16.92it/s] 75%|███████▌  | 12/16 [00:00<00:00, 17.03it/s] 88%|████████▊ | 14/16 [00:00<00:00, 17.14it/s]100%|██████████| 16/16 [00:00<00:00, 17.24it/s]100%|██████████| 16/16 [00:00<00:00, 17.16it/s]
+[2026-11-10 04:26:58] LlamaForCausalLM.initialize_sglang_model executed
+2026-11-10T04:26:58.996417+0000 | allocate_sglang_kv_cache | WARNING - [TT-METAL-SGLANG-LOG] allocate_sglang_kv_cache called in generator
+Allocating TT kv caches for each layer (submesh 1):   0%|          | 0/16 [00:00<?, ?it/s]Allocating TT kv caches for each layer (submesh 1):  31%|███▏      | 5/16 [00:00<00:00, 45.22it/s]Allocating TT kv caches for each layer (submesh 1):  62%|██████▎   | 10/16 [00:00<00:00, 45.92it/s]Allocating TT kv caches for each layer (submesh 1):  94%|█████████▍| 15/16 [00:00<00:00, 46.09it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 16/16 [00:00<00:00, 45.95it/s]
+[2026-11-10 04:26:59] Load weight end. type=TTLlamaForCausalLM, dtype=torch.bfloat16, avail mem=29.03 GB, mem usage=0.78 GB.
+[2026-11-10 04:26:59] Using KV cache dtype: torch.bfloat16
+[2026-11-10 04:27:01] KV Cache is allocated. #tokens: 131072, K size: 2.00 GB, V size: 2.00 GB
+[2026-11-10 04:27:01] Memory pool end. avail mem=25.19 GB
+[2026-11-10 04:27:02] max_total_num_tokens=131072, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=32, context_len=8192, available_cpu_mem=25.19 GB
+[2026-11-10 04:27:02] INFO:     Started server process [1]
+[2026-11-10 04:27:02] INFO:     Waiting for application startup.
+[2026-11-10 04:27:02] Using default chat sampling params from model generation config: {'repetition_penalty': 1.0, 'temperature': 0.6, 'top_k': 50, 'top_p': 0.9}
+[2026-11-10 04:27:02] Using default chat sampling params from model generation config: {'repetition_penalty': 1.0, 'temperature': 0.6, 'top_k': 50, 'top_p': 0.9}
+[2026-11-10 04:27:02] INFO:     Application startup complete.
+[2026-11-10 04:27:02] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[2026-11-10 04:27:03] INFO:     127.0.0.1:50996 - "GET /model_info HTTP/1.1" 200 OK
+[2026-11-10 04:27:03] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:03.810083+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128
+2026-11-10T04:27:03.810272+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:27:03.810370+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:03.810467+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:04.040761+0000 | _capture_trace_prefill | INFO - Done Compiling Model
+2026-11-10T04:27:04.050302+0000 | _capture_trace_prefill | INFO - Done Capturing Prefill Trace
+2026-11-10 04:27:04.050 | warning  |           Metal | Allocating device buffers is unsafe due to the existence of an active trace. These buffers may be corrupted once a trace is executed. (allocator.cpp:105)
+2026-11-10T04:27:04.319974+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:27:04.320167+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:27:04.320309+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:04.320415+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:04.421517+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:27:04.421719+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:27:04.421853+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:04.421958+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:04.514568+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:27:04.514775+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:27:04.514928+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:04.515035+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:04.607653+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:27:04.607859+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:27:04.607994+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:04.608102+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:04.700726+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:27:04.700910+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 128 with sampling params: None
+2026-11-10T04:27:04.701043+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:04.701149+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:04.722979+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+2026-11-10T04:27:04.723146+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024
+2026-11-10T04:27:04.723218+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:27:04.723314+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:27:04.723388+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:04.972875+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:27:04.973087+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:27:04.973224+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:27:04.973331+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:05.110013+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:27:05.110239+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:27:05.110378+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:27:05.110509+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:05.238222+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:27:05.238428+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:27:05.238601+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:27:05.238714+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:05.366412+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:27:05.366642+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:27:05.366779+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:27:05.366889+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:05.494599+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:27:05.494789+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 1024 with sampling params: None
+2026-11-10T04:27:05.494924+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1024 tokens
+2026-11-10T04:27:05.495035+0000 | prefill_forward_text | INFO - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:05.552132+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1024 tokens, Starting decode...
+2026-11-10T04:27:05.552348+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048
+2026-11-10T04:27:05.552423+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:27:05.552537+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:27:05.552629+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:05.849681+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:27:05.849895+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:27:05.850042+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:27:05.850152+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:06.034981+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:27:06.035204+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:27:06.035342+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:27:06.035447+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:06.211724+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:27:06.211942+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:27:06.212089+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:27:06.212198+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:06.388357+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:27:06.388592+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:27:06.388733+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:27:06.388841+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:06.564953+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:27:06.565148+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 2048 with sampling params: None
+2026-11-10T04:27:06.565294+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 2048 tokens
+2026-11-10T04:27:06.565402+0000 | prefill_forward_text | INFO - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:06.670540+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 2048 tokens, Starting decode...
+2026-11-10T04:27:06.670793+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096
+2026-11-10T04:27:06.670870+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:27:06.670962+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:27:06.671051+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:07.083223+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:27:07.083434+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:27:07.083600+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:27:07.083710+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:07.389330+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:27:07.389562+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:27:07.389708+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:27:07.389823+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:07.685937+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:27:07.686161+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:27:07.686297+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:27:07.686407+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:07.983151+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:27:07.983361+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:27:07.983526+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:27:07.983643+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:08.280087+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:27:08.280292+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 4096 with sampling params: None
+2026-11-10T04:27:08.280429+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 4096 tokens
+2026-11-10T04:27:08.280567+0000 | prefill_forward_text | INFO - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:08.506076+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 4096 tokens, Starting decode...
+2026-11-10T04:27:08.506331+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192
+2026-11-10T04:27:08.506409+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+2026-11-10T04:27:08.506523+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:27:08.506619+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:09.191439+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:27:09.191679+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+2026-11-10T04:27:09.191821+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:27:09.191931+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:09.791712+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:27:09.791935+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+2026-11-10T04:27:09.792079+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:27:09.792208+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[2026-11-10 04:27:10] INFO:     10.42.0.23:37690 - "GET /health HTTP/1.1" 503 Service Unavailable
+2026-11-10T04:27:10.381756+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:27:10.381964+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+2026-11-10T04:27:10.382099+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:27:10.382228+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:10.972200+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:27:10.972413+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+2026-11-10T04:27:10.972577+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:27:10.972695+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:11.562423+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:27:11.562639+0000 | warmup_model_prefill | INFO - Warming up prefill for sequence length: 8192 with sampling params: None
+2026-11-10T04:27:11.562776+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 8192 tokens
+2026-11-10T04:27:11.562892+0000 | prefill_forward_text | INFO - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+2026-11-10T04:27:12.082761+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 8192 tokens, Starting decode...
+2026-11-10T04:27:12.083025+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 7 tokens
+2026-11-10T04:27:12.083135+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:12.105445+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 7 tokens, Starting decode...
+2026-11-10T04:27:12.317773+0000 | _capture_decode_trace_text | INFO - Done Compiling Model
+2026-11-10T04:27:12.334387+0000 | _capture_decode_trace_text | INFO - Done Capturing Decode Trace
+[2026-11-10 04:27:12] INFO:     127.0.0.1:51008 - "POST /generate HTTP/1.1" 200 OK
+[2026-11-10 04:27:12] The server is fired up and ready to roll!
+[2026-11-10 04:27:20] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:20.293559+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:27:20.293757+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:20.318261+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:27:21] INFO:     10.42.0.23:44194 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:27:22] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:22.969417+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:27:22.969630+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:22.993843+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:27:23] INFO:     127.0.0.1:40158 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:27:23] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:23.983978+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:27:23.984168+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:24.008634+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:27:24] INFO:     127.0.0.1:40164 - "GET /health HTTP/1.1" 200 OK
+/home/container_app_user/tt-metal/python_env/lib/python3.10/site-packages/fastapi/routing.py:120: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+  response = await f(request)
+[2026-11-10 04:27:24] INFO:     127.0.0.1:40180 - "GET /v1/models HTTP/1.1" 200 OK
+[2026-11-10 04:27:24] Endpoint '/get_model_info' is deprecated and will be removed in a future version. Please use '/model_info' instead.
+[2026-11-10 04:27:24] INFO:     127.0.0.1:40196 - "GET /get_model_info HTTP/1.1" 200 OK
+[2026-11-10 04:27:25] Endpoint '/get_server_info' is deprecated and will be removed in a future version. Please use '/server_info' instead.
+[2026-11-10 04:27:25] INFO:     127.0.0.1:40210 - "GET /get_server_info HTTP/1.1" 200 OK
+[2026-11-10 04:27:25] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:25.302807+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 43 tokens
+2026-11-10T04:27:25.303007+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:25.327086+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 43 tokens, Starting decode...
+[2026-11-10 04:27:26] INFO:     127.0.0.1:40230 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:26] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:26.513380+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 43 tokens
+2026-11-10T04:27:26.513560+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:26.535752+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 43 tokens, Starting decode...
+[2026-11-10 04:27:26] Decode batch, #running-req: 1, #token: 64, token usage: 0.00, cpu graph: False, gen throughput (token/s): 1.09, #queue-req: 0, 
+[2026-11-10 04:27:27] Decode batch, #running-req: 1, #token: 128, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.36, #queue-req: 0, 
+[2026-11-10 04:27:27] INFO:     127.0.0.1:40234 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:27] INFO:     127.0.0.1:40240 - "GET /metrics HTTP/1.1" 200 OK
+[2026-11-10 04:27:30] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:30.291367+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:27:30.291546+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:30.314059+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:27:31] INFO:     10.42.0.23:51542 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:27:38] INFO:     127.0.0.1:35130 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:38] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:38.750700+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:38.750848+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:38.772729+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:27:39] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 3.41, #queue-req: 0, 
+[2026-11-10 04:27:39] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.43, #queue-req: 0, 
+[2026-11-10 04:27:40] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.62, #queue-req: 0, 
+[2026-11-10 04:27:41] INFO:     10.42.0.23:50918 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:27:41] INFO:     127.0.0.1:35130 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:41] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:27:41] INFO:     127.0.0.1:35136 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:41] INFO:     127.0.0.1:35146 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:41] INFO:     127.0.0.1:35162 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:27:41.413696+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:27:41.413844+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:41.436326+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:27:41] Prefill batch, #new-seq: 3, #new-token: 384, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:27:41.449351+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:41.449466+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:41.450750+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:27:41.450862+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:41.451836+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:27:41.451946+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:41.513417+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:27:41] Decode batch, #running-req: 4, #token: 768, token usage: 0.01, cpu graph: False, gen throughput (token/s): 73.55, #queue-req: 0, 
+[2026-11-10 04:27:42] Decode batch, #running-req: 4, #token: 768, token usage: 0.01, cpu graph: False, gen throughput (token/s): 156.26, #queue-req: 0, 
+[2026-11-10 04:27:43] Decode batch, #running-req: 4, #token: 1024, token usage: 0.01, cpu graph: False, gen throughput (token/s): 149.07, #queue-req: 0, 
+[2026-11-10 04:27:50] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:50.291735+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:27:50.291887+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:50.314227+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:27:51] INFO:     10.42.0.23:50076 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:27:54] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:54] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:54.674516+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:27:54.674679+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:54.702540+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:27:54] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 13.57, #queue-req: 0, 
+[2026-11-10 04:27:55] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 47.80, #queue-req: 0, 
+[2026-11-10 04:27:56] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.36, #queue-req: 0, 
+[2026-11-10 04:27:57] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.09, #queue-req: 0, 
+[2026-11-10 04:27:57] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:27:57] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:27:57.483391+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:27:57.483564+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:27:57.505353+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:27:58] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 39.64, #queue-req: 0, 
+[2026-11-10 04:27:59] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 36.35, #queue-req: 0, 
+[2026-11-10 04:28:00] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 37.75, #queue-req: 0, 
+[2026-11-10 04:28:00] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:00] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:00.856065+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:00.856266+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:00.880546+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:01] INFO:     10.42.0.23:42172 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:28:01] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 36.74, #queue-req: 0, 
+[2026-11-10 04:28:02] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 36.32, #queue-req: 0, 
+[2026-11-10 04:28:03] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 41.84, #queue-req: 0, 
+[2026-11-10 04:28:04] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:04] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:04.098875+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:04.099027+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:04.121419+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:04] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 40.42, #queue-req: 0, 
+[2026-11-10 04:28:05] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 37.46, #queue-req: 0, 
+[2026-11-10 04:28:06] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 37.34, #queue-req: 0, 
+[2026-11-10 04:28:07] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:07] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:07.503722+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:07.503912+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:07.528057+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:07] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 36.10, #queue-req: 0, 
+[2026-11-10 04:28:09] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 37.73, #queue-req: 0, 
+[2026-11-10 04:28:10] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 37.47, #queue-req: 0, 
+[2026-11-10 04:28:10] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:10] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:10.996992+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:10.997194+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:11.022052+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:11] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 34.49, #queue-req: 0, 
+[2026-11-10 04:28:11] INFO:     10.42.0.23:35942 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:28:12] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 38.53, #queue-req: 0, 
+[2026-11-10 04:28:13] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 34.46, #queue-req: 0, 
+[2026-11-10 04:28:14] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:14] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:14.559945+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:14.560140+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:14.584460+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:14] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 33.67, #queue-req: 0, 
+[2026-11-10 04:28:15] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 38.36, #queue-req: 0, 
+[2026-11-10 04:28:16] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 38.81, #queue-req: 0, 
+[2026-11-10 04:28:17] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 39.05, #queue-req: 0, 
+[2026-11-10 04:28:17] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:17] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:17.871781+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:17.871970+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:17.895689+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:18] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 35.33, #queue-req: 0, 
+[2026-11-10 04:28:19] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 41.52, #queue-req: 0, 
+[2026-11-10 04:28:20] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 42.37, #queue-req: 0, 
+[2026-11-10 04:28:21] INFO:     127.0.0.1:50752 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:21] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:21.057046+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:21.057193+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:21.079540+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:21] INFO:     10.42.0.23:41792 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:28:21] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 42.70, #queue-req: 0, 
+[2026-11-10 04:28:22] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.85, #queue-req: 0, 
+[2026-11-10 04:28:23] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 35.88, #queue-req: 0, 
+[2026-11-10 04:28:30] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:30.292110+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:28:30.292261+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:30.314555+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:28:31] INFO:     10.42.0.23:56788 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:28:34] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:34] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:34.311404+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:34.311572+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:34.340816+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:34] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 3.57, #queue-req: 0, 
+[2026-11-10 04:28:35] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 42.22, #queue-req: 0, 
+[2026-11-10 04:28:36] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.16, #queue-req: 0, 
+[2026-11-10 04:28:37] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:37] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:37.237334+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:28:37.237497+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:37.259755+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:28:37] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 43.79, #queue-req: 0, 
+[2026-11-10 04:28:38] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.09, #queue-req: 0, 
+[2026-11-10 04:28:39] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.23, #queue-req: 0, 
+[2026-11-10 04:28:40] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:40] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:40.149919+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:40.150063+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:40.171916+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:40] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 43.24, #queue-req: 0, 
+[2026-11-10 04:28:41] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.72, #queue-req: 0, 
+[2026-11-10 04:28:41] INFO:     10.42.0.23:49972 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:28:41] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.77, #queue-req: 0, 
+[2026-11-10 04:28:42] Decode batch, #running-req: 1, #token: 0, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.68, #queue-req: 0, 
+[2026-11-10 04:28:42] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:42] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:42.753265+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:42.753410+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:42.775278+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:43] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 47.76, #queue-req: 0, 
+[2026-11-10 04:28:44] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.42, #queue-req: 0, 
+[2026-11-10 04:28:45] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.95, #queue-req: 0, 
+[2026-11-10 04:28:45] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:45] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:45.343444+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:45.343627+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:45.365508+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:46] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 47.08, #queue-req: 0, 
+[2026-11-10 04:28:46] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.43, #queue-req: 0, 
+[2026-11-10 04:28:47] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 47.36, #queue-req: 0, 
+[2026-11-10 04:28:47] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:47] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:47.989574+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:47.989730+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:48.011471+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:48] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 47.29, #queue-req: 0, 
+[2026-11-10 04:28:49] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.83, #queue-req: 0, 
+[2026-11-10 04:28:50] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.21, #queue-req: 0, 
+[2026-11-10 04:28:50] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:50] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:50.634047+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:50.634195+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:50.655974+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:51] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 45.09, #queue-req: 0, 
+[2026-11-10 04:28:51] INFO:     10.42.0.23:43450 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:28:51] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.59, #queue-req: 0, 
+[2026-11-10 04:28:52] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.28, #queue-req: 0, 
+[2026-11-10 04:28:53] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:53] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:53.720686+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:53.720831+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:53.748025+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:54] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 31.81, #queue-req: 0, 
+[2026-11-10 04:28:54] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 43.89, #queue-req: 0, 
+[2026-11-10 04:28:55] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 42.49, #queue-req: 0, 
+[2026-11-10 04:28:56] INFO:     127.0.0.1:60064 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:28:56] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:28:56.911252+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:28:56.911460+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:28:56.941713+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:28:57] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 33.41, #queue-req: 0, 
+[2026-11-10 04:28:58] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 37.12, #queue-req: 0, 
+[2026-11-10 04:28:59] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 39.84, #queue-req: 0, 
+[2026-11-10 04:29:00] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 37.44, #queue-req: 0, 
+[2026-11-10 04:29:00] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:00.292258+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:29:00.292453+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:00.316589+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:29:01] INFO:     10.42.0.23:42624 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:29:08] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:08] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:08.910167+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:08.910366+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:08.934106+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:09] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 4.13, #queue-req: 0, 
+[2026-11-10 04:29:10] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.70, #queue-req: 0, 
+[2026-11-10 04:29:11] INFO:     10.42.0.23:37464 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:29:11] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.09, #queue-req: 0, 
+[2026-11-10 04:29:11] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:11] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:11.726791+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:29:11.726944+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:11.749294+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:29:12] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.14, #queue-req: 0, 
+[2026-11-10 04:29:13] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 42.90, #queue-req: 0, 
+[2026-11-10 04:29:14] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 45.76, #queue-req: 0, 
+[2026-11-10 04:29:14] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:14] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:14.585683+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:14.585830+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:14.612505+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:15] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 43.42, #queue-req: 0, 
+[2026-11-10 04:29:16] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 41.45, #queue-req: 0, 
+[2026-11-10 04:29:17] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 41.97, #queue-req: 0, 
+[2026-11-10 04:29:17] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:17] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:17.596989+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:17.597135+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:17.626457+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:18] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 39.84, #queue-req: 0, 
+[2026-11-10 04:29:19] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 40.68, #queue-req: 0, 
+[2026-11-10 04:29:19] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 45.03, #queue-req: 0, 
+[2026-11-10 04:29:20] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:20] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:20.605259+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:20.605413+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:20.633955+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:20] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 42.46, #queue-req: 0, 
+[2026-11-10 04:29:21] INFO:     10.42.0.23:39268 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:29:21] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.51, #queue-req: 0, 
+[2026-11-10 04:29:22] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.03, #queue-req: 0, 
+[2026-11-10 04:29:23] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:23] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:23.523555+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:23.523708+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:23.546008+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:23] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 42.55, #queue-req: 0, 
+[2026-11-10 04:29:24] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 43.65, #queue-req: 0, 
+[2026-11-10 04:29:25] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.43, #queue-req: 0, 
+[2026-11-10 04:29:26] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.45, #queue-req: 0, 
+[2026-11-10 04:29:26] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:26] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:26.428886+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:26.429033+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:26.451449+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:27] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.64, #queue-req: 0, 
+[2026-11-10 04:29:28] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.15, #queue-req: 0, 
+[2026-11-10 04:29:28] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.42, #queue-req: 0, 
+[2026-11-10 04:29:29] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:29] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:29.118448+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:29.118613+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:29.140873+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:29] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.72, #queue-req: 0, 
+[2026-11-10 04:29:30] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.61, #queue-req: 0, 
+[2026-11-10 04:29:31] INFO:     10.42.0.23:44858 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:29:31] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.64, #queue-req: 0, 
+[2026-11-10 04:29:31] INFO:     127.0.0.1:39636 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:31] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:31.844194+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:31.844337+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:31.872720+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:32] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 44.96, #queue-req: 0, 
+[2026-11-10 04:29:33] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 45.66, #queue-req: 0, 
+[2026-11-10 04:29:34] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 47.75, #queue-req: 0, 
+[2026-11-10 04:29:40] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:40.292582+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:29:40.292742+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:40.314598+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:29:41] INFO:     10.42.0.23:38136 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:29:44] INFO:     127.0.0.1:49260 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:44] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:29:44.617858+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:29:44.618007+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:44.639816+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:29:44] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 3.67, #queue-req: 0, 
+[2026-11-10 04:29:45] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.67, #queue-req: 0, 
+[2026-11-10 04:29:46] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 49.68, #queue-req: 0, 
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49260 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:47] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49266 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:29:47.216645+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49282 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:29:47.216797+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49284 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49300 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49308 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49318 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:47] INFO:     127.0.0.1:49320 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:29:47.238526+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:29:47] Prefill batch, #new-seq: 7, #new-token: 448, #cached-token: 448, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:29:47.264183+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:29:47.264310+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:47.265621+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 64 tokens
+2026-11-10T04:29:47.265740+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:47.266718+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 64 tokens
+2026-11-10T04:29:47.266823+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:47.267599+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 64 tokens
+2026-11-10T04:29:47.267713+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:47.268644+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 64 tokens
+2026-11-10T04:29:47.268761+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:47.269757+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 64 tokens
+2026-11-10T04:29:47.269863+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:47.270851+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 64 tokens
+2026-11-10T04:29:47.270959+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:47.419469+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:29:47] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 83.62, #queue-req: 0, 
+[2026-11-10 04:29:49] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 243.51, #queue-req: 0, 
+[2026-11-10 04:29:50] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 223.16, #queue-req: 0, 
+[2026-11-10 04:29:51] INFO:     10.42.0.23:36142 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49284 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:51] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49300 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49320 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49266 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49282 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49308 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:29:51.766078+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:51.766222+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49318 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:29:51] INFO:     127.0.0.1:49260 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:29:51.788505+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:51] Prefill batch, #new-seq: 7, #new-token: 896, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:29:51.814082+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:29:51.814213+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:51.815519+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:29:51.815629+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:51.816524+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:29:51.816632+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:51.817606+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 128 tokens
+2026-11-10T04:29:51.817721+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:51.818527+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 128 tokens
+2026-11-10T04:29:51.818632+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:51.819608+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 128 tokens
+2026-11-10T04:29:51.819719+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:51.820715+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 128 tokens
+2026-11-10T04:29:51.820820+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:29:51.961240+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:29:51] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 207.59, #queue-req: 0, 
+[2026-11-10 04:29:53] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 247.18, #queue-req: 0, 
+[2026-11-10 04:29:54] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 249.21, #queue-req: 0, 
+[2026-11-10 04:29:55] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 250.60, #queue-req: 0, 
+[2026-11-10 04:30:00] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:00.292058+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:30:00.292209+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:00.319942+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:30:01] INFO:     10.42.0.23:36612 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:30:06] INFO:     127.0.0.1:42282 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:06] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:06.056643+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:06.056804+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:06.079172+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:06] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 7.48, #queue-req: 0, 
+[2026-11-10 04:30:07] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 40.73, #queue-req: 0, 
+[2026-11-10 04:30:08] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 40.75, #queue-req: 0, 
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42282 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:09] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:09.068063+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42292 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:30:09.068213+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42298 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42308 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42320 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42330 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42336 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:09] INFO:     127.0.0.1:42346 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:30:09.090143+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:09] Prefill batch, #new-seq: 7, #new-token: 448, #cached-token: 448, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:30:09.115598+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:09.115739+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:09.116943+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 64 tokens
+2026-11-10T04:30:09.117055+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:09.118038+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 64 tokens
+2026-11-10T04:30:09.118148+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:09.123621+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 64 tokens
+2026-11-10T04:30:09.123753+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:09.124662+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 64 tokens
+2026-11-10T04:30:09.124777+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:09.125762+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 64 tokens
+2026-11-10T04:30:09.125867+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:09.126837+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 64 tokens
+2026-11-10T04:30:09.126943+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:09.262080+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:10] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 164.14, #queue-req: 0, 
+[2026-11-10 04:30:11] INFO:     10.42.0.23:40966 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:30:11] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 245.37, #queue-req: 0, 
+[2026-11-10 04:30:12] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 217.50, #queue-req: 0, 
+[2026-11-10 04:30:13] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42282 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42292 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42308 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42346 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42320 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42336 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42330 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:13] INFO:     127.0.0.1:42298 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:30:13.818680+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:30:13.818883+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:13.843409+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:30:13] Prefill batch, #new-seq: 7, #new-token: 896, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:30:13.870181+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:30:13.870350+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:13.871972+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:30:13.872093+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:13.873261+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:30:13.873377+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:13.874832+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 128 tokens
+2026-11-10T04:30:13.874948+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:13.876117+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 128 tokens
+2026-11-10T04:30:13.876232+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:13.877563+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 128 tokens
+2026-11-10T04:30:13.877676+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:13.879130+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 128 tokens
+2026-11-10T04:30:13.879248+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:14.035204+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:30:15] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 153.53, #queue-req: 0, 
+[2026-11-10 04:30:16] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 211.94, #queue-req: 0, 
+[2026-11-10 04:30:18] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 195.21, #queue-req: 0, 
+[2026-11-10 04:30:20] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:20.292787+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:30:20.292991+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:20.316415+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:30:21] INFO:     10.42.0.23:33164 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:30:29] INFO:     127.0.0.1:56684 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:29] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:29.181307+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:29.181523+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:29.206013+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:29] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 20.05, #queue-req: 0, 
+[2026-11-10 04:30:30] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 32.85, #queue-req: 0, 
+[2026-11-10 04:30:31] INFO:     10.42.0.23:37062 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:30:32] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 32.48, #queue-req: 0, 
+[2026-11-10 04:30:32] INFO:     127.0.0.1:56684 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:32] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:30:32] INFO:     127.0.0.1:54790 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:32] INFO:     127.0.0.1:54796 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:32] INFO:     127.0.0.1:54800 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:30:32.937708+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:32.937859+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:30:32] INFO:     127.0.0.1:54816 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:32] INFO:     127.0.0.1:54820 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:32] INFO:     127.0.0.1:54832 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:32] INFO:     127.0.0.1:54838 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:30:32.960154+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:32] Prefill batch, #new-seq: 7, #new-token: 448, #cached-token: 448, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:30:32.985979+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:32.986108+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:32.987396+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 64 tokens
+2026-11-10T04:30:32.987525+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:32.988463+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 64 tokens
+2026-11-10T04:30:32.988592+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:32.989583+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 64 tokens
+2026-11-10T04:30:32.989695+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:32.990529+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 64 tokens
+2026-11-10T04:30:32.990638+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:32.991608+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 64 tokens
+2026-11-10T04:30:32.991718+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:32.992711+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 64 tokens
+2026-11-10T04:30:32.992825+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:33.133648+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:33] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 64.50, #queue-req: 0, 
+[2026-11-10 04:30:34] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 243.58, #queue-req: 0, 
+[2026-11-10 04:30:36] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 186.69, #queue-req: 0, 
+[2026-11-10 04:30:37] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 225.76, #queue-req: 0, 
+[2026-11-10 04:30:37] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:30:37] INFO:     127.0.0.1:54816 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:37] INFO:     127.0.0.1:54832 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:37] INFO:     127.0.0.1:54838 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:37] INFO:     127.0.0.1:54800 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:37] INFO:     127.0.0.1:56684 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:37] INFO:     127.0.0.1:54790 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:37] INFO:     127.0.0.1:54820 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:37] INFO:     127.0.0.1:54796 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:30:37.824075+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:30:37.824218+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:37.846506+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:30:37] Prefill batch, #new-seq: 7, #new-token: 896, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:30:37.876548+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:30:37.876691+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:37.878025+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:30:37.878137+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:37.879070+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:30:37.879180+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:37.880152+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 128 tokens
+2026-11-10T04:30:37.880263+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:37.881242+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 128 tokens
+2026-11-10T04:30:37.881352+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:37.882268+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 128 tokens
+2026-11-10T04:30:37.882376+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:37.883360+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 128 tokens
+2026-11-10T04:30:37.883472+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:38.024361+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:30:39] Decode batch, #running-req: 8, #token: 1536, token usage: 0.01, cpu graph: False, gen throughput (token/s): 201.58, #queue-req: 0, 
+[2026-11-10 04:30:40] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 242.07, #queue-req: 0, 
+[2026-11-10 04:30:41] INFO:     10.42.0.23:47194 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:30:41] Decode batch, #running-req: 8, #token: 2048, token usage: 0.02, cpu graph: False, gen throughput (token/s): 249.63, #queue-req: 0, 
+[2026-11-10 04:30:50] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:50.292229+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:30:50.292382+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:50.314683+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:30:51] INFO:     10.42.0.23:57350 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:30:52] INFO:     127.0.0.1:48342 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:52] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:52.200186+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:52.200335+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:52.222729+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:52] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 8.80, #queue-req: 0, 
+[2026-11-10 04:30:53] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 46.31, #queue-req: 0, 
+[2026-11-10 04:30:54] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 48.29, #queue-req: 0, 
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48342 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:30:54.899964+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:54.900104+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.922491+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:30:54] Prefill batch, #new-seq: 10, #new-token: 768, #cached-token: 512, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48358 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48366 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48378 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48380 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48386 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48402 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48410 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48426 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48442 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48454 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48462 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48472 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48482 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48496 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48502 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48512 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48526 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48532 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48548 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48562 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48578 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48586 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48600 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48614 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48626 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48634 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48646 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48654 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48660 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:30:54] INFO:     127.0.0.1:48672 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:30:54.957446+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:30:54.957604+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.958902+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 64 tokens
+2026-11-10T04:30:54.959016+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.960016+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 64 tokens
+2026-11-10T04:30:54.960124+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.960988+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 64 tokens
+2026-11-10T04:30:54.961096+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.962114+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 64 tokens
+2026-11-10T04:30:54.962221+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.963200+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 64 tokens
+2026-11-10T04:30:54.963307+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.964287+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 64 tokens
+2026-11-10T04:30:54.964395+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.965381+0000 | prefill_forward_text | INFO - Prefilling User 8 up to 64 tokens
+2026-11-10T04:30:54.965507+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.966496+0000 | prefill_forward_text | INFO - Prefilling User 9 up to 128 tokens
+2026-11-10T04:30:54.966603+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:54.967601+0000 | prefill_forward_text | INFO - Prefilling User 10 up to 128 tokens
+2026-11-10T04:30:54.967710+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.166833+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:30:55] Prefill batch, #new-seq: 21, #new-token: 2240, #cached-token: 448, token usage: 0.01, #running-req: 11, #queue-req: 0, 
+2026-11-10T04:30:55.241190+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:30:55.241364+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.242763+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:30:55.242884+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.243897+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:30:55.244007+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.245010+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 128 tokens
+2026-11-10T04:30:55.245121+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.246119+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 128 tokens
+2026-11-10T04:30:55.246228+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.247227+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 128 tokens
+2026-11-10T04:30:55.247337+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.248341+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 64 tokens
+2026-11-10T04:30:55.248453+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.249460+0000 | prefill_forward_text | INFO - Prefilling User 8 up to 64 tokens
+2026-11-10T04:30:55.249590+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.250575+0000 | prefill_forward_text | INFO - Prefilling User 9 up to 64 tokens
+2026-11-10T04:30:55.250683+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.251674+0000 | prefill_forward_text | INFO - Prefilling User 10 up to 64 tokens
+2026-11-10T04:30:55.251790+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.252768+0000 | prefill_forward_text | INFO - Prefilling User 11 up to 64 tokens
+2026-11-10T04:30:55.252875+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.253869+0000 | prefill_forward_text | INFO - Prefilling User 12 up to 64 tokens
+2026-11-10T04:30:55.253980+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.254991+0000 | prefill_forward_text | INFO - Prefilling User 13 up to 64 tokens
+2026-11-10T04:30:55.255102+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.256094+0000 | prefill_forward_text | INFO - Prefilling User 14 up to 128 tokens
+2026-11-10T04:30:55.256200+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.257221+0000 | prefill_forward_text | INFO - Prefilling User 15 up to 128 tokens
+2026-11-10T04:30:55.257330+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.258310+0000 | prefill_forward_text | INFO - Prefilling User 16 up to 128 tokens
+2026-11-10T04:30:55.258419+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.259423+0000 | prefill_forward_text | INFO - Prefilling User 17 up to 128 tokens
+2026-11-10T04:30:55.259548+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.260562+0000 | prefill_forward_text | INFO - Prefilling User 18 up to 128 tokens
+2026-11-10T04:30:55.260670+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.261679+0000 | prefill_forward_text | INFO - Prefilling User 19 up to 128 tokens
+2026-11-10T04:30:55.261796+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.262792+0000 | prefill_forward_text | INFO - Prefilling User 20 up to 128 tokens
+2026-11-10T04:30:55.262903+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.263888+0000 | prefill_forward_text | INFO - Prefilling User 21 up to 128 tokens
+2026-11-10T04:30:55.263994+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:30:55.680147+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:30:57] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 283.90, #queue-req: 0, 
+[2026-11-10 04:31:00] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 420.58, #queue-req: 0, 
+[2026-11-10 04:31:01] INFO:     10.42.0.23:35948 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:31:03] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 419.78, #queue-req: 0, 
+[2026-11-10 04:31:05] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48526 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48586 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:31:05.320122+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:31:05.320316+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48548 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48600 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48562 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48402 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48472 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48454 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48634 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48366 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48386 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48442 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48378 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48410 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48482 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48512 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48672 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48502 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48578 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48626 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48342 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48496 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48426 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48432 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48654 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48358 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48462 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48532 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48646 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48660 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48614 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:05] INFO:     127.0.0.1:48380 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:31:05.344674+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:31:05] Prefill batch, #new-seq: 31, #new-token: 3968, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:31:05.451448+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:31:05.451708+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.453848+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:31:05.453988+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.455535+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:31:05.455668+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.457185+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 128 tokens
+2026-11-10T04:31:05.457310+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.458845+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 128 tokens
+2026-11-10T04:31:05.458972+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.460460+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 128 tokens
+2026-11-10T04:31:05.460593+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.462036+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 128 tokens
+2026-11-10T04:31:05.462150+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.463595+0000 | prefill_forward_text | INFO - Prefilling User 8 up to 128 tokens
+2026-11-10T04:31:05.463707+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.465159+0000 | prefill_forward_text | INFO - Prefilling User 9 up to 128 tokens
+2026-11-10T04:31:05.465270+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.466704+0000 | prefill_forward_text | INFO - Prefilling User 10 up to 128 tokens
+2026-11-10T04:31:05.466827+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.468235+0000 | prefill_forward_text | INFO - Prefilling User 11 up to 128 tokens
+2026-11-10T04:31:05.468349+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.469824+0000 | prefill_forward_text | INFO - Prefilling User 12 up to 128 tokens
+2026-11-10T04:31:05.469941+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.471448+0000 | prefill_forward_text | INFO - Prefilling User 13 up to 128 tokens
+2026-11-10T04:31:05.471580+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.473024+0000 | prefill_forward_text | INFO - Prefilling User 14 up to 128 tokens
+2026-11-10T04:31:05.473138+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.474602+0000 | prefill_forward_text | INFO - Prefilling User 15 up to 128 tokens
+2026-11-10T04:31:05.474715+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.476177+0000 | prefill_forward_text | INFO - Prefilling User 16 up to 128 tokens
+2026-11-10T04:31:05.476288+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.477745+0000 | prefill_forward_text | INFO - Prefilling User 17 up to 128 tokens
+2026-11-10T04:31:05.477863+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.479329+0000 | prefill_forward_text | INFO - Prefilling User 18 up to 128 tokens
+2026-11-10T04:31:05.479442+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.480910+0000 | prefill_forward_text | INFO - Prefilling User 19 up to 128 tokens
+2026-11-10T04:31:05.481021+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.482466+0000 | prefill_forward_text | INFO - Prefilling User 20 up to 128 tokens
+2026-11-10T04:31:05.482599+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.484044+0000 | prefill_forward_text | INFO - Prefilling User 21 up to 128 tokens
+2026-11-10T04:31:05.484162+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.485634+0000 | prefill_forward_text | INFO - Prefilling User 22 up to 128 tokens
+2026-11-10T04:31:05.485744+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.487182+0000 | prefill_forward_text | INFO - Prefilling User 23 up to 128 tokens
+2026-11-10T04:31:05.487294+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.488810+0000 | prefill_forward_text | INFO - Prefilling User 24 up to 128 tokens
+2026-11-10T04:31:05.488925+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.490393+0000 | prefill_forward_text | INFO - Prefilling User 25 up to 128 tokens
+2026-11-10T04:31:05.490520+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.491978+0000 | prefill_forward_text | INFO - Prefilling User 26 up to 128 tokens
+2026-11-10T04:31:05.492094+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.493595+0000 | prefill_forward_text | INFO - Prefilling User 27 up to 128 tokens
+2026-11-10T04:31:05.493709+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.495175+0000 | prefill_forward_text | INFO - Prefilling User 28 up to 128 tokens
+2026-11-10T04:31:05.495286+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.496748+0000 | prefill_forward_text | INFO - Prefilling User 29 up to 128 tokens
+2026-11-10T04:31:05.496874+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.498317+0000 | prefill_forward_text | INFO - Prefilling User 30 up to 128 tokens
+2026-11-10T04:31:05.498430+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:05.499925+0000 | prefill_forward_text | INFO - Prefilling User 31 up to 128 tokens
+2026-11-10T04:31:05.500036+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:06.153642+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:31:07] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 318.30, #queue-req: 0, 
+[2026-11-10 04:31:10] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 444.75, #queue-req: 0, 
+[2026-11-10 04:31:11] INFO:     10.42.0.23:40840 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:31:13] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 454.45, #queue-req: 0, 
+[2026-11-10 04:31:20] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:31:20.291735+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:31:20.291895+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:20.313589+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:31:21] INFO:     10.42.0.23:58436 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:31:24] INFO:     127.0.0.1:41726 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:24] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:31:25.001715+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:31:25.001874+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:25.023665+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:31:25] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 78.00, #queue-req: 0, 
+[2026-11-10 04:31:26] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 45.39, #queue-req: 0, 
+[2026-11-10 04:31:27] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 45.08, #queue-req: 0, 
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41726 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:31:27.847511+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:31:27.847655+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41742 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41744 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41750 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41766 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41774 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41780 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41784 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41788 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41802 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41810 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41816 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41830 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:31:27.869328+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41836 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41852 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41868 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41870 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41876 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41890 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41906 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41916 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] Prefill batch, #new-seq: 29, #new-token: 2752, #cached-token: 960, token usage: 0.01, #running-req: 1, #queue-req: 0, 
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41928 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41944 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41950 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41954 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41960 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41970 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41978 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:41996 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:42004 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:27] INFO:     127.0.0.1:42014 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:31:27.972121+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:31:27.972310+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.973735+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 64 tokens
+2026-11-10T04:31:27.973855+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.974847+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 64 tokens
+2026-11-10T04:31:27.974955+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.975956+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 64 tokens
+2026-11-10T04:31:27.976064+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.977075+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 64 tokens
+2026-11-10T04:31:27.977186+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.978192+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 64 tokens
+2026-11-10T04:31:27.978304+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.979306+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 64 tokens
+2026-11-10T04:31:27.979413+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.980405+0000 | prefill_forward_text | INFO - Prefilling User 8 up to 128 tokens
+2026-11-10T04:31:27.980530+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.981546+0000 | prefill_forward_text | INFO - Prefilling User 9 up to 128 tokens
+2026-11-10T04:31:27.981653+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.982644+0000 | prefill_forward_text | INFO - Prefilling User 10 up to 128 tokens
+2026-11-10T04:31:27.982750+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.983743+0000 | prefill_forward_text | INFO - Prefilling User 11 up to 128 tokens
+2026-11-10T04:31:27.983858+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.984832+0000 | prefill_forward_text | INFO - Prefilling User 12 up to 128 tokens
+2026-11-10T04:31:27.984938+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.985926+0000 | prefill_forward_text | INFO - Prefilling User 13 up to 128 tokens
+2026-11-10T04:31:27.986032+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.987028+0000 | prefill_forward_text | INFO - Prefilling User 14 up to 128 tokens
+2026-11-10T04:31:27.987136+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.988127+0000 | prefill_forward_text | INFO - Prefilling User 15 up to 128 tokens
+2026-11-10T04:31:27.988232+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.989226+0000 | prefill_forward_text | INFO - Prefilling User 16 up to 128 tokens
+2026-11-10T04:31:27.989333+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.990334+0000 | prefill_forward_text | INFO - Prefilling User 17 up to 64 tokens
+2026-11-10T04:31:27.990444+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.991459+0000 | prefill_forward_text | INFO - Prefilling User 18 up to 64 tokens
+2026-11-10T04:31:27.991585+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.992611+0000 | prefill_forward_text | INFO - Prefilling User 19 up to 64 tokens
+2026-11-10T04:31:27.992718+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.993696+0000 | prefill_forward_text | INFO - Prefilling User 20 up to 64 tokens
+2026-11-10T04:31:27.993809+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.994803+0000 | prefill_forward_text | INFO - Prefilling User 21 up to 64 tokens
+2026-11-10T04:31:27.994910+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.995897+0000 | prefill_forward_text | INFO - Prefilling User 22 up to 64 tokens
+2026-11-10T04:31:27.996006+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.997052+0000 | prefill_forward_text | INFO - Prefilling User 23 up to 64 tokens
+2026-11-10T04:31:27.997158+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.998157+0000 | prefill_forward_text | INFO - Prefilling User 24 up to 64 tokens
+2026-11-10T04:31:27.998263+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:27.999261+0000 | prefill_forward_text | INFO - Prefilling User 25 up to 128 tokens
+2026-11-10T04:31:27.999370+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:28.000388+0000 | prefill_forward_text | INFO - Prefilling User 26 up to 128 tokens
+2026-11-10T04:31:28.000516+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:28.001536+0000 | prefill_forward_text | INFO - Prefilling User 27 up to 128 tokens
+2026-11-10T04:31:28.001647+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:28.002640+0000 | prefill_forward_text | INFO - Prefilling User 28 up to 128 tokens
+2026-11-10T04:31:28.002746+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:28.003740+0000 | prefill_forward_text | INFO - Prefilling User 29 up to 128 tokens
+2026-11-10T04:31:28.003852+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:28.581917+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:31:28] Prefill batch, #new-seq: 2, #new-token: 256, #cached-token: 0, token usage: 0.03, #running-req: 30, #queue-req: 0, 
+2026-11-10T04:31:28.597957+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:31:28.598101+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:28.599451+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:31:28.599589+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:28.640767+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:31:28] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 87.21, #queue-req: 0, 
+[2026-11-10 04:31:31] INFO:     10.42.0.23:46758 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:31:31] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 454.70, #queue-req: 0, 
+[2026-11-10 04:31:34] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 446.64, #queue-req: 0, 
+[2026-11-10 04:31:37] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 432.51, #queue-req: 0, 
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41950 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:31:37.824157+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:31:37.824306+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41784 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41970 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41944 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41960 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41836 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41802 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41890 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41876 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41774 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41750 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41816 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41742 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41788 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41766 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41744 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41996 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41978 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41810 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:42004 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:31:37.846209+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:31:37] Prefill batch, #new-seq: 28, #new-token: 3584, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41906 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41780 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41928 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41868 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41830 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41870 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41954 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41726 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41852 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:41916 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:37] INFO:     127.0.0.1:42014 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:31:37.939880+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:31:37.940065+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.941462+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:31:37.941595+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.942652+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:31:37.942764+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.943803+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 128 tokens
+2026-11-10T04:31:37.943911+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.944906+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 128 tokens
+2026-11-10T04:31:37.945012+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.946008+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 128 tokens
+2026-11-10T04:31:37.946117+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.947122+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 128 tokens
+2026-11-10T04:31:37.947230+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.948225+0000 | prefill_forward_text | INFO - Prefilling User 8 up to 128 tokens
+2026-11-10T04:31:37.948333+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.949344+0000 | prefill_forward_text | INFO - Prefilling User 9 up to 128 tokens
+2026-11-10T04:31:37.949450+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.950442+0000 | prefill_forward_text | INFO - Prefilling User 10 up to 128 tokens
+2026-11-10T04:31:37.950568+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.951544+0000 | prefill_forward_text | INFO - Prefilling User 11 up to 128 tokens
+2026-11-10T04:31:37.951651+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.952640+0000 | prefill_forward_text | INFO - Prefilling User 12 up to 128 tokens
+2026-11-10T04:31:37.952748+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.953734+0000 | prefill_forward_text | INFO - Prefilling User 13 up to 128 tokens
+2026-11-10T04:31:37.953843+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.954830+0000 | prefill_forward_text | INFO - Prefilling User 14 up to 128 tokens
+2026-11-10T04:31:37.954936+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.955924+0000 | prefill_forward_text | INFO - Prefilling User 15 up to 128 tokens
+2026-11-10T04:31:37.956031+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.957021+0000 | prefill_forward_text | INFO - Prefilling User 16 up to 128 tokens
+2026-11-10T04:31:37.957126+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.958128+0000 | prefill_forward_text | INFO - Prefilling User 17 up to 128 tokens
+2026-11-10T04:31:37.958235+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.959227+0000 | prefill_forward_text | INFO - Prefilling User 18 up to 128 tokens
+2026-11-10T04:31:37.959335+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.960333+0000 | prefill_forward_text | INFO - Prefilling User 19 up to 128 tokens
+2026-11-10T04:31:37.960441+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.961462+0000 | prefill_forward_text | INFO - Prefilling User 20 up to 128 tokens
+2026-11-10T04:31:37.961588+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.962564+0000 | prefill_forward_text | INFO - Prefilling User 21 up to 128 tokens
+2026-11-10T04:31:37.962669+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.963657+0000 | prefill_forward_text | INFO - Prefilling User 22 up to 128 tokens
+2026-11-10T04:31:37.963762+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.964753+0000 | prefill_forward_text | INFO - Prefilling User 23 up to 128 tokens
+2026-11-10T04:31:37.964867+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.965851+0000 | prefill_forward_text | INFO - Prefilling User 24 up to 128 tokens
+2026-11-10T04:31:37.965957+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.966963+0000 | prefill_forward_text | INFO - Prefilling User 25 up to 128 tokens
+2026-11-10T04:31:37.967068+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.968069+0000 | prefill_forward_text | INFO - Prefilling User 26 up to 128 tokens
+2026-11-10T04:31:37.968175+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.969176+0000 | prefill_forward_text | INFO - Prefilling User 27 up to 128 tokens
+2026-11-10T04:31:37.969282+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:37.970276+0000 | prefill_forward_text | INFO - Prefilling User 28 up to 128 tokens
+2026-11-10T04:31:37.970382+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:38.524510+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:31:38] Prefill batch, #new-seq: 3, #new-token: 384, #cached-token: 0, token usage: 0.03, #running-req: 29, #queue-req: 0, 
+2026-11-10T04:31:38.542674+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:31:38.542813+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:38.544139+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:31:38.544249+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:38.545246+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:31:38.545355+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:38.606520+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:31:41] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 346.12, #queue-req: 0, 
+[2026-11-10 04:31:41] INFO:     10.42.0.23:53482 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:31:44] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 446.23, #queue-req: 0, 
+[2026-11-10 04:31:47] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 447.67, #queue-req: 0, 
+[2026-11-10 04:31:50] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:31:50.292542+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:31:50.292697+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:50.320990+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...
+[2026-11-10 04:31:51] INFO:     10.42.0.23:56930 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:31:57] INFO:     127.0.0.1:52978 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:31:57] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:31:57.437203+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:31:57.437357+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:31:57.459308+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:31:58] Decode batch, #running-req: 1, #token: 192, token usage: 0.00, cpu graph: False, gen throughput (token/s): 31.55, #queue-req: 0, 
+[2026-11-10 04:31:58] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 45.41, #queue-req: 0, 
+[2026-11-10 04:31:59] Decode batch, #running-req: 1, #token: 256, token usage: 0.00, cpu graph: False, gen throughput (token/s): 47.90, #queue-req: 0, 
+[2026-11-10 04:32:00] INFO:     127.0.0.1:52978 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 64, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:32:00.195257+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:32:00.195404+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:32:00] INFO:     127.0.0.1:52986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53002 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53014 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53022 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53038 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53046 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53050 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53056 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53066 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53068 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53070 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53072 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:32:00.217187+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 64 tokens, Starting decode...
+[2026-11-10 04:32:00] Prefill batch, #new-seq: 28, #new-token: 2624, #cached-token: 960, token usage: 0.01, #running-req: 1, #queue-req: 0, 
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53088 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53102 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53110 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53122 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53128 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53142 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53148 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53152 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53156 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53168 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53178 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53180 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53182 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53196 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53202 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53218 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53228 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53232 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:00] INFO:     127.0.0.1:53244 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:32:00.312623+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 64 tokens
+2026-11-10T04:32:00.312809+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.314226+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 64 tokens
+2026-11-10T04:32:00.314341+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.315348+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 64 tokens
+2026-11-10T04:32:00.315459+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.316458+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 64 tokens
+2026-11-10T04:32:00.316586+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.317600+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 64 tokens
+2026-11-10T04:32:00.317706+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.318700+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 64 tokens
+2026-11-10T04:32:00.318809+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.319810+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 128 tokens
+2026-11-10T04:32:00.319927+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.320941+0000 | prefill_forward_text | INFO - Prefilling User 8 up to 64 tokens
+2026-11-10T04:32:00.321050+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.322049+0000 | prefill_forward_text | INFO - Prefilling User 9 up to 128 tokens
+2026-11-10T04:32:00.322158+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.323153+0000 | prefill_forward_text | INFO - Prefilling User 10 up to 128 tokens
+2026-11-10T04:32:00.323260+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.324254+0000 | prefill_forward_text | INFO - Prefilling User 11 up to 128 tokens
+2026-11-10T04:32:00.324360+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.325380+0000 | prefill_forward_text | INFO - Prefilling User 12 up to 128 tokens
+2026-11-10T04:32:00.325503+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.326520+0000 | prefill_forward_text | INFO - Prefilling User 13 up to 128 tokens
+2026-11-10T04:32:00.326626+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.327623+0000 | prefill_forward_text | INFO - Prefilling User 14 up to 64 tokens
+2026-11-10T04:32:00.327732+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.328722+0000 | prefill_forward_text | INFO - Prefilling User 15 up to 128 tokens
+2026-11-10T04:32:00.328835+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.329832+0000 | prefill_forward_text | INFO - Prefilling User 16 up to 128 tokens
+2026-11-10T04:32:00.329939+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.330940+0000 | prefill_forward_text | INFO - Prefilling User 17 up to 64 tokens
+2026-11-10T04:32:00.331048+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.332070+0000 | prefill_forward_text | INFO - Prefilling User 18 up to 64 tokens
+2026-11-10T04:32:00.332178+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.333216+0000 | prefill_forward_text | INFO - Prefilling User 19 up to 64 tokens
+2026-11-10T04:32:00.333324+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.334320+0000 | prefill_forward_text | INFO - Prefilling User 20 up to 64 tokens
+2026-11-10T04:32:00.334429+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.335453+0000 | prefill_forward_text | INFO - Prefilling User 21 up to 64 tokens
+2026-11-10T04:32:00.335583+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.336591+0000 | prefill_forward_text | INFO - Prefilling User 22 up to 64 tokens
+2026-11-10T04:32:00.336701+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.337688+0000 | prefill_forward_text | INFO - Prefilling User 23 up to 64 tokens
+2026-11-10T04:32:00.337795+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.338804+0000 | prefill_forward_text | INFO - Prefilling User 24 up to 128 tokens
+2026-11-10T04:32:00.338917+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.339916+0000 | prefill_forward_text | INFO - Prefilling User 25 up to 128 tokens
+2026-11-10T04:32:00.340024+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.341033+0000 | prefill_forward_text | INFO - Prefilling User 26 up to 128 tokens
+2026-11-10T04:32:00.341140+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.342144+0000 | prefill_forward_text | INFO - Prefilling User 27 up to 128 tokens
+2026-11-10T04:32:00.342250+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.343260+0000 | prefill_forward_text | INFO - Prefilling User 28 up to 128 tokens
+2026-11-10T04:32:00.343371+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.908412+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:32:00] Prefill batch, #new-seq: 3, #new-token: 384, #cached-token: 0, token usage: 0.03, #running-req: 29, #queue-req: 0, 
+2026-11-10T04:32:00.927452+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:32:00.927601+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.928968+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:32:00.929080+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.930113+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:32:00.930225+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:00.991016+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:32:01] INFO:     10.42.0.23:59814 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:32:02] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 269.91, #queue-req: 0, 
+[2026-11-10 04:32:05] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 442.98, #queue-req: 0, 
+[2026-11-10 04:32:08] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 451.30, #queue-req: 0, 
+[2026-11-10 04:32:10] Prefill batch, #new-seq: 1, #new-token: 128, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53142 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:32:10.157282+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:32:10.157427+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53046 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53102 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53122 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53056 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:52986 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53066 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53152 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53168 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53244 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53022 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53068 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53070 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53218 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53178 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53072 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53002 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53196 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53128 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53202 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53148 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:52978 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53180 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53038 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53014 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53088 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53110 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53232 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53156 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53050 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53228 - "POST /v1/completions HTTP/1.1" 200 OK
+[2026-11-10 04:32:10] INFO:     127.0.0.1:53182 - "POST /v1/completions HTTP/1.1" 200 OK
+2026-11-10T04:32:10.179220+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:32:10] Prefill batch, #new-seq: 31, #new-token: 3968, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+2026-11-10T04:32:10.283249+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 128 tokens
+2026-11-10T04:32:10.283436+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.284890+0000 | prefill_forward_text | INFO - Prefilling User 2 up to 128 tokens
+2026-11-10T04:32:10.285003+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.286022+0000 | prefill_forward_text | INFO - Prefilling User 3 up to 128 tokens
+2026-11-10T04:32:10.286133+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.287150+0000 | prefill_forward_text | INFO - Prefilling User 4 up to 128 tokens
+2026-11-10T04:32:10.287258+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.288251+0000 | prefill_forward_text | INFO - Prefilling User 5 up to 128 tokens
+2026-11-10T04:32:10.288357+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.289372+0000 | prefill_forward_text | INFO - Prefilling User 6 up to 128 tokens
+2026-11-10T04:32:10.289495+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.290497+0000 | prefill_forward_text | INFO - Prefilling User 7 up to 128 tokens
+2026-11-10T04:32:10.290602+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.291598+0000 | prefill_forward_text | INFO - Prefilling User 8 up to 128 tokens
+2026-11-10T04:32:10.291703+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.292687+0000 | prefill_forward_text | INFO - Prefilling User 9 up to 128 tokens
+2026-11-10T04:32:10.292798+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.293789+0000 | prefill_forward_text | INFO - Prefilling User 10 up to 128 tokens
+2026-11-10T04:32:10.293906+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.294921+0000 | prefill_forward_text | INFO - Prefilling User 11 up to 128 tokens
+2026-11-10T04:32:10.295029+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.296028+0000 | prefill_forward_text | INFO - Prefilling User 12 up to 128 tokens
+2026-11-10T04:32:10.296135+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.297159+0000 | prefill_forward_text | INFO - Prefilling User 13 up to 128 tokens
+2026-11-10T04:32:10.297269+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.298260+0000 | prefill_forward_text | INFO - Prefilling User 14 up to 128 tokens
+2026-11-10T04:32:10.298369+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.299373+0000 | prefill_forward_text | INFO - Prefilling User 15 up to 128 tokens
+2026-11-10T04:32:10.299499+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.300528+0000 | prefill_forward_text | INFO - Prefilling User 16 up to 128 tokens
+2026-11-10T04:32:10.300634+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.301618+0000 | prefill_forward_text | INFO - Prefilling User 17 up to 128 tokens
+2026-11-10T04:32:10.301726+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.302757+0000 | prefill_forward_text | INFO - Prefilling User 18 up to 128 tokens
+2026-11-10T04:32:10.302877+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.303904+0000 | prefill_forward_text | INFO - Prefilling User 19 up to 128 tokens
+2026-11-10T04:32:10.304011+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.305014+0000 | prefill_forward_text | INFO - Prefilling User 20 up to 128 tokens
+2026-11-10T04:32:10.305120+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.306143+0000 | prefill_forward_text | INFO - Prefilling User 21 up to 128 tokens
+2026-11-10T04:32:10.306251+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.307240+0000 | prefill_forward_text | INFO - Prefilling User 22 up to 128 tokens
+2026-11-10T04:32:10.307348+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.308377+0000 | prefill_forward_text | INFO - Prefilling User 23 up to 128 tokens
+2026-11-10T04:32:10.308502+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.309520+0000 | prefill_forward_text | INFO - Prefilling User 24 up to 128 tokens
+2026-11-10T04:32:10.309624+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.310622+0000 | prefill_forward_text | INFO - Prefilling User 25 up to 128 tokens
+2026-11-10T04:32:10.310728+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.311721+0000 | prefill_forward_text | INFO - Prefilling User 26 up to 128 tokens
+2026-11-10T04:32:10.311833+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.312814+0000 | prefill_forward_text | INFO - Prefilling User 27 up to 128 tokens
+2026-11-10T04:32:10.312929+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.313934+0000 | prefill_forward_text | INFO - Prefilling User 28 up to 128 tokens
+2026-11-10T04:32:10.314040+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.315027+0000 | prefill_forward_text | INFO - Prefilling User 29 up to 128 tokens
+2026-11-10T04:32:10.315133+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.316144+0000 | prefill_forward_text | INFO - Prefilling User 30 up to 128 tokens
+2026-11-10T04:32:10.316251+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.317239+0000 | prefill_forward_text | INFO - Prefilling User 31 up to 128 tokens
+2026-11-10T04:32:10.317346+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:10.933957+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 128 tokens, Starting decode...
+[2026-11-10 04:32:11] INFO:     10.42.0.23:51998 - "GET /health HTTP/1.1" 200 OK
+[2026-11-10 04:32:12] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 341.90, #queue-req: 0, 
+[2026-11-10 04:32:14] Decode batch, #running-req: 32, #token: 6144, token usage: 0.05, cpu graph: False, gen throughput (token/s): 447.12, #queue-req: 0, 
+[2026-11-10 04:32:17] Decode batch, #running-req: 32, #token: 8192, token usage: 0.06, cpu graph: False, gen throughput (token/s): 442.40, #queue-req: 0, 
+[2026-11-10 04:32:20] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+2026-11-10T04:32:20.292462+0000 | prefill_forward_text | INFO - Prefilling User 1 up to 1 tokens
+2026-11-10T04:32:20.292633+0000 | prefill_forward_text | INFO - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+2026-11-10T04:32:20.315065+0000 | prefill_forward_text | INFO - Finished prefill for all users up to 1 tokens, Starting decode...

@@ -1,0 +1,28 @@
+apiVersion: kueue.x-k8s.io/v1beta2
+kind: ResourceFlavor
+metadata:
+  name: default
+---
+apiVersion: kueue.x-k8s.io/v1beta2
+kind: ClusterQueue
+metadata:
+  name: default # one queue for both cards (n150 + MI210)
+spec:
+  namespaceSelector: {}
+  # a Job that fits doesn't wait behind one that doesn't (e.g. waiting for the n150 or 4 MI210s); each card still goes oldest first
+  queueingStrategy: BestEffortFIFO
+  resourceGroups:
+    - coveredResources: [cpu, memory, hugepages-1Gi, tenstorrent.com/chip, amd.com/gpu]
+      flavors:
+        - name: default
+          resources:
+            - name: cpu
+              nominalQuota: 30
+            - name: memory
+              nominalQuota: 56Gi
+            - name: hugepages-1Gi
+              nominalQuota: 4Gi
+            - name: tenstorrent.com/chip
+              nominalQuota: 1
+            - name: amd.com/gpu
+              nominalQuota: 4 # MI210

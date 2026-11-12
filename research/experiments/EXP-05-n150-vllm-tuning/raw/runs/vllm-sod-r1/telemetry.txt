@@ -1,0 +1,18 @@
+## tt_ai_clock_mhz
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_ai_clock_mhz","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2","unit":"MHz"},"value":[1794387061.149,"1000"]}]}}
+## tt_asic_temperature_celsius
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_asic_temperature_celsius","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2","unit":"°C"},"value":[1794387061.207,"49.125"]}]}}
+## tt_tdp_w
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_tdp_w","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2","unit":"W"},"value":[1794387061.264,"23"]}]}}
+## tt_tdc_a
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_tdc_a","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2","unit":"A"},"value":[1794387061.317,"26"]}]}}
+## tt_vcore_v
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_vcore_v","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2","unit":"V"},"value":[1794387061.375,"0.915"]}]}}
+## tt_device_dram_used_megabytes
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_device_dram_used_megabytes","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2","unit":"MB"},"value":[1794387061.433,"0"]}]}}
+## tt_device_dram_total_megabytes
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_device_dram_total_megabytes","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2","unit":"MB"},"value":[1794387061.489,"12288"]}]}}
+## tt_process_count
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_process_count","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw"},"value":[1794387061.548,"2"]}]}}
+## tt_device_accessible
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"tt_device_accessible","chip":"0","container":"tt-telemetry","endpoint":"telemetry-http","hostname":"tenstorrent","instance":"10.42.0.99:18080","job":"monitoring/tt-telemetry","namespace":"tt-operator-system","pod":"tt-telemetry-daemonset-vqzsw","tray":"2"},"value":[1794387061.602,"1"]}]}}

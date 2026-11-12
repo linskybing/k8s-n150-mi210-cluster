@@ -1,0 +1,16 @@
+# What main.go publishes for a node with one chip (the helper creates it; shown for reference, compare raw/env/dra-tenstorrent.yaml).
+apiVersion: resource.k8s.io/v1
+kind: ResourceSlice
+metadata:
+  name: tenstorrent-chip.example.com-example
+spec:
+  driver: chip.example.com
+  nodeName: tenstorrent
+  pool: {name: tenstorrent, generation: 1, resourceSliceCount: 1}
+  devices:
+    - name: chip-0
+      attributes:
+        model: {string: example-x1}
+        pciAddress: {string: "0000:00:00.0"}
+      capacity:
+        memory: {value: 16Gi}

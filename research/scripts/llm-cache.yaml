@@ -1,0 +1,36 @@
+# llm.yaml with the model caches on the host (EXP-05): weights + converted tensors (cache_root) survive the Job, so the next
+# load skips the download and the weight conversion. The ~/.cache mount stayed empty in EXP-05; where the kernel cache goes
+# under runAsUser 0 is not confirmed.
+# Host dir /home/testuser/.cache/tt-vllm-cache; runs as root like n150/vllm-custom.yaml (image uid 1000 can't write a home).
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: n150-llm
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      resourceClaims:
+        - {name: n150, resourceClaimTemplateName: n150}
+      containers:
+        - name: vllm
+          image: ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06
+          securityContext: {runAsUser: 0}
+          args: ["--tt-device", "n150", "--no-auth"]
+          env:
+            - name: RUNTIME_MODEL_SPEC_JSON_PATH
+              value: /spec/spec.json
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef: {name: hf-token, key: token}
+          readinessProbe:
+            httpGet: {path: /health, port: 8000}
+          volumeMounts:
+            - {name: spec, mountPath: /spec}
+            - {name: cache, mountPath: /home/container_app_user/cache_root, subPath: cache_root}
+            - {name: cache, mountPath: /home/container_app_user/.cache, subPath: dot-cache}
+      volumes:
+        - name: spec
+          configMap: {name: llm-spec}
+        - name: cache
+          hostPath: {path: /home/testuser/.cache/tt-vllm-cache, type: DirectoryOrCreate}

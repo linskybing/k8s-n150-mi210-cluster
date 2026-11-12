@@ -1,0 +1,22 @@
+configmap/llm-spec created
+configmap/llm-spec-seq1 created
+configmap/sglang-tt-site created
+== load vllm clean 2026-11-10T12:34:51Z
+job.batch/n150-llm created
+pod/n150-llm-grwmx condition met
+== bench vllm clean 2026-11-10T12:38:23Z
+== unload vllm clean 2026-11-10T12:45:55Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== load sglang-tt clean 2026-11-10T12:45:57Z
+job.batch/n150-sglang-custom created
+pod/n150-sglang-custom-s46zl condition met
+== bench sglang-tt clean 2026-11-10T12:46:52Z
+== unload sglang-tt clean 2026-11-10T12:52:00Z
+job.batch "n150-sglang-custom" deleted from u-testuser namespace
+== load vllm-seq1 clean 2026-11-10T12:52:05Z
+job.batch/n150-llm created
+pod/n150-llm-7fl2c condition met
+== bench vllm-seq1 clean 2026-11-10T12:55:43Z
+== unload vllm-seq1 clean 2026-11-10T13:06:03Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== DONE 2026-11-10T13:06:06Z

@@ -1,0 +1,94 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "resource.k8s.io/v1",
+            "kind": "ResourceClaim",
+            "metadata": {
+                "annotations": {
+                    "resource.kubernetes.io/pod-claim-name": "n150"
+                },
+                "creationTimestamp": "2026-11-10T04:19:58Z",
+                "finalizers": [
+                    "resource.kubernetes.io/delete-protection"
+                ],
+                "generateName": "n150-sglang-custom-d8fkp-n150-",
+                "name": "n150-sglang-custom-d8fkp-n150-snbf5",
+                "namespace": "u-testuser",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "controller": true,
+                        "kind": "Pod",
+                        "name": "n150-sglang-custom-d8fkp",
+                        "uid": "3603837e-ba94-4703-a680-26f95823f4d2"
+                    }
+                ],
+                "resourceVersion": "6942557",
+                "uid": "285bde96-135a-4e33-8111-6fb98f6b70d9"
+            },
+            "spec": {
+                "devices": {
+                    "requests": [
+                        {
+                            "exactly": {
+                                "allocationMode": "ExactCount",
+                                "count": 1,
+                                "deviceClassName": "tenstorrent.com",
+                                "selectors": [
+                                    {
+                                        "cel": {
+                                            "expression": "device.attributes[\"tenstorrent.com\"].boardName == \"n150\""
+                                        }
+                                    }
+                                ]
+                            },
+                            "name": "board"
+                        }
+                    ]
+                }
+            },
+            "status": {
+                "allocation": {
+                    "allocationTimestamp": "2026-11-10T04:19:58Z",
+                    "devices": {
+                        "results": [
+                            {
+                                "device": "tt-0",
+                                "driver": "tenstorrent.com",
+                                "pool": "tenstorrent",
+                                "request": "board"
+                            }
+                        ]
+                    },
+                    "nodeSelector": {
+                        "nodeSelectorTerms": [
+                            {
+                                "matchFields": [
+                                    {
+                                        "key": "metadata.name",
+                                        "operator": "In",
+                                        "values": [
+                                            "tenstorrent"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "reservedFor": [
+                    {
+                        "name": "n150-sglang-custom-d8fkp",
+                        "resource": "pods",
+                        "uid": "3603837e-ba94-4703-a680-26f95823f4d2"
+                    }
+                ]
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

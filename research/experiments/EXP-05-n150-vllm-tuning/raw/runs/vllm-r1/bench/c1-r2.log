@@ -1,0 +1,90 @@
+INFO 11-11 08:39:45 [scheduler.py:225] Chunked prefill is enabled with max_num_batched_tokens=2048.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7781d1ab3010>, seed=12, num_prompts=8, dataset_name='random', no_stream=False, dataset_path=None, no_oversample=False, skip_chat_template=False, disable_shuffle=False, custom_output_len=256, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=128, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, no_reranker=False, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 1}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='openai', base_url='http://localhost:8000', host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=1, model='meta-llama/Llama-3.2-1B-Instruct', tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, num_warmups=0, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir='/tmp/bench', result_filename='c1-r2.json', ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='99', goodput=None, request_id_prefix='bench-cbacf1b7-', top_p=None, top_k=None, min_p=None, temperature=0.0, frequency_penalty=None, presence_penalty=None, repetition_penalty=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600, extra_body=None)
+INFO 11-11 08:39:46 [datasets.py:613] Sampling input_len from [127, 127] and output_len from [128, 128]
+Starting initial single prompt test run...
+Waiting for endpoint to become up in 600 seconds
+ |          | 00:00 elapsed, ? remaining |          | 00:00 elapsed, 00:05 remainingInitial test run completed.
+Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 1
+ |          | 00:07 elapsed, 1304:42:45 remaining
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:07<00:52,  7.50s/it] 25%|██▌       | 2/8 [00:14<00:44,  7.50s/it] 38%|███▊      | 3/8 [00:22<00:38,  7.67s/it] 50%|█████     | 4/8 [00:30<00:30,  7.67s/it] 62%|██████▎   | 5/8 [00:38<00:23,  7.79s/it] 75%|███████▌  | 6/8 [00:45<00:15,  7.65s/it] 88%|████████▊ | 7/8 [00:53<00:07,  7.71s/it]100%|██████████| 8/8 [01:01<00:00,  7.67s/it]100%|██████████| 8/8 [01:01<00:00,  7.67s/it]
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     8         
+Failed requests:                         0         
+Maximum request concurrency:             1         
+Benchmark duration (s):                  61.32     
+Total input tokens:                      1016      
+Total generated tokens:                  1024      
+Request throughput (req/s):              0.13      
+Output token throughput (tok/s):         16.70     
+Peak output token throughput (tok/s):    19.00     
+Peak concurrent requests:                2.00      
+Total Token throughput (tok/s):          33.27     
+---------------Time to First Token----------------
+Mean TTFT (ms):                          84.50     
+Median TTFT (ms):                        81.19     
+P99 TTFT (ms):                           102.14    
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          59.69     
+Median TPOT (ms):                        59.30     
+P99 TPOT (ms):                           62.12     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           59.69     
+Median ITL (ms):                         57.07     
+P99 ITL (ms):                            105.81    
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          7664.99   
+Median E2EL (ms):                        7619.34   
+P99 E2EL (ms):                           7989.97   
+==================================================
+nanobind: leaked 577 instances!
+ - leaked instance 0x7781f3ec0c28 of type "ttnn._ttnn.operations.data_movement.tosa_scatter_t"
+ - leaked instance 0x7781f3ec1a48 of type "ttnn._ttnn.operations.normalization.layer_norm_pre_all_gather_t"
+ - leaked instance 0x7781f4024308 of type "ttnn._ttnn.operations.unary.fill_t"
+ - leaked instance 0x7781f4026b68 of type "ttnn._ttnn.operations.unary_backward.rpow_bw_t"
+ - leaked instance 0x7781f3ec1e68 of type "ttnn._ttnn.operations.transformer.flash_mla_prefill_t"
+ - leaked instance 0x7781f4024708 of type "ttnn._ttnn.operations.unary.multigammaln_t"
+ - leaked instance 0x7781f4024da8 of type "ttnn._ttnn.operations.binary.subtract_t"
+ - leaked instance 0x7781f3ec1ce8 of type "ttnn._ttnn.operations.transformer.concatenate_heads_t"
+ - leaked instance 0x7781f3ec2a88 of type "ttnn._ttnn.operations.experimental.wan_fused_rmsnorm_pre_allgather_t"
+ - leaked instance 0x7781f40244c8 of type "ttnn._ttnn.operations.unary.tanhshrink_t"
+ - leaked instance 0x7781f40256c8 of type "ttnn._ttnn.operations.binary.addalpha_t"
+ - leaked instance 0x7781f40254e8 of type "ttnn._ttnn.operations.binary.atan2_t"
+ - leaked instance 0x7781f4024ee8 of type "ttnn._ttnn.operations.binary.le_t"
+ - leaked instance 0x7781f4025168 of type "ttnn._ttnn.operations.binary.multiply_t"
+ - leaked instance 0x7781f4027c88 of type "ttnn._ttnn.operations.complex_unary_backward.imag_bw_t"
+ - leaked instance 0x7781f4027fa8 of type "ttnn._ttnn.operations.ccl.broadcast_t"
+ - leaked instance 0x7781f3d6c828 of type "ttnn._ttnn.operations.moreh.moreh_softmax_t"
+ - leaked instance 0x7781f4024608 of type "ttnn._ttnn.operations.unary.identity_t"
+ - leaked instance 0x7781f3ec1de8 of type "ttnn._ttnn.operations.transformer.joint_scaled_dot_product_attention_t"
+ - leaked instance 0x7781f3ec2f48 of type "ttnn._ttnn.operations.experimental.convert_to_chw_t"
+ - ... skipped remainder
+nanobind: leaked 708 types!
+ - leaked type "ttnn._ttnn.operations.transformer.scaled_dot_product_attention_t"
+ - leaked type "SocketEndpoint"
+ - leaked type "ttnn._ttnn.operations.unary.selu_t"
+ - leaked type "ttnn._ttnn.operations.moreh.moreh_layer_norm_t"
+ - leaked type "ttnn._ttnn.operations.unary.cos_t"
+ - leaked type "ttnn._ttnn.operations.examples.composite_example_t"
+ - leaked type "ttnn._ttnn.operations.unary.mish_t"
+ - leaked type "ttnn._ttnn.operations.experimental.nlp_create_qkv_heads_t"
+ - leaked type "DispatchCoreAxis"
+ - leaked type "ttnn._ttnn.operations.binary.prelu_t"
+ - ... skipped remainder
+nanobind: leaked 3169 functions!
+ - leaked function ""
+ - leaked function "__call__"
+ - leaked function ""
+ - leaked function "__call__"
+ - leaked function ""
+ - leaked function ""
+ - leaked function ""
+ - leaked function ""
+ - leaked function "__call__"
+ - leaked function ""
+ - ... skipped remainder
+nanobind: this is likely caused by a reference counting issue in the binding code.
+See https://nanobind.readthedocs.io/en/latest/refleaks.html

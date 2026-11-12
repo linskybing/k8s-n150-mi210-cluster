@@ -1,0 +1,32 @@
+enablePrometheus: true # ServiceMonitor in ns monitoring
+managerConfig:
+  controllerManagerConfigYaml: |-
+    apiVersion: config.kueue.x-k8s.io/v1beta2
+    kind: Configuration
+    health:
+      healthProbeBindAddress: :8081
+    metrics:
+      bindAddress: :8443
+    webhook:
+      port: 9443
+    leaderElection:
+      leaderElect: true
+      resourceName: c1f6bfd2.kueue.x-k8s.io
+    # every Job/Pod/Deployment in a labelled namespace is queued, label or not
+    manageJobsWithoutQueueName: true
+    managedJobsNamespaceSelector:
+      matchLabels:
+        n150/user: "true"
+    integrations:
+      frameworks:
+        - batch/job
+        - pod
+        - deployment
+    resources:
+      deviceClassMappings:
+        - name: tenstorrent.com/chip
+          deviceClassNames:
+            - tenstorrent.com
+        - name: amd.com/gpu
+          deviceClassNames:
+            - gpu.amd.com

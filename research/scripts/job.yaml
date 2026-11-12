@@ -1,0 +1,24 @@
+# Run a script on the n150, from your home.
+#   kubectl replace --force -f k8s-llm-example/n150/job.yaml  submit / resubmit
+#   kubectl logs -f job/n150-job
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: n150-job
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      resourceClaims:                  # ask for the n150; remove for a CPU-only job (no wait for the card)
+        - {name: n150, resourceClaimTemplateName: n150}
+      containers:
+        - name: app
+          image: ghcr.io/tenstorrent/tt-metal/tt-metalium-ubuntu-22.04-release-amd64:v0.79.0
+          workingDir: /home/testuser        # your home, mounted below (hostPath): same files as over SSH
+          command: [python3, k8s-llm-example/n150/matmul.py]
+          env:
+            - {name: HOME, value: /home/testuser}
+          volumeMounts:
+            - {name: home, mountPath: /home/testuser}
+      volumes:
+        - {name: home, hostPath: {path: /home/testuser, type: Directory}}

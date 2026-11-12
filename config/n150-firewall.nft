@@ -1,0 +1,18 @@
+#!/usr/sbin/nft -f
+# Host firewall, loaded by n150-firewall.service (scripts/node.sh). From outside: SSH and the API server only.
+# Metrics (etcd 2381, node-exporter 9100, kube-proxy 10249/10256, cilium 9962-9965), controller-manager/scheduler,
+# kubelet and etcd answer only the node itself and pods (Prometheus scrapes from the pod CIDR).
+# Own table, no "flush ruleset": kube-proxy and Cilium rules stay untouched.
+# Adding a node: also allow Cilium VXLAN (udp 8472), health (tcp 4240) and kubelet (tcp 10250) from the other nodes.
+table inet n150
+delete table inet n150
+table inet n150 {
+  chain input {
+    type filter hook input priority filter; policy drop;
+    ct state established,related accept
+    iif lo accept
+    ip saddr 10.42.0.0/16 accept # pods (podSubnet in kubeadm.yaml)
+    meta l4proto { icmp, ipv6-icmp } accept
+    tcp dport { 22, 6443 } accept
+  }
+}

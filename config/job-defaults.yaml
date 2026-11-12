@@ -1,0 +1,119 @@
+# Every Job in a user namespace (label n150/user): no retries, device groups. No time limit (a Job may set kueue.x-k8s.io/max-exec-time-seconds).
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingAdmissionPolicy
+metadata:
+  name: n150-job-defaults
+spec:
+  matchConstraints:
+    resourceRules:
+      - apiGroups: [batch]
+        apiVersions: [v1]
+        operations: [CREATE]
+        resources: [jobs]
+  failurePolicy: Fail
+  reinvocationPolicy: Never
+  mutations:
+    - patchType: ApplyConfiguration
+      applyConfiguration:
+        expression: >-
+          Object{spec: Object.spec{backoffLimit: 0}}
+    # device groups so non-root images (e.g. the TT vLLM image) can open the cards: tenstorrent (2150) for the n150, render (993) for the MI210s
+    # shortcut: 993 is render's gid on this node (getent group render); check it when adding a node
+    # supplementalGroups is an atomic list: ApplyConfiguration can't set it
+    - patchType: JSONPatch
+      jsonPatch:
+        expression: >-
+          [JSONPatch{op: "add", path: "/spec/template/spec/securityContext/supplementalGroups",
+            value: object.spec.template.spec.?securityContext.?supplementalGroups.orValue([]) + [2150, 993]}]
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingAdmissionPolicyBinding
+metadata:
+  name: n150-job-defaults
+spec:
+  policyName: n150-job-defaults
+  matchResources:
+    namespaceSelector:
+      matchLabels:
+        n150/user: "true"
+---
+# Jobs that ask for the n150 (pod resourceClaims -> resourceClaimTemplateName: n150, made by add-user.sh) also get
+# what tt-metal needs: a 1G hugepage for each container using the claim (all of them if none lists it), hugepage cleanup,
+# and kubectl logs/exec default to the user's container instead of the injected init container.
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingAdmissionPolicy
+metadata:
+  name: n150-board
+spec:
+  matchConstraints:
+    resourceRules:
+      - apiGroups: [batch]
+        apiVersions: [v1]
+        operations: [CREATE]
+        resources: [jobs]
+  matchConditions:
+    - name: uses-n150
+      expression: >-
+        object.spec.template.spec.?resourceClaims.orValue([]).exists(rc, rc.?resourceClaimTemplateName.orValue("") == "n150")
+  failurePolicy: Fail
+  reinvocationPolicy: Never
+  variables:
+    - name: claim
+      expression: >-
+        object.spec.template.spec.resourceClaims.filter(rc, rc.?resourceClaimTemplateName.orValue("") == "n150")[0].name
+    # containers that use the claim; if none says so, all of them
+    - name: users
+      expression: >-
+        object.spec.template.spec.containers.exists(c, c.?resources.?claims.orValue([]).exists(x, x.name == variables.claim))
+        ? object.spec.template.spec.containers.filter(c, c.?resources.?claims.orValue([]).exists(x, x.name == variables.claim)).map(c, c.name)
+        : object.spec.template.spec.containers.map(c, c.name)
+  mutations:
+    - patchType: ApplyConfiguration
+      applyConfiguration:
+        expression: >-
+          Object{spec: Object.spec{template: Object.spec.template{
+            metadata: Object.spec.template.metadata{
+              annotations: {"kubectl.kubernetes.io/default-container": object.spec.template.spec.containers[0].name}
+            },
+            spec: Object.spec.template.spec{
+              containers: object.spec.template.spec.containers
+                .filter(c, c.name in variables.users)
+                .map(c, Object.spec.template.spec.containers{
+                  name: c.name,
+                  resources: Object.spec.template.spec.containers.resources{
+                    requests: c.?resources.?requests.orValue({}).exists(k, k == "memory")
+                      ? {"hugepages-1Gi": "1Gi"} : {"hugepages-1Gi": "1Gi", "memory": "8Gi"},
+                    limits: {"hugepages-1Gi": "1Gi"},
+                    claims: [Object.spec.template.spec.containers.resources.claims{name: variables.claim}]
+                  }
+                })
+            }
+          }}}
+    # atomic list (command) can't be set by ApplyConfiguration
+    # a crashed run leaves its 1G hugepage file behind; free it before starting
+    - patchType: JSONPatch
+      jsonPatch:
+        expression: >-
+          [
+            JSONPatch{op: "add", path: "/spec/template/spec/initContainers", value: [
+              Object.spec.template.spec.initContainers{
+                name: "cleanup-hugepages",
+                image: "busybox:1.37",
+                command: ["sh", "-c", "rm -f /dev/hugepages-1G/tenstorrent /dev/hugepages-1G/device_0_*tenstorrent"],
+                resources: Object.spec.template.spec.initContainers.resources{
+                  claims: [Object.spec.template.spec.initContainers.resources.claims{name: variables.claim}]
+                }
+              }
+            ] + object.spec.template.spec.?initContainers.orValue([])}
+          ]
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingAdmissionPolicyBinding
+metadata:
+  name: n150-board
+spec:
+  policyName: n150-board
+  matchResources:
+    namespaceSelector:
+      matchLabels:
+        n150/user: "true"

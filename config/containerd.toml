@@ -1,0 +1,5 @@
+# /etc/containerd/config.toml (containerd.io ships one with CRI disabled). CDI is on by default in containerd 2.x.
+version = 3
+
+[plugins.'io.containerd.cri.v1.runtime'.containerd.runtimes.runc.options]
+  SystemdCgroup = true

@@ -1,0 +1,616 @@
+INFO 11-10 12:52:14 [importing.py:44] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-10 12:52:14 [importing.py:68] Triton not installed or not compatible; certain GPU-related functions will not be available.
+2026-11-10 12:52:14,861 - __main__ - INFO - Using pre-resolved runtime model spec from RUNTIME_MODEL_SPEC_JSON_PATH=/spec/spec.json
+2026-11-10 12:52:14,861 - __main__ - INFO - Loading runtime model spec from: /spec/spec.json
+2026-11-10 12:52:14,861 - __main__ - INFO - Set MESH_DEVICE to N150
+2026-11-10 12:52:14,861 - __main__ - INFO - Set TT_CACHE_PATH to /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.2-1B-Instruct/N150
+2026-11-10 12:52:14,861 - __main__ - INFO - Downloading weights from meta-llama/Llama-3.2-1B-Instruct to /home/container_app_user/cache_root/weights/Llama-3.2-1B-Instruct
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:   8%|▊         | 1/13 [00:00<00:05,  2.21it/s]Fetching 13 files:  54%|█████▍    | 7/13 [00:46<00:41,  6.86s/it]Fetching 13 files:  62%|██████▏   | 8/13 [01:16<00:55, 11.06s/it]Fetching 13 files: 100%|██████████| 13/13 [01:16<00:00,  5.91s/it]
+2026-11-10 12:53:31,983 - __main__ - INFO - Using model spec: id_tt-transformers_Llama-3.2-1B-Instruct_n150
+2026-11-10 12:53:31,984 - __main__ - INFO - Set TT_METAL_OPERATION_TIMEOUT_SECONDS=5.0
+2026-11-10 12:53:31,984 - __main__ - INFO - Set TT_METAL_DISPATCH_TIMEOUT_COMMAND_TO_EXECUTE=/home/container_app_user/tt-metal/python_env/bin/python /home/container_app_user/tt-metal/tools/triage/triage.py --disable-progress > /home/container_app_user/logs/tt-triage-$(date +%Y%m%d-%H%M%S).log 2>&1
+2026-11-10 12:53:31,984 - __main__ - WARNING - env var MESH_DEVICE is already set to N150, overriding with N150
+2026-11-10 12:53:31,984 - __main__ - INFO - setting env var: MESH_DEVICE=N150
+2026-11-10 12:53:31,984 - __main__ - WARNING - env var ARCH_NAME is already set to wormhole_b0, overriding with wormhole_b0
+2026-11-10 12:53:31,984 - __main__ - INFO - setting env var: ARCH_NAME=wormhole_b0
+2026-11-10 12:53:31,984 - __main__ - INFO - setting env var: VLLM_CONFIGURE_LOGGING=1
+2026-11-10 12:53:31,984 - __main__ - INFO - setting env var: VLLM_RPC_TIMEOUT=900000
+2026-11-10 12:53:31,984 - __main__ - WARNING - env var VLLM_TARGET_DEVICE is already set to tt, overriding with tt
+2026-11-10 12:53:31,984 - __main__ - INFO - setting env var: VLLM_TARGET_DEVICE=tt
+2026-11-10 12:53:31,984 - __main__ - INFO - setting env var: TORCHDYNAMO_DISABLE=1
+2026-11-10 12:53:31,984 - __main__ - WARNING - env var value:=1 is not a string, converting to string: 1
+2026-11-10 12:53:31,984 - __main__ - INFO - setting env var: VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+2026-11-10 12:53:31,984 - __main__ - INFO - using model: id_tt-transformers_Llama-3.2-1B-Instruct_n150
+2026-11-10 12:53:31,984 - __main__ - INFO - HF_TOKEN is set
+2026-11-10 12:53:31,984 - __main__ - INFO - --no-auth is set: requests to vLLM API will not require authorization. HTTP Authorization header will not be checked.
+2026-11-10 12:53:31,984 - root - INFO - MODEL_WEIGHTS_DIR: /home/container_app_user/cache_root/weights/Llama-3.2-1B-Instruct
+2026-11-10 12:53:31,984 - root - INFO - TT_CACHE_PATH: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.2-1B-Instruct/N150
+2026-11-10 12:53:31,988 - __main__ - INFO - setting vllm logging config at: /home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-10 12:53:31,988 - __main__ - INFO - setting vllm logging file at: /home/container_app_user/cache_root/logs/vllm_2026-11-10_12-52-14.log
+2026-11-10 12:53:31,988 - root - INFO - HF model setup for meta-llama/Llama-3.2-1B-Instruct
+2026-11-10 12:53:31,988 - __main__ - INFO - setting dynamic runtime environment variables:
+2026-11-10 12:53:31,988 - __main__ - INFO - setting env var: VLLM_LOGGING_CONFIG=/home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-10 12:53:31,988 - __main__ - INFO - setting env var: HF_MODEL=/home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+2026-11-10 12:53:31,988 - __main__ - INFO - Model has builtin warmup (has_builtin_warmup=True), skipping background trace capture
+2026-11-10 12:53:31,988 - __main__ - INFO - Trace capture is disabled via --disable-trace-capture
+2026-11-10 12:53:31,988 - __main__ - INFO - vllm_args: {
+    "model": "meta-llama/Llama-3.2-1B-Instruct",
+    "block_size": "64",
+    "max_model_len": "8192",
+    "max_num_seqs": "1",
+    "max_num_batched_tokens": "8192",
+    "max-log-len": "32",
+    "seed": "9472",
+    "override_tt_config": "{}"
+}
+DEBUG 11-10 12:53:34 utils.py:175] Setting VLLM_WORKER_MULTIPROC_METHOD to 'spawn'
+DEBUG 11-10 12:53:34 __init__.py:40] Available plugins for group vllm.general_plugins:
+DEBUG 11-10 12:53:34 __init__.py:42] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+DEBUG 11-10 12:53:34 __init__.py:45] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+DEBUG 11-10 12:53:34 parallel.py:745] Disabled the custom all-reduce kernel because it is not supported on current platform.
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:34 scheduler.py:225] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:34 api_server.py:1978] vLLM API server version 0.1.dev11674+g222ee06b9
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:34 utils.py:253] non-default args: {'max_log_len': 32, 'model': 'meta-llama/Llama-3.2-1B-Instruct', 'seed': 9472, 'max_model_len': 8192, 'block_size': 64, 'max_num_batched_tokens': 8192, 'max_num_seqs': 1}
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:35 registry.py:599] Cached model info file for class vllm.model_executor.models.llama.LlamaForCausalLM not found
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:35 registry.py:659] Cache model info for class vllm.model_executor.models.llama.LlamaForCausalLM miss. Loading model instead.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 registry.py:669] Loaded model info for class vllm.model_executor.models.llama.LlamaForCausalLM
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 flashinfer.py:55] FlashInfer unavailable since package was not found
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 log_time.py:29] Registry inspect model class: Elapsed time 9.5505543 secs
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:45 model.py:649] Resolved architecture: LlamaForCausalLM
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:45 model.py:1777] Using max model len 8192
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 arg_utils.py:1997] Enabling chunked prefill by default
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 arg_utils.py:2015] Enabling prefix caching by default
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:45 arg_utils.py:2032] Chunked prefill is not yet supported for TT devices; disabling it for V1 backend.
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:45 arg_utils.py:1586] Using host IP 10.42.0.236 as TT data parallel address
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 parallel.py:745] Disabled the custom all-reduce kernel because it is not supported on current platform.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 parallel.py:745] Disabled the custom all-reduce kernel because it is not supported on current platform.
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:53:45 tt.py:370] Automatic prefix caching is enabled
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:45 __init__.py:32] No plugins for group vllm.stat_logger_plugins found.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:49 __init__.py:33] No IOProcessor plugins requested by the model
+INFO 11-10 12:53:55 [importing.py:44] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-10 12:53:55 [importing.py:68] Triton not installed or not compatible; certain GPU-related functions will not be available.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:53:56 utils.py:1144] HELLO from local core engine process 0.
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:53:56 [core.py:96] Initializing a V1 LLM engine (v0.1.dev11674+g222ee06b9) with config: model='meta-llama/Llama-3.2-1B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.2-1B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=None, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=9472, served_model_name=meta-llama/Llama-3.2-1B-Instruct, enable_prefix_caching=True, enable_chunked_prefill=False, pooler_config=None, override_tt_config={}, compilation_config={'level': None, 'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'eager', 'custom_ops': ['all'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention_core', 'vllm::kda_attention', 'vllm::sparse_attn_indexer'], 'compile_mm_encoder': False, 'use_inductor': None, 'compile_sizes': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': None, 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {}, 'max_cudagraph_capture_size': None, 'local_cache_dir': None}
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:53:56 [tt.py:370] Automatic prefix caching is enabled
+2026-11-10 12:53:56.803 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 12:53:56.803 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 12:53:56.807 | info     |          Device | Opening user mode device driver (tt_cluster.cpp:222)
+2026-11-10 12:53:56.810 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 12:53:56.810 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 12:53:56.823 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-10 12:53:56.823 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-10 12:53:56.826 | info     |             UMD | Harvesting masks for chip 0 tensix: 0x1 dram: 0x0 eth: 0x0 pcie: 0x0 l2cpu: 0x0 (cluster.cpp:331)
+2026-11-10 12:53:56.925 | info     |             UMD | Opening local chip ids/PCIe ids: {0}/[0] and remote chip ids {} (cluster.cpp:180)
+2026-11-10 12:53:56.925 | info     |             UMD | IOMMU: disabled (cluster.cpp:155)
+2026-11-10 12:53:56.925 | info     |             UMD | KMD version: 2.11.0 (cluster.cpp:158)
+2026-11-10 12:53:56.926 | info     |             UMD | Starting devices in cluster (cluster.cpp:964)
+2026-11-10 12:53:56.926 | info     |             UMD | Mapped hugepage 0x280000000 to NOC address 0x800000000 (silicon_sysmem_manager.cpp:217)
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:53:56 [tt_worker.py:609] Attempting to open mesh device with grid shape (1, 1)
+2026-11-10 12:53:56.962 | info     |     Distributed | Using auto discovery to generate mesh graph. (metal_context.cpp:1061)
+2026-11-10 12:53:56.963 | info     |     Distributed | Constructing control plane using auto-discovery (no mesh graph descriptor). (metal_context.cpp:1028)
+2026-11-10 12:53:56.963 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 12:53:56.963 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 12:53:56.963 | info     |          Fabric | Starting multi-mesh mapping: 1 logical mesh(es) to 1 physical mesh(es) (topology_mapper_utils.cpp:936)
+2026-11-10 12:53:56.963 | info     |          Fabric | Multi-mesh mapping attempt 1/2: Trying inter-mesh mapping (topology_mapper_utils.cpp:989)
+2026-11-10 12:53:56.963 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 12:53:56.963 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 12:53:56.963 | info     |          Fabric | Attempt 1: Inter-mesh mapping succeeded, found 1 mesh pair(s) (topology_mapper_utils.cpp:1018)
+2026-11-10 12:53:56.963 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-10 12:53:56.963 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 1, backtracks: 0, memoization hits: 0. Required constraints satisfied: 0, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-10 12:53:56.963 | info     |          Fabric | Multi-mesh mapping succeeded after 1 attempt(s): 1 mesh pair(s) mapped (topology_mapper_utils.cpp:1155)
+2026-11-10 12:53:56.969 | info     |    BuildKernels | Skipping deleting built cache (build.cpp:123)
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:53:59 [tt_worker.py:624] multidevice with 1 devices and grid (1, 1) is created
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:53:59 [tt_model_runner.py:144] TTModelRunner: trace_mode=all, sample_on_device_mode=None, enable_model_warmup=True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.835 | INFO     | models.tt_transformers.tt.model_config:__init__:472 - Inferring device name: N150
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.836 | INFO     | models.tt_transformers.tt.model_config:__init__:519 - Checkpoint directory: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.836 | INFO     | models.tt_transformers.tt.model_config:__init__:520 - Tokenizer file: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct/tokenizer.model
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.836 | INFO     | models.tt_transformers.tt.model_config:__init__:521 - Cache directory: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.2-1B-Instruct/N150/N150
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.836 | INFO     | models.tt_transformers.tt.model_config:__init__:522 - Model name: Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.838 | INFO     | models.tt_transformers.tt.model_config:_set_params_from_dict:2562 - Model name from config: Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.838 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3333 - Tokenizer path: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.838 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3334 - Model name: Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:53:59.838 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3335 - Base model name: Llama-3.2-1B
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:00.199 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3346 - Successfully loaded tokenizer from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:00.541 | INFO     | models.tt_transformers.tt.model_config:create_processor:3415 - Successfully loaded processor from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:00.542 | INFO     | models.tt_transformers.tt.model_config:__init__:1020 - Attention grid: ttnn.CoreGrid(x=8, y=4)
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:00.542 | INFO     | models.tt_transformers.tt.model_config:__init__:1021 - MLP grid: ttnn.CoreGrid(x=8, y=8)
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:00.542 | INFO     | models.tt_transformers.tt.model_config:__init__:1022 - MLP prefill grids @ 32: w1/w3: (8, 8), w2: (8, 8)
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:00.542 | INFO     | models.tt_transformers.tt.model_config:__init__:1023 - MLP prefill grids @ max_seq_len(8192): w1/w3: (8, 8), w2: (8, 8)
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:00.542 | INFO     | models.tt_transformers.tt.model_config:__init__:1026 - LM head grid: ttnn.CoreGrid(x=8, y=8)
+[1;36m(EngineCore_DP0 pid=211)[0;0m `torch_dtype` is deprecated! Use `dtype` instead!
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:54:06 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:54:16 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m   0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:19,  1.30s/it] 12%|█▎        | 2/16 [00:02<00:18,  1.33s/it] 19%|█▉        | 3/16 [00:03<00:17,  1.32s/it] 25%|██▌       | 4/16 [00:05<00:15,  1.31s/it] 31%|███▏      | 5/16 [00:06<00:14,  1.31s/it] 38%|███▊      | 6/16 [00:07<00:13,  1.31s/it] 44%|████▍     | 7/16 [00:09<00:11,  1.33s/it] 50%|█████     | 8/16 [00:10<00:10,  1.34s/it] 56%|█████▋    | 9/16 [00:11<00:09,  1.35s/it] 62%|██████▎   | 10/16 [00:13<00:08,  1.35s/it] 69%|██████▉   | 11/16 [00:14<00:06,  1.37s/it] 75%|███████▌  | 12/16 [00:16<00:05,  1.36s/it] 81%|████████▏ | 13/16 [00:17<00:04,  1.36s/it] 88%|████████▊ | 14/16 [00:18<00:02,  1.36s/it] 94%|█████████▍| 15/16 [00:20<00:01,  1.36s/it]100%|██████████| 16/16 [00:21<00:00,  1.36s/it]100%|██████████| 16/16 [00:21<00:00,  1.35s/it]
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:54:26 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:54:30 [kv_cache_utils.py:800] Overriding num_gpu_blocks=140737488355328 with num_gpu_blocks_override=2049
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:54:30 [kv_cache_utils.py:1234] GPU KV cache size: 131,136 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:54:30 [kv_cache_utils.py:1239] Maximum concurrency for 8,192 tokens per request: 16.01x
+[1;36m(EngineCore_DP0 pid=211)[0;0m Allocating TT kv caches for each layer (submesh 1):   0%|          | 0/16 [00:00<?, ?it/s]Allocating TT kv caches for each layer (submesh 1):   6%|▋         | 1/16 [00:02<00:33,  2.21s/it]Allocating TT kv caches for each layer (submesh 1):  38%|███▊      | 6/16 [00:02<00:02,  3.43it/s]Allocating TT kv caches for each layer (submesh 1):  69%|██████▉   | 11/16 [00:02<00:00,  7.04it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 16/16 [00:02<00:00, 11.22it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 16/16 [00:02<00:00,  6.27it/s]
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:32.574 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 128
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:32.575 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 128 with sampling params: None
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:32.582 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:32.582 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:54:36 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:44.666 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:166 - Done Compiling Model
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:44.676 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:180 - Done Capturing Prefill Trace
+2026-11-10 12:54:44.677 | warning  |           Metal | Allocating device buffers is unsafe due to the existence of an active trace. These buffers may be corrupted once a trace is executed. (allocator.cpp:105)
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:54:46 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:48.798 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:48.798 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 1024
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:48.799 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 1024 with sampling params: None
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:48.815 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 1024 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:48.816 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:54:56 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:57.594 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 1024 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:57.594 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 2048
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:57.595 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 2048 with sampling params: None
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:57.596 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 2048 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:54:57.599 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:06.554 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 2048 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:06.555 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 4096
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:06.555 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 4096 with sampling params: None
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:06.560 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 4096 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:06.560 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:55:06 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:15.102 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 4096 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:15.103 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 8192
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:15.103 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 8192 with sampling params: None
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:15.108 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 8192 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:15.108 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:55:16 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:23.765 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 8192 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:23.765 | INFO     | models.common.warmup.warmup_utils:warmup_model_decode:99 - Starting decode warmup
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:23.766 | INFO     | models.common.warmup.warmup_utils:warmup_model_decode:100 - Tokens shape: torch.Size([1, 1])
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:23.766 | INFO     | models.common.warmup.warmup_utils:warmup_model_decode:101 - Start pos shape: torch.Size([1])
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:23.766 | INFO     | models.common.warmup.warmup_utils:warmup_model_decode:102 - Page table shape: torch.Size([1, 128])
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:23.766 | INFO     | models.common.warmup.warmup_utils:warmup_model_decode:105 - Warming up decode for sampling params: None
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:55:26 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:55:36 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:38.845 | INFO     | models.tt_transformers.tt.generator:_capture_decode_trace_text:787 - Done Compiling Model
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:38.865 | INFO     | models.tt_transformers.tt.generator:_capture_decode_trace_text:825 - Done Capturing Decode Trace
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:38.897 | INFO     | models.common.warmup.warmup_utils:warmup_model_decode:116 - Decode warmup completed
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:55:38 [core.py:254] init engine (profile, create kv cache, warmup model) took 68.88 seconds
+[1;36m(EngineCore_DP0 pid=211)[0;0m WARNING 11-10 12:55:39 [scheduler.py:175] Using custom scheduler class vllm.v1.core.sched.ascend_scheduler.AscendScheduler. This scheduler interface is not public and compatibility may not be maintained.
+[1;36m(EngineCore_DP0 pid=211)[0;0m INFO 11-10 12:55:40 [tt.py:370] Automatic prefix caching is enabled
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:55:40 utils.py:1144] READY from local core engine process 0.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-10 12:55:40 loggers.py:246] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 2049
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:40 api_server.py:1726] Supported tasks: ['generate']
+[1;36m(APIServer pid=1)[0;0m WARNING 11-10 12:55:40 model.py:1596] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:40 serving_responses.py:154] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 serving_chat.py:131] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 serving_completion.py:73] Using default completion sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 serving_chat.py:131] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 api_server.py:2056] Starting vLLM API server 0 on http://0.0.0.0:8000
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:38] Available routes are:
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /docs, Methods: GET, HEAD
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /redoc, Methods: GET, HEAD
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /health, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /load, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /tokenize, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /detokenize, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/models, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /version, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/responses, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/messages, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/chat/completions, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/completions, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/embeddings, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /pooling, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /classify, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /score, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/score, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/audio/transcriptions, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/audio/translations, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /rerank, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v1/rerank, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /v2/rerank, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /inference/v1/generate, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /ping, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /ping, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /invocations, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-10 12:55:41 launcher.py:46] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO:     Started server process [1]
+[1;36m(APIServer pid=1)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=1)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:44352 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:55912 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48950 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:53.806 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:53.807 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:55:53.861 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48950 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:46870 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:46876 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:46888 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:01.106 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:01.106 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:02.344 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:36512 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:08.928 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:08.928 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:08.967 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:42804 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:15.783 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:15.784 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:15.822 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:22.192 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:22.193 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:22.227 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:38968 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:52432 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:38.604 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:38.605 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:38.644 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:45642 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:45.342 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:45.343 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:45.382 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:52.101 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:52.101 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:52.140 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:33154 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:58.906 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:58.906 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:56:58.946 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:44002 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:05.924 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:05.924 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:05.963 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:12.722 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:12.722 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:12.761 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:46418 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:19.353 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:19.354 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:19.387 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:42672 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:25.690 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:25.691 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:25.727 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:56426 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:32.261 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:32.261 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:32.318 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:53222 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:56872 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:49.076 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:49.076 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:49.117 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:41710 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:55.480 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:55.481 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:57:55.521 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:01.823 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:01.823 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:01.855 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:45012 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:08.546 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:08.546 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:08.583 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:42586 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:15.102 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:15.102 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:15.141 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:21.889 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:21.890 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:21.928 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:58404 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:28.298 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:28.299 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:28.339 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:39518 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:34.811 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:34.811 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:34.850 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:48456 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:41.523 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:41.523 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:41.560 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:55604 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:59926 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:58.249 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:58.249 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:58:58.286 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:41468 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:04.944 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:04.944 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:04.981 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:11.559 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:11.559 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:11.596 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:60060 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:18.219 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:18.220 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:18.258 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:34984 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:24.793 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:24.796 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:24.832 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:31.380 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:31.380 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:31.421 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:37712 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:38.096 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:38.097 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:38.132 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:33528 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:44.759 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:44.760 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:44.792 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:53306 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:51.602 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:51.602 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 12:59:51.641 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:59346 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:42208 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:39836 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:08.359 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:08.359 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:08.394 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:37854 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:39836 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:14.928 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:14.928 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34128 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34144 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34150 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34160 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34174 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34180 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34196 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:14.966 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:21.589 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:21.589 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:39836 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:21.624 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:46420 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:27.876 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:27.876 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34128 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:27.934 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:37774 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:34.777 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:34.777 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34144 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:34.817 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:41.247 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:41.247 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34150 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:41.288 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:39830 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:48.535 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:48.536 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34160 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:48.574 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:41738 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:55.316 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:55.316 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34174 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:00:55.355 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:01.906 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:01.907 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34180 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:01.947 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:58900 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:08.686 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:08.687 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34196 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:08.726 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:59898 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:15.494 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:15.495 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:15.535 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:21.962 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:21.963 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:22.004 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:55578 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:28.616 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:28.616 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:28.651 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:45520 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:35.310 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:35.310 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:35.349 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:41.936 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:41.936 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:41.978 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:42400 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:48.568 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:48.568 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:48.605 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:41160 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:55.467 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:55.468 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:01:55.506 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:52858 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40220 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:10.872 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:10.873 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:10.910 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:39868 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40220 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:17.610 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:17.610 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40228 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40236 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40250 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40258 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40268 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40280 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40296 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:17.648 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:46708 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:24.370 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:24.370 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40220 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:24.406 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:30.727 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:30.728 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40228 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:30.766 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:45396 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:37.253 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:37.253 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40236 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:37.288 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:44544 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:43.797 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:43.798 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40250 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:43.836 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:50.394 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:50.394 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40258 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:50.437 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:49670 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:56.893 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:56.894 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40268 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:02:56.924 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:40900 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:03.212 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:03.212 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40280 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:03.249 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:09.850 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:09.850 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:40296 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:09.887 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:52288 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:16.520 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:16.521 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:16.558 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:52626 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:23.320 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:23.320 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:23.354 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:29.971 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:29.972 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:30.012 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:33678 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:36.622 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:36.622 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:36.659 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:57868 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:43.236 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:43.236 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:43.277 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:49.813 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:49.813 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:49.848 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:54466 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:56.464 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:56.465 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:03:56.491 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:35444 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59136 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:12.071 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:12.071 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:12.110 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:54792 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59136 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:18.750 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:18.750 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59152 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59160 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59168 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59176 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59184 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59192 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59200 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:18.789 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:48976 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:25.184 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:25.184 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59136 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:25.223 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:31.672 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:31.672 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59152 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:31.715 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:48050 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:38.259 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:38.260 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59160 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:38.299 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:50672 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:44.917 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:44.917 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59168 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:44.956 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:51.498 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:51.498 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59176 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:51.528 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:55578 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:58.016 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:58.016 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59184 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:04:58.053 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:44692 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:04.575 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:04.575 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59192 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:04.615 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:10.787 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:10.787 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:59200 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:10.825 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:46764 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:17.261 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:17.261 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:17.298 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:42650 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:23.742 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:23.742 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:23.770 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:30.189 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:30.189 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:30.228 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:38146 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:36.714 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:36.715 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:36.753 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:39978 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:43.472 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:43.472 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:43.508 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:50.085 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:50.085 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:50.123 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:41848 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:56.524 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:56.524 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=211)[0;0m 2026-11-10 13:05:56.562 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:53146 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:47758 - "GET /metrics HTTP/1.1" 200 OK

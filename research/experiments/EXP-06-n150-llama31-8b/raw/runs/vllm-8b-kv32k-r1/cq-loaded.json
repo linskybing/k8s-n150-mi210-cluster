@@ -1,0 +1,150 @@
+{
+    "apiVersion": "kueue.x-k8s.io/v1beta2",
+    "kind": "ClusterQueue",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"kueue.x-k8s.io/v1beta2\",\"kind\":\"ClusterQueue\",\"metadata\":{\"annotations\":{},\"name\":\"default\"},\"spec\":{\"namespaceSelector\":{},\"queueingStrategy\":\"BestEffortFIFO\",\"resourceGroups\":[{\"coveredResources\":[\"cpu\",\"memory\",\"hugepages-1Gi\",\"tenstorrent.com/chip\",\"amd.com/gpu\"],\"flavors\":[{\"name\":\"default\",\"resources\":[{\"name\":\"cpu\",\"nominalQuota\":30},{\"name\":\"memory\",\"nominalQuota\":\"56Gi\"},{\"name\":\"hugepages-1Gi\",\"nominalQuota\":\"4Gi\"},{\"name\":\"tenstorrent.com/chip\",\"nominalQuota\":1},{\"name\":\"amd.com/gpu\",\"nominalQuota\":4}]}]}]}}\n"
+        },
+        "creationTimestamp": "2026-10-19T06:32:10Z",
+        "finalizers": [
+            "kueue.x-k8s.io/resource-in-use"
+        ],
+        "generation": 1,
+        "name": "default",
+        "resourceVersion": "7613106",
+        "uid": "78724680-77f4-462b-8839-01e2206afbab"
+    },
+    "spec": {
+        "flavorFungibility": {
+            "whenCanBorrow": "MayStopSearch",
+            "whenCanPreempt": "TryNextFlavor"
+        },
+        "namespaceSelector": {},
+        "preemption": {
+            "borrowWithinCohort": {
+                "policy": "Never"
+            },
+            "reclaimWithinCohort": "Never",
+            "withinClusterQueue": "Never"
+        },
+        "queueingStrategy": "BestEffortFIFO",
+        "resourceGroups": [
+            {
+                "coveredResources": [
+                    "cpu",
+                    "memory",
+                    "hugepages-1Gi",
+                    "tenstorrent.com/chip",
+                    "amd.com/gpu"
+                ],
+                "flavors": [
+                    {
+                        "name": "default",
+                        "resources": [
+                            {
+                                "name": "cpu",
+                                "nominalQuota": "30"
+                            },
+                            {
+                                "name": "memory",
+                                "nominalQuota": "56Gi"
+                            },
+                            {
+                                "name": "hugepages-1Gi",
+                                "nominalQuota": "4Gi"
+                            },
+                            {
+                                "name": "tenstorrent.com/chip",
+                                "nominalQuota": "1"
+                            },
+                            {
+                                "name": "amd.com/gpu",
+                                "nominalQuota": "4"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "stopPolicy": "None"
+    },
+    "status": {
+        "admittedWorkloads": 1,
+        "conditions": [
+            {
+                "lastTransitionTime": "2026-10-19T06:32:10Z",
+                "message": "Can admit new workloads",
+                "observedGeneration": 1,
+                "reason": "Ready",
+                "status": "True",
+                "type": "Active"
+            }
+        ],
+        "flavorsReservation": [
+            {
+                "name": "default",
+                "resources": [
+                    {
+                        "borrowed": "0",
+                        "name": "amd.com/gpu",
+                        "total": "0"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "cpu",
+                        "total": "0"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "hugepages-1Gi",
+                        "total": "1Gi"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "memory",
+                        "total": "8Gi"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "tenstorrent.com/chip",
+                        "total": "1"
+                    }
+                ]
+            }
+        ],
+        "flavorsUsage": [
+            {
+                "name": "default",
+                "resources": [
+                    {
+                        "borrowed": "0",
+                        "name": "amd.com/gpu",
+                        "total": "0"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "cpu",
+                        "total": "0"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "hugepages-1Gi",
+                        "total": "1Gi"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "memory",
+                        "total": "8Gi"
+                    },
+                    {
+                        "borrowed": "0",
+                        "name": "tenstorrent.com/chip",
+                        "total": "1"
+                    }
+                ]
+            }
+        ],
+        "pendingWorkloads": 0,
+        "reservingWorkloads": 1
+    }
+}

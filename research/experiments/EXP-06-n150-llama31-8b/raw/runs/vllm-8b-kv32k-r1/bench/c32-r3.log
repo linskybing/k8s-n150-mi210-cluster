@@ -1,0 +1,34 @@
+INFO 11-11 17:15:46 [__init__.py:250] Automatically detected platform tt.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x740f319460e0>, seed=323, num_prompts=64, dataset_name='random', no_stream=False, dataset_path=None, custom_output_len=256, custom_skip_chat_template=False, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=128, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, endpoint_type='openai', label=None, backend='openai', base_url='http://localhost:8000', host='127.0.0.1', port=8000, endpoint='/v1/completions', max_concurrency=32, model='meta-llama/Llama-3.1-8B-Instruct', tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir='/tmp/bench', result_filename='c32-r3.json', ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='99', goodput=None, top_p=None, top_k=None, min_p=None, temperature=0.0, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None)
+INFO 11-11 17:15:50 [datasets.py:355] Sampling input_len from [127, 127] and output_len from [128, 128]
+Starting initial single prompt test run...
+Initial test run completed. Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 32
+  0%|          | 0/64 [00:00<?, ?it/s]  2%|▏         | 1/64 [00:11<12:13, 11.65s/it] 52%|█████▏    | 33/64 [00:23<00:18,  1.65it/s]100%|██████████| 64/64 [00:23<00:00,  2.75it/s]
+============ Serving Benchmark Result ============
+Successful requests:                     64        
+Benchmark duration (s):                  23.31     
+Total input tokens:                      8128      
+Total generated tokens:                  8192      
+Request throughput (req/s):              2.75      
+Output token throughput (tok/s):         351.46    
+Total Token throughput (tok/s):          700.18    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          3922.65   
+Median TTFT (ms):                        3922.88   
+P99 TTFT (ms):                           3930.02   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          60.83     
+Median TPOT (ms):                        60.85     
+P99 TPOT (ms):                           60.93     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           60.83     
+Median ITL (ms):                         59.25     
+P99 ITL (ms):                            78.08     
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          11647.98  
+Median E2EL (ms):                        11647.71  
+P99 E2EL (ms):                           11659.28  
+==================================================

@@ -1,0 +1,536 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/default-container": "vllm",
+            "kueue.x-k8s.io/workload": "job-n150-llm-a053c"
+        },
+        "creationTimestamp": "2026-11-11T17:05:46Z",
+        "finalizers": [
+            "batch.kubernetes.io/job-tracking"
+        ],
+        "generateName": "n150-llm-",
+        "generation": 1,
+        "labels": {
+            "batch.kubernetes.io/controller-uid": "6334f90e-84f7-4ebd-99da-e2497d390821",
+            "batch.kubernetes.io/job-name": "n150-llm",
+            "controller-uid": "6334f90e-84f7-4ebd-99da-e2497d390821",
+            "job-name": "n150-llm",
+            "kueue.x-k8s.io/cluster-queue-name": "default",
+            "kueue.x-k8s.io/local-queue-name": "default",
+            "kueue.x-k8s.io/podset": "main"
+        },
+        "name": "n150-llm-b5n87",
+        "namespace": "u-testuser",
+        "ownerReferences": [
+            {
+                "apiVersion": "batch/v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "Job",
+                "name": "n150-llm",
+                "uid": "6334f90e-84f7-4ebd-99da-e2497d390821"
+            }
+        ],
+        "resourceVersion": "7614014",
+        "uid": "d081fcce-0f8a-4cc0-b3df-27bae8ec1dc3"
+    },
+    "spec": {
+        "containers": [
+            {
+                "command": [
+                    "bash",
+                    "-c",
+                    "source $PYTHON_ENV_DIR/bin/activate \u0026\u0026 python run_vllm_api_server.py"
+                ],
+                "env": [
+                    {
+                        "name": "CACHE_ROOT",
+                        "value": "/home/container_app_user/cache_root"
+                    },
+                    {
+                        "name": "MODEL_WEIGHTS_PATH",
+                        "value": "/home/container_app_user/cache_root/weights/Llama-3.1-8B-Instruct"
+                    },
+                    {
+                        "name": "TT_CACHE_PATH",
+                        "value": "/home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.1-8B-Instruct/N150"
+                    },
+                    {
+                        "name": "TT_MODEL_SPEC_JSON_PATH",
+                        "value": "/spec/spec.json"
+                    },
+                    {
+                        "name": "HF_TOKEN",
+                        "valueFrom": {
+                            "secretKeyRef": {
+                                "key": "token",
+                                "name": "hf-token"
+                            }
+                        }
+                    }
+                ],
+                "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.9.0-25305db-6e67d2d",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "vllm",
+                "readinessProbe": {
+                    "exec": {
+                        "command": [
+                            "test",
+                            "-f",
+                            "/tmp/ready"
+                        ]
+                    },
+                    "failureThreshold": 3,
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 1
+                },
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ],
+                    "limits": {
+                        "hugepages-1Gi": "1Gi"
+                    },
+                    "requests": {
+                        "hugepages-1Gi": "1Gi",
+                        "memory": "8Gi"
+                    }
+                },
+                "securityContext": {
+                    "runAsUser": 0
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/spec",
+                        "name": "spec"
+                    },
+                    {
+                        "mountPath": "/home/container_app_user/cache_root",
+                        "name": "cache"
+                    },
+                    {
+                        "mountPath": "/dev/shm",
+                        "name": "shm"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-2khtn",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "initContainers": [
+            {
+                "command": [
+                    "sh",
+                    "-c",
+                    "rm -f /dev/hugepages-1G/tenstorrent /dev/hugepages-1G/device_0_*tenstorrent"
+                ],
+                "image": "busybox:1.37",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "cleanup-hugepages",
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ]
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-2khtn",
+                        "readOnly": true
+                    }
+                ]
+            },
+            {
+                "command": [
+                    "bash",
+                    "-c",
+                    "source $PYTHON_ENV_DIR/bin/activate \u0026\u0026 python -c \"import os; from huggingface_hub import snapshot_download as d; d(\\\"meta-llama/Llama-3.1-8B-Instruct\\\", local_dir=os.environ[\\\"MODEL_WEIGHTS_PATH\\\"], ignore_patterns=[\\\"original/*\\\"])\""
+                ],
+                "env": [
+                    {
+                        "name": "MODEL_WEIGHTS_PATH",
+                        "value": "/home/container_app_user/cache_root/weights/Llama-3.1-8B-Instruct"
+                    },
+                    {
+                        "name": "HF_TOKEN",
+                        "valueFrom": {
+                            "secretKeyRef": {
+                                "key": "token",
+                                "name": "hf-token"
+                            }
+                        }
+                    }
+                ],
+                "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.9.0-25305db-6e67d2d",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "weights",
+                "resources": {},
+                "securityContext": {
+                    "runAsUser": 0
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/home/container_app_user/cache_root",
+                        "name": "cache"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-2khtn",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "nodeName": "tenstorrent",
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "resourceClaims": [
+            {
+                "name": "n150",
+                "resourceClaimTemplateName": "n150"
+            }
+        ],
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {
+            "supplementalGroups": [
+                2150,
+                993
+            ]
+        },
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/not-ready",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            },
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/unreachable",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            }
+        ],
+        "volumes": [
+            {
+                "configMap": {
+                    "defaultMode": 420,
+                    "name": "llm-spec-8b-kv32k"
+                },
+                "name": "spec"
+            },
+            {
+                "hostPath": {
+                    "path": "/home/testuser/.cache/tt-vllm-8b",
+                    "type": "DirectoryOrCreate"
+                },
+                "name": "cache"
+            },
+            {
+                "emptyDir": {
+                    "medium": "Memory",
+                    "sizeLimit": "32Gi"
+                },
+                "name": "shm"
+            },
+            {
+                "name": "kube-api-access-2khtn",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "allocatedResources": {
+            "hugepages-1Gi": "1Gi",
+            "memory": "8Gi"
+        },
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-11T17:05:47Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "PodReadyToStartContainers"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-11T17:05:48Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-11T17:08:43Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-11T17:08:43Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-11T17:05:46Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "allocatedResources": {
+                    "hugepages-1Gi": "1Gi",
+                    "memory": "8Gi"
+                },
+                "allocatedResourcesStatus": [
+                    {
+                        "name": "claim:n150",
+                        "resources": [
+                            {
+                                "health": "Unknown",
+                                "resourceID": "k8s.tenstorrent.com/tenstorrent=common"
+                            }
+                        ]
+                    }
+                ],
+                "containerID": "containerd://53ee245812e5a2c9020f50bb6d195d63ab1abda6fc825f8b897bb6e10e83fc6f",
+                "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.9.0-25305db-6e67d2d",
+                "imageID": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64@sha256:a2e2470c3e4f52138c93e831f5b03352ad0bf89a476395fe5a4b39992c67c5d4",
+                "lastState": {},
+                "name": "vllm",
+                "ready": true,
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ],
+                    "limits": {
+                        "hugepages-1Gi": "1Gi"
+                    },
+                    "requests": {
+                        "hugepages-1Gi": "1Gi",
+                        "memory": "8Gi"
+                    }
+                },
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2026-11-11T17:05:48Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 0,
+                        "supplementalGroups": [
+                            0,
+                            993,
+                            2150
+                        ],
+                        "uid": 0
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/spec",
+                        "name": "spec"
+                    },
+                    {
+                        "mountPath": "/home/container_app_user/cache_root",
+                        "name": "cache"
+                    },
+                    {
+                        "mountPath": "/dev/shm",
+                        "name": "shm"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-2khtn",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "hostIP": "<node-ip>",
+        "hostIPs": [
+            {
+                "ip": "<node-ip>"
+            }
+        ],
+        "initContainerStatuses": [
+            {
+                "containerID": "containerd://3b4733fb349d25f51de14dce2226b4822ffd3696f18f867be7e3679b38d70c9d",
+                "image": "docker.io/library/busybox:1.37",
+                "imageID": "docker.io/library/busybox@sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec",
+                "lastState": {},
+                "name": "cleanup-hugepages",
+                "ready": true,
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ]
+                },
+                "restartCount": 0,
+                "started": false,
+                "state": {
+                    "terminated": {
+                        "containerID": "containerd://3b4733fb349d25f51de14dce2226b4822ffd3696f18f867be7e3679b38d70c9d",
+                        "exitCode": 0,
+                        "finishedAt": "2026-11-11T17:05:47Z",
+                        "reason": "Completed",
+                        "startedAt": "2026-11-11T17:05:47Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 0,
+                        "supplementalGroups": [
+                            0,
+                            10,
+                            993,
+                            2150
+                        ],
+                        "uid": 0
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-2khtn",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            },
+            {
+                "containerID": "containerd://802471bc1c6fd346999aa2e34bb61ddfe722e5f47819fa4c4bbb687375af1663",
+                "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.9.0-25305db-6e67d2d",
+                "imageID": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64@sha256:a2e2470c3e4f52138c93e831f5b03352ad0bf89a476395fe5a4b39992c67c5d4",
+                "lastState": {},
+                "name": "weights",
+                "ready": true,
+                "resources": {},
+                "restartCount": 0,
+                "started": false,
+                "state": {
+                    "terminated": {
+                        "containerID": "containerd://802471bc1c6fd346999aa2e34bb61ddfe722e5f47819fa4c4bbb687375af1663",
+                        "exitCode": 0,
+                        "finishedAt": "2026-11-11T17:05:48Z",
+                        "reason": "Completed",
+                        "startedAt": "2026-11-11T17:05:47Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 0,
+                        "supplementalGroups": [
+                            0,
+                            993,
+                            2150
+                        ],
+                        "uid": 0
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/home/container_app_user/cache_root",
+                        "name": "cache"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-2khtn",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "observedGeneration": 1,
+        "phase": "Running",
+        "podIP": "10.42.0.68",
+        "podIPs": [
+            {
+                "ip": "10.42.0.68"
+            }
+        ],
+        "qosClass": "Burstable",
+        "resourceClaimStatuses": [
+            {
+                "name": "n150",
+                "resourceClaimName": "n150-llm-b5n87-n150-24vhz"
+            }
+        ],
+        "resources": {
+            "requests": {
+                "memory": "8Gi"
+            }
+        },
+        "startTime": "2026-11-11T17:05:46Z"
+    }
+}

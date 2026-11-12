@@ -1,0 +1,9 @@
+configmap/llm-spec-b16 created
+== load vllm-b16 1 2026-11-11T09:14:34Z
+job.batch/n150-llm created
+pod/n150-llm-4tjsj condition met
+== query vllm-b16 1 2026-11-11T09:19:16Z
+== bench vllm-b16 1 2026-11-11T09:19:29Z
+== unload vllm-b16 1 2026-11-11T09:28:32Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== DONE 2026-11-11T09:28:35Z

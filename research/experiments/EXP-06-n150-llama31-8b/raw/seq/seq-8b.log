@@ -1,0 +1,6 @@
+configmap/llm-spec created
+configmap/llm-spec-seq1 created
+configmap/llm-spec-8b created
+== load vllm-8b 1 2026-11-11T16:50:57Z
+job.batch/n150-llm created
+== stopped by agent after device OOM 2026-11-11T17:05:02Z; unload by hand

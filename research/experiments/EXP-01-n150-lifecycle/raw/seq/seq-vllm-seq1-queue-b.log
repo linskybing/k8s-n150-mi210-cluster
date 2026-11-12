@@ -1,0 +1,14 @@
+== load vllm-seq1 1 2026-11-10T03:51:00Z
+job.batch/n150-llm created
+pod/n150-llm-x2cls condition met
+== query vllm-seq1 1 2026-11-10T03:54:25Z
+== bench vllm-seq1 1 2026-11-10T03:54:37Z
+== unload vllm-seq1 1 2026-11-10T04:05:00Z
+job.batch "n150-llm" deleted from u-testuser namespace
+job.batch/n150-job-a created
+job.batch/n150-job-b created
+job.batch/n150-job-a condition met
+job.batch/n150-job-b condition met
+job.batch "n150-job-a" deleted from u-testuser namespace
+job.batch "n150-job-b" deleted from u-testuser namespace
+== DONE 2026-11-10T04:06:10Z

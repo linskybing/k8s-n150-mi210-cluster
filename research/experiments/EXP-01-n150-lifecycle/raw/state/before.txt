@@ -1,0 +1,22 @@
+2026-11-10T03:22:59Z
+NAMESPACE    NAME                                           STATE                AGE
+<other-ns>   <other-workload>   allocated,reserved   2d14h
+
+NAME                   READY   STATUS        RESTARTS   AGE
+pod/exp-helper-8zthb   1/1     Terminating   0          117s
+
+NAME                         DATA   AGE
+configmap/kube-root-ca.crt   1      22d
+
+NAME              TYPE     DATA   AGE
+secret/hf-token   Opaque   1      2m12s
+
+amd.com/gpu 0
+cpu 0
+hugepages-1Gi 0
+memory 0
+tenstorrent.com/chip 0
+
+NAMESPACE    NAME                       QUEUE     RESERVED IN   ADMITTED   FINISHED   AGE
+<other-ns>   <other-workload>         default   default       True       True       19d
+<other-ns>   <other-workload>   default   default       True       True       84m

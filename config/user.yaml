@@ -1,0 +1,41 @@
+# applied into each user namespace by scripts/add-user.sh (kubectl apply -n u-<name>)
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: user
+---
+apiVersion: kueue.x-k8s.io/v1beta2
+kind: LocalQueue
+metadata:
+  name: default
+spec:
+  clusterQueue: default
+---
+# the n150 board; Jobs reference it via resourceClaimTemplateName: n150 (config/job-defaults.yaml adds hugepages etc. for it)
+apiVersion: resource.k8s.io/v1
+kind: ResourceClaimTemplate
+metadata:
+  name: n150
+spec:
+  spec:
+    devices:
+      requests:
+        - name: board
+          exactly:
+            deviceClassName: tenstorrent.com
+            selectors:
+              - cel:
+                  expression: device.attributes["tenstorrent.com"].boardName == "n150"
+---
+# one MI210; for more, users make their own template with exactly.count: N (Kueue counts amd.com/gpu, quota 4)
+apiVersion: resource.k8s.io/v1
+kind: ResourceClaimTemplate
+metadata:
+  name: mi210
+spec:
+  spec:
+    devices:
+      requests:
+        - name: gpu
+          exactly:
+            deviceClassName: gpu.amd.com

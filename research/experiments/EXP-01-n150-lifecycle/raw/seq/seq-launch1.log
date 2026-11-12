@@ -1,0 +1,12 @@
+configmap/llm-spec created
+configmap/llm-spec-seq1 created
+== load vllm 1 2026-11-10T03:26:21Z
+job.batch/n150-llm created
+pod/n150-llm-zbv7x condition met
+== query vllm 1 2026-11-10T03:29:46Z
+== unload vllm 1 2026-11-10T03:30:00Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== load vllm 2 2026-11-10T03:30:03Z
+job.batch/n150-llm created
+pod/n150-llm-g5qv2 condition met
+== query vllm 2 2026-11-10T03:33:28Z

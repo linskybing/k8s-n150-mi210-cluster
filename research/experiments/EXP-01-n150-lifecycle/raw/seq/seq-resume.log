@@ -1,0 +1,19 @@
+== query vllm 2 2026-11-10T03:34:35Z
+== unload vllm 2 2026-11-10T03:34:46Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== load vllm 3 2026-11-10T03:34:49Z
+job.batch/n150-llm created
+pod/n150-llm-hlz4k condition met
+== query vllm 3 2026-11-10T03:38:14Z
+== bench vllm 3 2026-11-10T03:38:26Z
+== load sglang q 2026-11-10T03:45:57Z
+job.batch/n150-sglang-custom created
+== unload vllm 3 2026-11-10T03:46:57Z
+job.batch "n150-llm" deleted from u-testuser namespace
+pod/n150-sglang-custom-pbgdz condition met
+== query sglang q 2026-11-10T03:47:42Z
+== unload sglang q 2026-11-10T03:49:38Z
+job.batch "n150-sglang-custom" deleted from u-testuser namespace
+== load sglang 1 2026-11-10T03:49:46Z
+job.batch/n150-sglang-custom created
+== ABORTED after load sglang 1 2026-11-10T03:50:22Z: SGLang on CPU, see sglang-rq

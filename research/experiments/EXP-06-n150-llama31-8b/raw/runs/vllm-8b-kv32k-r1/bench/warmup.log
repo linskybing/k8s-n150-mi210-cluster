@@ -1,0 +1,34 @@
+INFO 11-11 17:09:02 [__init__.py:250] Automatically detected platform tt.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7bddc1ab9870>, seed=0, num_prompts=4, dataset_name='random', no_stream=False, dataset_path=None, custom_output_len=256, custom_skip_chat_template=False, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=128, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, endpoint_type='openai', label=None, backend='openai', base_url='http://localhost:8000', host='127.0.0.1', port=8000, endpoint='/v1/completions', max_concurrency=4, model='meta-llama/Llama-3.1-8B-Instruct', tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir='/tmp/bench', result_filename='warmup.json', ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='99', goodput=None, top_p=None, top_k=None, min_p=None, temperature=0.0, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None)
+INFO 11-11 17:09:06 [datasets.py:355] Sampling input_len from [127, 127] and output_len from [128, 128]
+  0%|          | 0/4 [00:00<?, ?it/s]Starting initial single prompt test run...
+Initial test run completed. Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 4
+ 25%|██▌       | 1/4 [00:07<00:23,  7.88s/it]100%|██████████| 4/4 [00:07<00:00,  1.97s/it]
+============ Serving Benchmark Result ============
+Successful requests:                     4         
+Benchmark duration (s):                  7.88      
+Total input tokens:                      508       
+Total generated tokens:                  512       
+Request throughput (req/s):              0.51      
+Output token throughput (tok/s):         65.00     
+Total Token throughput (tok/s):          129.49    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          578.80    
+Median TTFT (ms):                        578.78    
+P99 TTFT (ms):                           579.40    
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          57.43     
+Median TPOT (ms):                        57.43     
+P99 TPOT (ms):                           57.43     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           57.43     
+Median ITL (ms):                         56.10     
+P99 ITL (ms):                            78.67     
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          7872.69   
+Median E2EL (ms):                        7872.68   
+P99 E2EL (ms):                           7873.31   
+==================================================

@@ -1,0 +1,90 @@
+INFO 11-11 09:11:41 [scheduler.py:225] Chunked prefill is enabled with max_num_batched_tokens=2048.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x72e622a73010>, seed=83, num_prompts=16, dataset_name='random', no_stream=False, dataset_path=None, no_oversample=False, skip_chat_template=False, disable_shuffle=False, custom_output_len=256, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=128, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, no_reranker=False, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 1}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='openai', base_url='http://localhost:8000', host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=8, model='meta-llama/Llama-3.2-1B-Instruct', tokenizer=None, use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, num_warmups=0, profile=False, save_result=True, save_detailed=False, append_result=False, metadata=None, result_dir='/tmp/bench', result_filename='c8-r3.json', ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='99', goodput=None, request_id_prefix='bench-3d1f842c-', top_p=None, top_k=None, min_p=None, temperature=0.0, frequency_penalty=None, presence_penalty=None, repetition_penalty=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=600, extra_body=None)
+INFO 11-11 09:11:42 [datasets.py:613] Sampling input_len from [127, 127] and output_len from [128, 128]
+Starting initial single prompt test run...
+Waiting for endpoint to become up in 600 seconds
+ |          | 00:00 elapsed, ? remaining |          | 00:00 elapsed, 00:04 remaining |          | 00:08 elapsed, 1244:27:33 remaining
+Initial test run completed.
+Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 8
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:11<02:49, 11.33s/it] 56%|█████▋    | 9/16 [00:22<00:15,  2.23s/it]100%|██████████| 16/16 [00:22<00:00,  1.43s/it]
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     16        
+Failed requests:                         0         
+Maximum request concurrency:             8         
+Benchmark duration (s):                  22.80     
+Total input tokens:                      2032      
+Total generated tokens:                  2048      
+Request throughput (req/s):              0.70      
+Output token throughput (tok/s):         89.82     
+Peak output token throughput (tok/s):    104.00    
+Peak concurrent requests:                16.00     
+Total Token throughput (tok/s):          178.94    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          373.12    
+Median TTFT (ms):                        372.81    
+P99 TTFT (ms):                           415.15    
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          86.82     
+Median TPOT (ms):                        87.38     
+P99 TPOT (ms):                           88.23     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           86.82     
+Median ITL (ms):                         83.24     
+P99 ITL (ms):                            144.22    
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          11399.29  
+Median E2EL (ms):                        11398.64  
+P99 E2EL (ms):                           11471.35  
+==================================================
+nanobind: leaked 577 instances!
+ - leaked instance 0x72e64504d1e8 of type "ttnn._ttnn.operations.binary.xlogy_t"
+ - leaked instance 0x72e64526f8e8 of type "ttnn._ttnn.operations.unary.silu_t"
+ - leaked instance 0x72e64504da68 of type "ttnn._ttnn.operations.binary.ge__t"
+ - leaked instance 0x72e64504dfa8 of type "ttnn._ttnn.operations.ternary.lerp_t"
+ - leaked instance 0x72e644ee7688 of type "ttnn._ttnn.operations.experimental.ccl_experimental.all_to_all_async_generic_t"
+ - leaked instance 0x72e644f8c608 of type "ttnn._ttnn.operations.moreh.moreh_norm_t"
+ - leaked instance 0x72e64504c2c8 of type "ttnn._ttnn.operations.unary.celu_t"
+ - leaked instance 0x72e6bc268748 of type "ttnn._ttnn.operations.normalization.batch_norm_t"
+ - leaked instance 0x72e64504eea8 of type "ttnn._ttnn.operations.unary_backward.sin_bw_t"
+ - leaked instance 0x72e64504ea28 of type "ttnn._ttnn.operations.unary_backward.rsqrt_bw_t"
+ - leaked instance 0x72e644ee7708 of type "ttnn._ttnn.operations.experimental.ccl_experimental.matmul_reduce_scatter_async_t"
+ - leaked instance 0x72e64504eee8 of type "ttnn._ttnn.operations.unary_backward.sinh_bw_t"
+ - leaked instance 0x72e64504c8c8 of type "ttnn._ttnn.operations.unary.clip_t"
+ - leaked instance 0x72e6bc26a808 of type "ttnn._ttnn.operations.experimental.hc_sum_reduce_t"
+ - leaked instance 0x72e6bc26acf8 of type "ttnn._ttnn.operations.experimental.adaptive_max_pool2d_t"
+ - leaked instance 0x72e64504d228 of type "ttnn._ttnn.operations.binary.rsub_t"
+ - leaked instance 0x72e64504f268 of type "ttnn._ttnn.operations.unary_backward.erfinv_bw_t"
+ - leaked instance 0x72e64504cd68 of type "ttnn._ttnn.operations.binary.add__t"
+ - leaked instance 0x72e644ee6648 of type "ttnn._ttnn.operations.copy.typecast_t"
+ - leaked instance 0x72e644ee7c48 of type "ttnn._ttnn.operations.experimental.minimal_matmul_split_t"
+ - ... skipped remainder
+nanobind: leaked 708 types!
+ - leaked type "ttnn._ttnn.operations.transformer.scaled_dot_product_attention_t"
+ - leaked type "SocketEndpoint"
+ - leaked type "ttnn._ttnn.operations.unary.selu_t"
+ - leaked type "ttnn._ttnn.operations.moreh.moreh_layer_norm_t"
+ - leaked type "ttnn._ttnn.operations.unary.cos_t"
+ - leaked type "ttnn._ttnn.operations.examples.composite_example_t"
+ - leaked type "ttnn._ttnn.operations.unary.mish_t"
+ - leaked type "ttnn._ttnn.operations.experimental.nlp_create_qkv_heads_t"
+ - leaked type "DispatchCoreAxis"
+ - leaked type "ttnn._ttnn.operations.binary.prelu_t"
+ - ... skipped remainder
+nanobind: leaked 3169 functions!
+ - leaked function "from_json"
+ - leaked function ""
+ - leaked function ""
+ - leaked function "__call__"
+ - leaked function ""
+ - leaked function ""
+ - leaked function ""
+ - leaked function ""
+ - leaked function ""
+ - leaked function "__call__"
+ - ... skipped remainder
+nanobind: this is likely caused by a reference counting issue in the binding code.
+See https://nanobind.readthedocs.io/en/latest/refleaks.html

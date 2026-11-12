@@ -1,0 +1,169 @@
+{
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": {
+        "creationTimestamp": "2026-11-10T04:05:02Z",
+        "generation": 2,
+        "labels": {
+            "kueue.x-k8s.io/queue-name": "default"
+        },
+        "name": "n150-job-a",
+        "namespace": "u-testuser",
+        "resourceVersion": "6938127",
+        "uid": "5d05ac6b-e7c6-4fbf-ae8e-ecbc0d8e3e25"
+    },
+    "spec": {
+        "backoffLimit": 0,
+        "completionMode": "NonIndexed",
+        "completions": 1,
+        "manualSelector": false,
+        "parallelism": 1,
+        "podReplacementPolicy": "TerminatingOrFailed",
+        "selector": {
+            "matchLabels": {
+                "batch.kubernetes.io/controller-uid": "5d05ac6b-e7c6-4fbf-ae8e-ecbc0d8e3e25"
+            }
+        },
+        "suspend": false,
+        "template": {
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/default-container": "app",
+                    "kueue.x-k8s.io/workload": "job-n150-job-a-814f3"
+                },
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "5d05ac6b-e7c6-4fbf-ae8e-ecbc0d8e3e25",
+                    "batch.kubernetes.io/job-name": "n150-job-a",
+                    "controller-uid": "5d05ac6b-e7c6-4fbf-ae8e-ecbc0d8e3e25",
+                    "job-name": "n150-job-a",
+                    "kueue.x-k8s.io/cluster-queue-name": "default",
+                    "kueue.x-k8s.io/local-queue-name": "default",
+                    "kueue.x-k8s.io/podset": "main"
+                }
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "command": [
+                            "sh",
+                            "-c",
+                            "date -u; ls -l /dev/tenstorrent; sleep 30; date -u"
+                        ],
+                        "env": [
+                            {
+                                "name": "HOME",
+                                "value": "/home/testuser"
+                            }
+                        ],
+                        "image": "busybox:1.37",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "app",
+                        "resources": {
+                            "claims": [
+                                {
+                                    "name": "n150"
+                                }
+                            ],
+                            "limits": {
+                                "hugepages-1Gi": "1Gi"
+                            },
+                            "requests": {
+                                "hugepages-1Gi": "1Gi",
+                                "memory": "8Gi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/home/testuser",
+                                "name": "home"
+                            }
+                        ],
+                        "workingDir": "/home/testuser"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "initContainers": [
+                    {
+                        "command": [
+                            "sh",
+                            "-c",
+                            "rm -f /dev/hugepages-1G/tenstorrent /dev/hugepages-1G/device_0_*tenstorrent"
+                        ],
+                        "image": "busybox:1.37",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "cleanup-hugepages",
+                        "resources": {
+                            "claims": [
+                                {
+                                    "name": "n150"
+                                }
+                            ]
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "resourceClaims": [
+                    {
+                        "name": "n150",
+                        "resourceClaimTemplateName": "n150"
+                    }
+                ],
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "supplementalGroups": [
+                        2150,
+                        993
+                    ]
+                },
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "hostPath": {
+                            "path": "/home/testuser",
+                            "type": "Directory"
+                        },
+                        "name": "home"
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "completionTime": "2026-11-10T04:05:36Z",
+        "conditions": [
+            {
+                "lastProbeTime": "2026-11-10T04:05:02Z",
+                "lastTransitionTime": "2026-11-10T04:05:02Z",
+                "message": "Job resumed",
+                "reason": "JobResumed",
+                "status": "False",
+                "type": "Suspended"
+            },
+            {
+                "lastProbeTime": "2026-11-10T04:05:36Z",
+                "lastTransitionTime": "2026-11-10T04:05:36Z",
+                "message": "Reached expected number of succeeded pods",
+                "reason": "CompletionsReached",
+                "status": "True",
+                "type": "SuccessCriteriaMet"
+            },
+            {
+                "lastProbeTime": "2026-11-10T04:05:36Z",
+                "lastTransitionTime": "2026-11-10T04:05:36Z",
+                "message": "Reached expected number of succeeded pods",
+                "reason": "CompletionsReached",
+                "status": "True",
+                "type": "Complete"
+            }
+        ],
+        "ready": 0,
+        "startTime": "2026-11-10T04:05:02Z",
+        "succeeded": 1,
+        "terminating": 0,
+        "uncountedTerminatedPods": {}
+    }
+}

@@ -1,0 +1,19 @@
+== load sglang-tt 1 2026-11-10T04:24:09Z
+job.batch/n150-sglang-custom created
+pod/n150-sglang-custom-lgzzd condition met
+== query sglang-tt 1 2026-11-10T04:25:03Z
+== unload sglang-tt 1 2026-11-10T04:25:10Z
+job.batch "n150-sglang-custom" deleted from u-testuser namespace
+== load sglang-tt 2 2026-11-10T04:25:16Z
+job.batch/n150-sglang-custom created
+pod/n150-sglang-custom-xlkpj condition met
+== query sglang-tt 2 2026-11-10T04:26:10Z
+== unload sglang-tt 2 2026-11-10T04:26:18Z
+job.batch "n150-sglang-custom" deleted from u-testuser namespace
+== load sglang-tt 3 2026-11-10T04:26:27Z
+job.batch/n150-sglang-custom created
+pod/n150-sglang-custom-7lt82 condition met
+== query sglang-tt 3 2026-11-10T04:27:21Z
+== bench sglang-tt 3 2026error: timed out == unload sglang-tt 3 2026-11-10T04:32:20Z
+job.batch "n150-sglang-custom" deleted from u-testuser namespace
+== DONE 2026-11-10T04:32:27Z

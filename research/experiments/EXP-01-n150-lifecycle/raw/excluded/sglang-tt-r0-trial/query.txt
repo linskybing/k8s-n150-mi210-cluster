@@ -1,0 +1,9 @@
+## /health
+200 1.003087s
+## /v1/models
+{"object":"list","data":[{"id":"meta-llama/Llama-3.2-1B-Instruct","object":"model","created":1794284626,"owned_by":"sglang","root":"meta-llama/Llama-3.2-1B-Instruct","parent":null,"max_model_len":8192}]}
+## chat.py
+Kubernetes (also known as K8s) is an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications and services across a cluster of nodes, providing a flexible and scalable way to deploy and run software applications.
+## curl /v1/chat/completions
+{"id":"fad6a70764f74209822f6558d2d68146","object":"chat.completion","created":1794284630,"model":"meta-llama/Llama-3.2-1B-Instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Here are three uses of an AI accelerator:\n\n1. **Image and Video Processing**: AI accelerators can significantly speed up the processing of images and videos by performing complex calculations and transformations in parallel. This can be particularly useful in applications such as:\n\t* Object detection and tracking\n\t* Image segmentation and classification\n\t","reasoning_content":null,"tool_calls":null},"logprobs":null,"finish_reason":"length","matched_stop":null}],"usage":{"prompt_tokens":43,"total_tokens":107,"completion_tokens":64,"prompt_tokens_details":null,"reasoning_tokens":0},"metadata":{"weight_version":"default"}}
+200 1.290831s

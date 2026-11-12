@@ -1,0 +1,19 @@
+tt-k8s-driver-manager:
+  enabled: false # tt-kmd installed by node.sh via DKMS; operator builder (gcc-12) can't build for Ubuntu 24.04 kernels (gcc-13)
+tt-telemetry:
+  enabled: true
+  aggregator:
+    enabled: false # single node: scrape the per-node collector directly
+  podMonitor:
+    enabled: true
+jobset:
+  enabled: false
+kubepmix:
+  enabled: false # avoids the cert-manager dependency
+tt-dra-driver:
+  image:
+    tag: "0.0.65" # includes the post-reboot CDI fix (tt-dra-driver#33); chart 0.3.0 pins 0.0.59
+tt-fabric-manager:
+  agent:
+    podSecurityContext:
+      supplementalGroups: [2150] # agent runs as uid 1001; /dev/tenstorrent is root:tenstorrent(2150) 0660, else it finds 0 boards

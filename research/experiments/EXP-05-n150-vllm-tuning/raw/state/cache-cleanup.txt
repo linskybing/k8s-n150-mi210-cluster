@@ -1,0 +1,6 @@
+# Transcribed by hand from the output of the root helper pod cacheclean (u-testuser, busybox, hostPath /home/testuser),
+# 2026-11-11 ~10:29Z: du -sh /h/.cache/tt-vllm-cache/*; rm -rf /h/.cache/tt-vllm-cache; ls -la /h/.cache | grep -c tt-vllm-cache
+# (the scripted capture of this log ran after the pod was deleted and failed). Exit 1 = grep found 0 matches = dir removed.
+6.2G	/h/.cache/tt-vllm-cache/cache_root
+4.0K	/h/.cache/tt-vllm-cache/dot-cache
+0

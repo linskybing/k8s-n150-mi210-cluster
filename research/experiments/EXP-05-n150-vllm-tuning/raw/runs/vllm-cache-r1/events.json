@@ -1,0 +1,2552 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:40:07.680702Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-3d5b6",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475868",
+                "uid": "7f3fd874-d920-4e19-a3e7-2470bde08172"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "job-n150-llm-3d5b6.18e6f4347451a089",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475869",
+                "uid": "0b5a9739-ce13-483e-a4d2-41f90a4798ca"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:40:07.680719Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-3d5b6",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475868",
+                "uid": "7f3fd874-d920-4e19-a3e7-2470bde08172"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "job-n150-llm-3d5b6.18e6f4347451deaf",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475870",
+                "uid": "f7fee227-6ffd-4ad1-b17d-ea7f0ed14449"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:14:34.582002Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-61932",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467996",
+                "uid": "db0f2490-9bd3-4b66-abca-2026d2db3e14"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "job-n150-llm-61932.18e6f2cf8083f96e",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467997",
+                "uid": "c226d5ef-fb65-4c35-bc54-3eeb1025cf26"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:14:34.582025Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-61932",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467996",
+                "uid": "db0f2490-9bd3-4b66-abca-2026d2db3e14"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "job-n150-llm-61932.18e6f2cf80844aa4",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467998",
+                "uid": "b3b00f79-5ded-44ce-bbc4-37189ebf463a"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:28:36.188988Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-848fb",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472313",
+                "uid": "e90deece-993b-4cea-9fcc-73c0399b3602"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "job-n150-llm-848fb.18e6f393743370a7",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472314",
+                "uid": "8b681831-df30-4e1c-b9b3-c17b41e92240"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:28:36.189383Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-848fb",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472313",
+                "uid": "e90deece-993b-4cea-9fcc-73c0399b3602"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "job-n150-llm-848fb.18e6f393743975c8",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472315",
+                "uid": "b2cac273-b3f8-442f-baaa-5c5c87f1546c"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:01:43.523438Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-af765",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464047",
+                "uid": "3034690f-00ac-46ad-9730-a243df65abd1"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "job-n150-llm-af765.18e6f21bf9d7f6a9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464048",
+                "uid": "4c3754dd-0291-4f21-8878-ffe80720ce56"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:01:43.523452Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-af765",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464047",
+                "uid": "3034690f-00ac-46ad-9730-a243df65abd1"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 1s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "job-n150-llm-af765.18e6f21bf9d82a43",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464049",
+                "uid": "656beb7a-40ad-4c40-8d70-0d3edd3fc3bf"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "QuotaReserved",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:46:02.320164Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-d0d6b",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477730",
+                "uid": "34d5d336-5eb6-4bc1-b841-93e021567067"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Quota reserved in ClusterQueue default, wait time since queued was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "job-n150-llm-d0d6b.18e6f487067a5ee8",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477731",
+                "uid": "9eba542e-fa76-4b00-af56-8ff8c05a69b7"
+            },
+            "reason": "QuotaReserved",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Admitted",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:46:02.320180Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "kueue.x-k8s.io/v1beta2",
+                "kind": "Workload",
+                "name": "job-n150-llm-d0d6b",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477730",
+                "uid": "34d5d336-5eb6-4bc1-b841-93e021567067"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by ClusterQueue default, wait time since reservation was 0s",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "job-n150-llm-d0d6b.18e6f487067a9886",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477732",
+                "uid": "cc66ee81-7b22-4d7c-9806-aaee98f75852"
+            },
+            "reason": "Admitted",
+            "reportingComponent": "kueue-admission",
+            "reportingInstance": "kueue-admission-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:14:34.621459Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468006",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned u-testuser/n150-llm-4tjsj to tenstorrent",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "n150-llm-4tjsj.18e6f2cf82de1665",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468011",
+                "uid": "b4677508-d7fc-4acf-a559-f6142accffe6"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-tenstorrent",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:35Z",
+            "message": "Container image \"busybox:1.37\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:35Z",
+                "name": "n150-llm-4tjsj.18e6f2cfa951a90c",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468021",
+                "uid": "05366e83-6110-4f0e-bc80-cc06aba425a2"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:35Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:35Z",
+                "name": "n150-llm-4tjsj.18e6f2cfa9d44737",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468023",
+                "uid": "6f857527-026b-490c-ad26-f9a7f5bc09fc"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:35Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:35Z",
+                "name": "n150-llm-4tjsj.18e6f2cfad0e5fb9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468024",
+                "uid": "b8b9be10-f40c-4d37-9889-cd3bab531009"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:35Z",
+            "message": "Container image \"ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:35Z",
+                "name": "n150-llm-4tjsj.18e6f2cfcdd650e9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468029",
+                "uid": "f77e2859-7e6c-4956-9dbe-79d9e8f1c0eb"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:35Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:35Z",
+                "name": "n150-llm-4tjsj.18e6f2cfce7a7260",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468031",
+                "uid": "da51f6ac-ac05-418f-aca6-8041f46cb77c"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:35Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:35Z",
+                "name": "n150-llm-4tjsj.18e6f2cfd1d607db",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468032",
+                "uid": "c481d923-528e-4bdf-a4ac-c7ab72bbf8bb"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 25,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:18:19Z",
+            "message": "Readiness probe failed: Get \"http://10.42.0.87:8000/health\": dial tcp 10.42.0.87:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:35Z",
+                "name": "n150-llm-4tjsj.18e6f2cfd20979d1",
+                "namespace": "u-testuser",
+                "resourceVersion": "7469182",
+                "uid": "63bb55b5-71c3-4372-bef2-4850b9933ad2"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:33Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-4tjsj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468010",
+                "uid": "c3b437ca-4392-474f-8931-f533e9f55c67"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:33Z",
+            "message": "Stopping container vllm",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:33Z",
+                "name": "n150-llm-4tjsj.18e6f392c66e40e1",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472274",
+                "uid": "e425159c-daa5-4c96-a339-971d8dbd0867"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:40:07.728915Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475879",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned u-testuser/n150-llm-9wsfp to tenstorrent",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "n150-llm-9wsfp.18e6f43477316001",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475884",
+                "uid": "5e066ec5-af2c-45e2-86f1-97f840a07d42"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-tenstorrent",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:08Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:08Z",
+            "message": "Container image \"busybox:1.37\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:08Z",
+                "name": "n150-llm-9wsfp.18e6f4349b60ee56",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475892",
+                "uid": "328708f9-51f3-4d35-b454-60e813441983"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:08Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:08Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:08Z",
+                "name": "n150-llm-9wsfp.18e6f4349bf3e146",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475894",
+                "uid": "650785fd-306b-4dc0-acda-169483e28bbd"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:08Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:08Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:08Z",
+                "name": "n150-llm-9wsfp.18e6f4349fa329d5",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475895",
+                "uid": "e4c5746e-42f8-4b75-a332-6223b71cab1f"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:08Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:08Z",
+            "message": "Container image \"ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:08Z",
+                "name": "n150-llm-9wsfp.18e6f434b8ff6425",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475899",
+                "uid": "deacd90e-37c9-46e0-951c-56c4694630c4"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:08Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:08Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:08Z",
+                "name": "n150-llm-9wsfp.18e6f434b9982937",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475901",
+                "uid": "fb897da1-3405-4b59-9769-4985504671ef"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:08Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:08Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:08Z",
+                "name": "n150-llm-9wsfp.18e6f434bce82069",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475902",
+                "uid": "5efeb9aa-144a-42e0-82c4-ea50b7ce89b4"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 25,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:08Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:43:44Z",
+            "message": "Readiness probe failed: Get \"http://10.42.0.163:8000/health\": dial tcp 10.42.0.163:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:08Z",
+                "name": "n150-llm-9wsfp.18e6f434bd1a5234",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477015",
+                "uid": "8615b190-dc7b-4586-b421-5803c48a59e8"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:00Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-9wsfp",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475883",
+                "uid": "7bea87d7-88f4-4159-b8cd-18a514808a56"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:00Z",
+            "message": "Stopping container vllm",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:00Z",
+                "name": "n150-llm-9wsfp.18e6f486825e4d09",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477704",
+                "uid": "910a535b-3c3f-487a-88d4-689f3e16ea8a"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:41Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-bg5pq",
+                "namespace": "u-testuser",
+                "resourceVersion": "7459339",
+                "uid": "ad3a47f2-0e62-4f4d-a1a7-6a7654670186"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:41Z",
+            "message": "Stopping container vllm",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:41Z",
+                "name": "n150-llm-bg5pq.18e6f21b6c0ff9fa",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464013",
+                "uid": "59794670-cf61-4f91-8061-7be4db2185f2"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:46:02.379326Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477741",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned u-testuser/n150-llm-j8cq9 to tenstorrent",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "n150-llm-j8cq9.18e6f4870a01481f",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477749",
+                "uid": "af6bb68a-81d1-4910-b863-69ec8ec23e54"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-tenstorrent",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:02Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:02Z",
+            "message": "Container image \"busybox:1.37\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "n150-llm-j8cq9.18e6f4872ebc77dd",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477758",
+                "uid": "ce0534c0-f693-4e73-98bd-5a97b8f9adeb"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:03Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:03Z",
+                "name": "n150-llm-j8cq9.18e6f4872f46871b",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477760",
+                "uid": "efe1b2ee-70ff-4e5c-a793-9d5eb2a0f45d"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:03Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:03Z",
+                "name": "n150-llm-j8cq9.18e6f48732523e83",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477762",
+                "uid": "26133f07-ff5c-43de-bf1d-915ceff3bd58"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:03Z",
+            "message": "Container image \"ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:03Z",
+                "name": "n150-llm-j8cq9.18e6f487478422fa",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477766",
+                "uid": "e9134cf3-c1dd-46fc-b231-4f7bb6127712"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:03Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:03Z",
+                "name": "n150-llm-j8cq9.18e6f48748a8be20",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477768",
+                "uid": "8b56129b-9ca9-47bd-8824-e7d450972656"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:03Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:03Z",
+                "name": "n150-llm-j8cq9.18e6f4874c5694ea",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477769",
+                "uid": "6777c34d-3db5-4c83-bf92-191ea24d499c"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 25,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:49:46Z",
+            "message": "Readiness probe failed: Get \"http://10.42.0.191:8000/health\": dial tcp 10.42.0.191:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:03Z",
+                "name": "n150-llm-j8cq9.18e6f4874c832393",
+                "namespace": "u-testuser",
+                "resourceVersion": "7478918",
+                "uid": "df064ce0-e889-4c18-9090-1afd87af7b60"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:51:05Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-j8cq9",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477748",
+                "uid": "476b4d17-7004-47c4-9b6a-fccf44d27887"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:51:05Z",
+            "message": "Stopping container vllm",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:51:05Z",
+                "name": "n150-llm-j8cq9.18e6f4cd9d6c755d",
+                "namespace": "u-testuser",
+                "resourceVersion": "7479330",
+                "uid": "46990a80-f967-4340-bdf3-db358ad2e5e5"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:28:36.229078Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472323",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned u-testuser/n150-llm-q2pwj to tenstorrent",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm-q2pwj.18e6f39376972ff5",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472328",
+                "uid": "75c122d9-e286-4e16-8132-90ffcfcda14c"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-tenstorrent",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:36Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:36Z",
+            "message": "Container image \"busybox:1.37\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm-q2pwj.18e6f393a0682885",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472331",
+                "uid": "9b45533b-e869-4915-88ac-a506ac319b8c"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:36Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:36Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm-q2pwj.18e6f393a1021e15",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472333",
+                "uid": "be0c0490-d033-46b2-9e2d-b5641d065372"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:36Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:36Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm-q2pwj.18e6f393a4349c09",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472334",
+                "uid": "c1e936b3-7424-430b-bbb6-f6ad79d1f34e"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:37Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:37Z",
+            "message": "Container image \"ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:37Z",
+                "name": "n150-llm-q2pwj.18e6f393b40018a7",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472340",
+                "uid": "0785c94d-43f7-4d64-942b-fea1fa7d39c6"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:37Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:37Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:37Z",
+                "name": "n150-llm-q2pwj.18e6f393b4aa164d",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472342",
+                "uid": "59df9d74-1a09-409d-8350-f8ad015cbdba"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:37Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:37Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:37Z",
+                "name": "n150-llm-q2pwj.18e6f393b8050bc3",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472343",
+                "uid": "58f5e8b5-c800-499a-9f98-c82b3fceeb0a"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 20,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:37Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:31:25Z",
+            "message": "Readiness probe failed: Get \"http://10.42.0.253:8000/health\": dial tcp 10.42.0.253:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:37Z",
+                "name": "n150-llm-q2pwj.18e6f393b83b6b5e",
+                "namespace": "u-testuser",
+                "resourceVersion": "7473210",
+                "uid": "57cbc412-187c-4b8c-b95d-289e6f93be7a"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:05Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-q2pwj",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472327",
+                "uid": "2e38a6bb-54a2-4e96-8a90-e0586628db2a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:05Z",
+            "message": "Stopping container vllm",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:05Z",
+                "name": "n150-llm-q2pwj.18e6f433f7ad6731",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475839",
+                "uid": "02f251ff-2f71-4ee8-9835-3e5e36402661"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:01:43.604015Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464058",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned u-testuser/n150-llm-zl5kc to tenstorrent",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "n150-llm-zl5kc.18e6f21bfea5b71c",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464063",
+                "uid": "b8c64f1d-b732-44eb-be65-3427c581580a"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-tenstorrent",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:44Z",
+            "message": "Container image \"busybox:1.37\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:44Z",
+                "name": "n150-llm-zl5kc.18e6f21c25fdeb01",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464066",
+                "uid": "8c8f61ef-41f2-4ebe-a08d-f066324958e9"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:44Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:44Z",
+                "name": "n150-llm-zl5kc.18e6f21c26cdf251",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464068",
+                "uid": "63229e1d-88ee-46d0-a9d7-025c7ae2797d"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{cleanup-hugepages}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:44Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:44Z",
+                "name": "n150-llm-zl5kc.18e6f21c2a540e57",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464069",
+                "uid": "b9eaaf82-30be-4e83-85dc-6702069187b4"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:44Z",
+            "message": "Container image \"ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:44Z",
+                "name": "n150-llm-zl5kc.18e6f21c3fd617a1",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464076",
+                "uid": "0bdaabaa-a6f5-41d8-a317-1f7424461b5a"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:44Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:44Z",
+                "name": "n150-llm-zl5kc.18e6f21c4077b7f3",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464078",
+                "uid": "026deee2-698f-4e4e-91fb-f7627cc0cd99"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:44Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:44Z",
+                "name": "n150-llm-zl5kc.18e6f21c43ad7b57",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464079",
+                "uid": "7996a90e-3f9c-4194-990f-bbaf7e343a37"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 22,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:44Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:04:56Z",
+            "message": "Readiness probe failed: Get \"http://10.42.0.251:8000/health\": dial tcp 10.42.0.251:8000: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:44Z",
+                "name": "n150-llm-zl5kc.18e6f21c43e869bc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7465064",
+                "uid": "dc70d734-40d2-48f3-afe6-c376c959a722"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:31Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{vllm}",
+                "kind": "Pod",
+                "name": "n150-llm-zl5kc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464062",
+                "uid": "20051432-09b5-4e49-83ca-6c061c581207"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:31Z",
+            "message": "Stopping container vllm",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:31Z",
+                "name": "n150-llm-zl5kc.18e6f2ced4caefcb",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467963",
+                "uid": "4f09ae20-e424-4c81-92f3-a2c8956b458a"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "tenstorrent",
+            "source": {
+                "component": "kubelet",
+                "host": "tenstorrent"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:43Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464042",
+                "uid": "a02fc757-ff8a-4a48-8069-465cccacfe86"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:43Z",
+            "message": "Job suspended",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "n150-llm.18e6f21bf89af99a",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464043",
+                "uid": "89a3e5bb-bf2d-4dc3-ad55-962d8dbc0fa7"
+            },
+            "reason": "Suspended",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "CreatedWorkload",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:01:43.514222Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464042",
+                "uid": "a02fc757-ff8a-4a48-8069-465cccacfe86"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Created Workload: u-testuser/job-n150-llm-af765",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "n150-llm.18e6f21bf94b5e55",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464046",
+                "uid": "bca27dc9-be88-4382-ade4-9ed15885e1ae"
+            },
+            "reason": "CreatedWorkload",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Started",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:01:43.566697Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464051",
+                "uid": "a02fc757-ff8a-4a48-8069-465cccacfe86"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by clusterQueue default",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "n150-llm.18e6f21bfc6c18f3",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464052",
+                "uid": "e2f9253e-044f-4a7e-a0b5-48b245f5d4db"
+            },
+            "reason": "Started",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:43Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464051",
+                "uid": "a02fc757-ff8a-4a48-8069-465cccacfe86"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:43Z",
+            "message": "Created pod: n150-llm-zl5kc",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "n150-llm.18e6f21bfd443186",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464054",
+                "uid": "db162d58-a2cd-4aa3-94af-db27e23156e8"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:01:43Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464051",
+                "uid": "a02fc757-ff8a-4a48-8069-465cccacfe86"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:01:43Z",
+            "message": "Job resumed",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:01:43Z",
+                "name": "n150-llm.18e6f21bfd44a7d8",
+                "namespace": "u-testuser",
+                "resourceVersion": "7464057",
+                "uid": "edfb30b4-4bda-41d7-b4c0-a58376aac401"
+            },
+            "reason": "Resumed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:34Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467990",
+                "uid": "cf3c9a49-3620-4143-a546-79f7afafc7a4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:34Z",
+            "message": "Job suspended",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "n150-llm.18e6f2cf7ec2c212",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467991",
+                "uid": "2ab38950-7e53-438d-9d68-ae3e3f103ad5"
+            },
+            "reason": "Suspended",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "CreatedWorkload",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:14:34.564709Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467990",
+                "uid": "cf3c9a49-3620-4143-a546-79f7afafc7a4"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Created Workload: u-testuser/job-n150-llm-61932",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "n150-llm.18e6f2cf7f7c31cc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467994",
+                "uid": "32283fb9-bbb9-417f-84c3-cb98e1d7ecab"
+            },
+            "reason": "CreatedWorkload",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Started",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:14:34.588548Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467999",
+                "uid": "cf3c9a49-3620-4143-a546-79f7afafc7a4"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by clusterQueue default",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "n150-llm.18e6f2cf80e7dd3b",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468000",
+                "uid": "a494409d-f00a-4a3e-8ddd-1e7735e85bcf"
+            },
+            "reason": "Started",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:34Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467999",
+                "uid": "cf3c9a49-3620-4143-a546-79f7afafc7a4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:34Z",
+            "message": "Created pod: n150-llm-4tjsj",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "n150-llm.18e6f2cf8189d5f7",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468002",
+                "uid": "096999a7-40cd-4312-b093-6ee7433a61c5"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:14:34Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7467999",
+                "uid": "cf3c9a49-3620-4143-a546-79f7afafc7a4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:14:34Z",
+            "message": "Job resumed",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:14:34Z",
+                "name": "n150-llm.18e6f2cf818a3835",
+                "namespace": "u-testuser",
+                "resourceVersion": "7468005",
+                "uid": "b9f9fced-2d5e-4b3a-b223-ed0ca82de846"
+            },
+            "reason": "Resumed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:36Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472307",
+                "uid": "d7d6c1f8-573a-4084-9816-251ca63543e8"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:36Z",
+            "message": "Job suspended",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm.18e6f393727d4ebd",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472308",
+                "uid": "9ecd1f50-bc21-48d5-bc72-84b67d25962c"
+            },
+            "reason": "Suspended",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "CreatedWorkload",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:28:36.170778Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472307",
+                "uid": "d7d6c1f8-573a-4084-9816-251ca63543e8"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Created Workload: u-testuser/job-n150-llm-848fb",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm.18e6f393731d9c65",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472311",
+                "uid": "6043509f-2f54-45e2-97fb-0addc832a558"
+            },
+            "reason": "CreatedWorkload",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Started",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:28:36.194666Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472316",
+                "uid": "d7d6c1f8-573a-4084-9816-251ca63543e8"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by clusterQueue default",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm.18e6f393748a1569",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472317",
+                "uid": "bceb58f2-cb42-4ed8-bf84-9e0051ead23c"
+            },
+            "reason": "Started",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:36Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472316",
+                "uid": "d7d6c1f8-573a-4084-9816-251ca63543e8"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:36Z",
+            "message": "Created pod: n150-llm-q2pwj",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm.18e6f3937539ee7a",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472320",
+                "uid": "150fd067-a6c9-4504-994a-3c5e31a1f77f"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:28:36Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472316",
+                "uid": "d7d6c1f8-573a-4084-9816-251ca63543e8"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:28:36Z",
+            "message": "Job resumed",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:28:36Z",
+                "name": "n150-llm.18e6f393753a8394",
+                "namespace": "u-testuser",
+                "resourceVersion": "7472322",
+                "uid": "17b77c10-8a80-40c2-8536-648549504ea4"
+            },
+            "reason": "Resumed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:07Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475863",
+                "uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:07Z",
+            "message": "Job suspended",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "n150-llm.18e6f43473338c5b",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475864",
+                "uid": "041033c5-e1d6-457e-8869-1ecb43fab6cc"
+            },
+            "reason": "Suspended",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "CreatedWorkload",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:40:07.671928Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475863",
+                "uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Created Workload: u-testuser/job-n150-llm-3d5b6",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "n150-llm.18e6f43473cbc5dc",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475867",
+                "uid": "e682e6ce-4834-41fa-bd4c-bd6c25a37aec"
+            },
+            "reason": "CreatedWorkload",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Started",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:40:07.698428Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475872",
+                "uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by clusterQueue default",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "n150-llm.18e6f43475601bf3",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475873",
+                "uid": "148db657-9864-4b67-a6bf-0e4346e1f816"
+            },
+            "reason": "Started",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:07Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475872",
+                "uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:07Z",
+            "message": "Created pod: n150-llm-9wsfp",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "n150-llm.18e6f43475f1f78d",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475875",
+                "uid": "800f31d9-a22d-416e-84de-c70325adb8d8"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:40:07Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475872",
+                "uid": "4e0076ab-49b6-4466-a9e6-1c4014cf6d36"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:40:07Z",
+            "message": "Job resumed",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:40:07Z",
+                "name": "n150-llm.18e6f43475f26e1b",
+                "namespace": "u-testuser",
+                "resourceVersion": "7475878",
+                "uid": "46197423-8b02-431a-98e6-8af8cca19e1f"
+            },
+            "reason": "Resumed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:02Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477725",
+                "uid": "ed3459f6-ed53-4e83-9fa8-662a4332a578"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:02Z",
+            "message": "Job suspended",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "n150-llm.18e6f487053139b3",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477726",
+                "uid": "4b057d59-c4c6-458e-9997-ce470f138e64"
+            },
+            "reason": "Suspended",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "CreatedWorkload",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:46:02.309021Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477725",
+                "uid": "ed3459f6-ed53-4e83-9fa8-662a4332a578"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Created Workload: u-testuser/job-n150-llm-d0d6b",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "n150-llm.18e6f48705d06013",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477729",
+                "uid": "aeebb016-a0a6-44d4-9af2-4ea928dcfc6b"
+            },
+            "reason": "CreatedWorkload",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "action": "Started",
+            "apiVersion": "v1",
+            "eventTime": "2026-11-11T09:46:02.343838Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477734",
+                "uid": "ed3459f6-ed53-4e83-9fa8-662a4332a578"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Admitted by clusterQueue default",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "n150-llm.18e6f48707e39ad8",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477735",
+                "uid": "136b9fa3-1cba-4bdd-b4ae-19eb84009fb6"
+            },
+            "reason": "Started",
+            "reportingComponent": "batch/job-kueue-controller",
+            "reportingInstance": "batch/job-kueue-controller-kueue-controller-manager-548c446bf9-424b5",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:02Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477734",
+                "uid": "ed3459f6-ed53-4e83-9fa8-662a4332a578"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:02Z",
+            "message": "Created pod: n150-llm-j8cq9",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "n150-llm.18e6f48708a62df7",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477737",
+                "uid": "91a5745c-e051-4b66-aefc-8c2c09abdd28"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-11T09:46:02Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "n150-llm",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477734",
+                "uid": "ed3459f6-ed53-4e83-9fa8-662a4332a578"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-11T09:46:02Z",
+            "message": "Job resumed",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T09:46:02Z",
+                "name": "n150-llm.18e6f48708a69408",
+                "namespace": "u-testuser",
+                "resourceVersion": "7477740",
+                "uid": "af7b967d-56e2-41c7-82d6-b1d4905536df"
+            },
+            "reason": "Resumed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

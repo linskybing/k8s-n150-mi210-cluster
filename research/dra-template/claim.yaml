@@ -1,0 +1,34 @@
+# User side (each user namespace): the claim template and a Job that uses it (same shape as config/user.yaml template n150).
+apiVersion: resource.k8s.io/v1
+kind: ResourceClaimTemplate
+metadata:
+  name: chip
+spec:
+  spec:
+    devices:
+      requests:
+        - name: chip
+          exactly:
+            deviceClassName: chip.example.com
+            selectors:
+              - cel:
+                  expression: device.attributes["chip.example.com"].model == "example-x1"
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: chip-llm
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      resourceClaims:
+        - {name: chip, resourceClaimTemplateName: chip}
+      containers:
+        - name: vllm
+          image: registry.example.com/vllm-chip:0.1.0   # vendor image: runtime + vLLM platform plugin
+          args: [--model, meta-llama/Llama-3.2-1B-Instruct, --max-model-len, "8192", --max-num-seqs, "32"]
+          resources:
+            claims: [{name: chip}]
+          readinessProbe:
+            httpGet: {path: /health, port: 8000}

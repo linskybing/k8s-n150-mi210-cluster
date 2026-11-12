@@ -1,0 +1,6 @@
+# captured 2026-11-10T10:30:38Z (read-only, after the runs): container images on the node (tenstorrent-related)
+ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64@sha256:4ba37cbb1d51e95fe337aa280b92e873e7a8709c285fc95813f2706f4d41fb63 ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06 4078609307
+ghcr.io/tenstorrent/tt-fabric-manager@sha256:82c9063a5182051f0980459eaacb3e2d878a197874dfe05c6a5eb9288f4cca33 ghcr.io/tenstorrent/tt-fabric-manager:0.2.30 326805227
+ghcr.io/tenstorrent/tt-telemetry@sha256:96f0f3f25a1e6cce2c7c28181e1d138caf5ce5ba8cfcb5493c2dd25b637f608e ghcr.io/tenstorrent/tt-telemetry:0.2.0 75570434
+ghcr.io/tenstorrent/tt-dra-driver@sha256:cf2d9d1cb1441b146fc6bc36223541646a5aacfae2f56d90444b1e635cc3898f ghcr.io/tenstorrent/tt-dra-driver:0.0.65 44971271
+docker.io/library/busybox@sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec docker.io/library/busybox:1.37 2222118

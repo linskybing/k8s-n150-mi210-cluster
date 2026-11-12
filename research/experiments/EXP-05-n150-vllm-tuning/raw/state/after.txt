@@ -1,0 +1,19 @@
+2026-11-11T10:32:21Z
+NAMESPACE    NAME                                           STATE                AGE
+<other-ns>   <other-workload>   allocated,reserved   3d21h
+<other-ns>     <other-workload>                    allocated,reserved   3h24m
+
+NAME                         DATA   AGE
+configmap/kube-root-ca.crt   1      24d
+
+amd.com/gpu 1
+cpu 0
+hugepages-1Gi 0
+memory 0
+tenstorrent.com/chip 0
+NAMESPACE    NAME                                  QUEUE     RESERVED IN   ADMITTED   FINISHED   AGE
+<other-ns>     <other-workload>                 default   default       True                  3h24m
+<other-ns>   <other-workload>      default   default       True       True       5h28m
+<other-ns>   <other-workload>   default   default       True       True       5h12m
+<other-ns>   <other-workload>                    default   default       True       True       20d
+<other-ns>   <other-workload>              default   default       True       True       23h

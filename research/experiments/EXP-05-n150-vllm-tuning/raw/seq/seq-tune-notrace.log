@@ -1,0 +1,9 @@
+configmap/llm-spec-notrace created
+== load vllm-notrace 1 2026-11-11T09:01:43Z
+job.batch/n150-llm created
+pod/n150-llm-zl5kc condition met
+== query vllm-notrace 1 2026-11-11T09:05:06Z
+== bench vllm-notrace 1 2026-11-11T09:05:21Z
+== unload vllm-notrace 1 2026-11-11T09:14:31Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== DONE 2026-11-11T09:14:34Z

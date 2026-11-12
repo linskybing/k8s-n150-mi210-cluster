@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/eu43VyIb5WZgmQ2N15+YIrdj7vk</id>
+  <title>arXiv Query: search_query=&amp;id_list=2312.07104,2403.02310,2211.17192,2309.06180&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-10T03:28:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2312.07104,2403.02310,2211.17192,2309.06180" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2403.02310v3</id>
+    <title>Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve</title>
+    <updated>2024-06-17T21:10:46Z</updated>
+    <link href="https://arxiv.org/abs/2403.02310v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.02310v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Each LLM serving request goes through two phases. The first is prefill which processes the entire input prompt and produces the first output token and the second is decode which generates the rest of output tokens, one-at-a-time. Prefill iterations have high latency but saturate GPU compute due to parallel processing of the input prompt. In contrast, decode iterations have low latency but also low compute utilization because a decode iteration processes only a single token per request. This makes batching highly effective for decodes and consequently for overall throughput. However, batching multiple requests leads to an interleaving of prefill and decode iterations which makes it challenging to achieve both high throughput and low latency.
+  We introduce an efficient LLM inference scheduler, Sarathi-Serve, to address this throughput-latency tradeoff. Sarathi-Serve introduces chunked-prefills which splits a prefill request into near equal sized chunks and creates stall-free schedules that adds new requests in a batch without pausing ongoing decodes. Stall-free scheduling unlocks the opportunity to improve throughput with large batch sizes while minimizing the effect of batching on latency. Furthermore, uniform batches in Sarathi-Serve ameliorate the imbalance between iterations resulting in minimal pipeline bubbles.
+  Our techniques yield significant improvements in inference performance across models and hardware under tail latency constraints. For Mistral-7B on single A100 GPUs, we achieve 2.6x higher serving capacity and up to 3.7x higher serving capacity for the Yi-34B model on two A100 GPUs as compared to vLLM. When used with pipeline parallelism on Falcon-180B, Sarathi-Serve provides up to 5.6x gain in the end-to-end serving capacity. The source code for Sarathi-Serve is available at https://github.com/microsoft/sarathi-serve.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-04T18:47:08Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Amey Agrawal</name>
+    </author>
+    <author>
+      <name>Nitin Kedia</name>
+    </author>
+    <author>
+      <name>Ashish Panwar</name>
+    </author>
+    <author>
+      <name>Jayashree Mohan</name>
+    </author>
+    <author>
+      <name>Nipun Kwatra</name>
+    </author>
+    <author>
+      <name>Bhargav S. Gulavani</name>
+    </author>
+    <author>
+      <name>Alexey Tumanov</name>
+    </author>
+    <author>
+      <name>Ramachandran Ramjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.17192v2</id>
+    <title>Fast Inference from Transformers via Speculative Decoding</title>
+    <updated>2023-05-18T20:28:20Z</updated>
+    <link href="https://arxiv.org/abs/2211.17192v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.17192v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inference from large autoregressive models like Transformers is slow - decoding K tokens takes K serial runs of the model. In this work we introduce speculative decoding - an algorithm to sample from autoregressive models faster without any changes to the outputs, by computing several tokens in parallel. At the heart of our approach lie the observations that (1) hard language-modeling tasks often include easier subtasks that can be approximated well by more efficient models, and (2) using speculative execution and a novel sampling method, we can make exact decoding from the large models faster, by running them in parallel on the outputs of the approximation models, potentially generating several tokens concurrently, and without changing the distribution. Our method can accelerate existing off-the-shelf models without retraining or architecture changes. We demonstrate it on T5-XXL and show a 2X-3X acceleration compared to the standard T5X implementation, with identical outputs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-30T17:33:28Z</published>
+    <arxiv:comment>ICML 2023 Oral</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yaniv Leviathan</name>
+    </author>
+    <author>
+      <name>Matan Kalman</name>
+    </author>
+    <author>
+      <name>Yossi Matias</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.07104v2</id>
+    <title>SGLang: Efficient Execution of Structured Language Model Programs</title>
+    <updated>2024-06-06T00:10:06Z</updated>
+    <link href="https://arxiv.org/abs/2312.07104v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.07104v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) are increasingly used for complex tasks that require multiple generation calls, advanced prompting techniques, control flow, and structured inputs/outputs. However, efficient systems are lacking for programming and executing these applications. We introduce SGLang, a system for efficient execution of complex language model programs. SGLang consists of a frontend language and a runtime. The frontend simplifies programming with primitives for generation and parallelism control. The runtime accelerates execution with novel optimizations like RadixAttention for KV cache reuse and compressed finite state machines for faster structured output decoding. Experiments show that SGLang achieves up to 6.4x higher throughput compared to state-of-the-art inference systems on various large language and multi-modal models on tasks including agent control, logical reasoning, few-shot learning benchmarks, JSON decoding, retrieval-augmented generation pipelines, and multi-turn chat. The code is publicly available at https://github.com/sgl-project/sglang</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-12T09:34:27Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Lianmin Zheng</name>
+    </author>
+    <author>
+      <name>Liangsheng Yin</name>
+    </author>
+    <author>
+      <name>Zhiqiang Xie</name>
+    </author>
+    <author>
+      <name>Chuyue Sun</name>
+    </author>
+    <author>
+      <name>Jeff Huang</name>
+    </author>
+    <author>
+      <name>Cody Hao Yu</name>
+    </author>
+    <author>
+      <name>Shiyi Cao</name>
+    </author>
+    <author>
+      <name>Christos Kozyrakis</name>
+    </author>
+    <author>
+      <name>Ion Stoica</name>
+    </author>
+    <author>
+      <name>Joseph E. Gonzalez</name>
+    </author>
+    <author>
+      <name>Clark Barrett</name>
+    </author>
+    <author>
+      <name>Ying Sheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.06180v1</id>
+    <title>Efficient Memory Management for Large Language Model Serving with PagedAttention</title>
+    <updated>2023-09-12T12:50:04Z</updated>
+    <link href="https://arxiv.org/abs/2309.06180v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.06180v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2-4$\times$ with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-12T12:50:04Z</published>
+    <arxiv:comment>SOSP 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Woosuk Kwon</name>
+    </author>
+    <author>
+      <name>Zhuohan Li</name>
+    </author>
+    <author>
+      <name>Siyuan Zhuang</name>
+    </author>
+    <author>
+      <name>Ying Sheng</name>
+    </author>
+    <author>
+      <name>Lianmin Zheng</name>
+    </author>
+    <author>
+      <name>Cody Hao Yu</name>
+    </author>
+    <author>
+      <name>Joseph E. Gonzalez</name>
+    </author>
+    <author>
+      <name>Hao Zhang</name>
+    </author>
+    <author>
+      <name>Ion Stoica</name>
+    </author>
+  </entry>
+</feed>

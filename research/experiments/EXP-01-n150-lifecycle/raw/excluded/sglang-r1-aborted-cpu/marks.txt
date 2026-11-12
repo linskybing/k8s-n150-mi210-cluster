@@ -1,0 +1,2 @@
+submit 2026-11-10T03:49:46.935Z
+aborted 2026-11-10T03:50:22.741Z by agent: SGLang runs on CPU (device=cpu, no /dev/tenstorrent fd); pending researcher decision

@@ -1,0 +1,437 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/default-container": "sglang",
+            "kueue.x-k8s.io/workload": "job-n150-sglang-custom-82314"
+        },
+        "creationTimestamp": "2026-11-10T04:19:58Z",
+        "finalizers": [
+            "batch.kubernetes.io/job-tracking"
+        ],
+        "generateName": "n150-sglang-custom-",
+        "generation": 1,
+        "labels": {
+            "batch.kubernetes.io/controller-uid": "59923e91-8cf0-4300-9d3f-2f1c5ad075c2",
+            "batch.kubernetes.io/job-name": "n150-sglang-custom",
+            "controller-uid": "59923e91-8cf0-4300-9d3f-2f1c5ad075c2",
+            "job-name": "n150-sglang-custom",
+            "kueue.x-k8s.io/cluster-queue-name": "default",
+            "kueue.x-k8s.io/local-queue-name": "default",
+            "kueue.x-k8s.io/podset": "main",
+            "n150/metrics": "true"
+        },
+        "name": "n150-sglang-custom-d8fkp",
+        "namespace": "u-testuser",
+        "ownerReferences": [
+            {
+                "apiVersion": "batch/v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "Job",
+                "name": "n150-sglang-custom",
+                "uid": "59923e91-8cf0-4300-9d3f-2f1c5ad075c2"
+            }
+        ],
+        "resourceVersion": "6943470",
+        "uid": "3603837e-ba94-4703-a680-26f95823f4d2"
+    },
+    "spec": {
+        "containers": [
+            {
+                "args": [
+                    "set -e\nsource $PYTHON_ENV_DIR/bin/activate\n# first run (~1 min): build SGLang's CPU kernels (sgl-kernel) against the image's torch, + torchao, into ~/venvs/sglang-tt\n[ -e ~/venvs/sglang-tt/sgl_kernel ] || (pip install -q --target ~/venvs/sglang-tt-build scikit-build-core cmake ninja \\\n  \u0026\u0026 cd ~/tt-sglang/sgl-kernel \u0026\u0026 cp pyproject_cpu.toml pyproject.toml \\\n  \u0026\u0026 PATH=~/venvs/sglang-tt-build/bin:$PATH PYTHONPATH=~/venvs/sglang-tt-build:$PYTHONPATH MAX_JOBS=8 \\\n     pip install -q --no-build-isolation --no-deps --target ~/venvs/sglang-tt . torchao==0.9.0)\nexport PYTHONPATH=/sglang-site:$HOME/tt-sglang/python:$HOME/tt-inference-server/tt-sglang-plugin:$HOME/venvs/sglang-tt:$PYTHONPATH\nexport SGLANG_TT_SITE=1   # /sglang-site/sitecustomize.py: decode alias + TT plugin in every process\nexec python -c 'from sglang_tt_plugin.scripts.launch_tt_server import main; main()' --model-path meta-llama/Llama-3.2-1B-Instruct --port 8000 --context-length 8192 --enable-metrics\n"
+                ],
+                "command": [
+                    "bash",
+                    "-c"
+                ],
+                "env": [
+                    {
+                        "name": "TORCHDYNAMO_DISABLE",
+                        "value": "1"
+                    },
+                    {
+                        "name": "HF_TOKEN",
+                        "valueFrom": {
+                            "secretKeyRef": {
+                                "key": "token",
+                                "name": "hf-token"
+                            }
+                        }
+                    },
+                    {
+                        "name": "HOME",
+                        "value": "/home/testuser"
+                    }
+                ],
+                "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "sglang",
+                "ports": [
+                    {
+                        "containerPort": 8000,
+                        "name": "metrics",
+                        "protocol": "TCP"
+                    }
+                ],
+                "readinessProbe": {
+                    "failureThreshold": 3,
+                    "httpGet": {
+                        "path": "/health",
+                        "port": 8000,
+                        "scheme": "HTTP"
+                    },
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5
+                },
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ],
+                    "limits": {
+                        "hugepages-1Gi": "1Gi"
+                    },
+                    "requests": {
+                        "hugepages-1Gi": "1Gi",
+                        "memory": "8Gi"
+                    }
+                },
+                "securityContext": {
+                    "runAsUser": 0
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/home/testuser",
+                        "name": "home"
+                    },
+                    {
+                        "mountPath": "/sglang-site",
+                        "name": "site"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-47t7h",
+                        "readOnly": true
+                    }
+                ],
+                "workingDir": "/home/testuser"
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "initContainers": [
+            {
+                "command": [
+                    "sh",
+                    "-c",
+                    "rm -f /dev/hugepages-1G/tenstorrent /dev/hugepages-1G/device_0_*tenstorrent"
+                ],
+                "image": "busybox:1.37",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "cleanup-hugepages",
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ]
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-47t7h",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "nodeName": "tenstorrent",
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "resourceClaims": [
+            {
+                "name": "n150",
+                "resourceClaimTemplateName": "n150"
+            }
+        ],
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {
+            "supplementalGroups": [
+                2150,
+                993
+            ]
+        },
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/not-ready",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            },
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/unreachable",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            }
+        ],
+        "volumes": [
+            {
+                "hostPath": {
+                    "path": "/home/testuser",
+                    "type": "Directory"
+                },
+                "name": "home"
+            },
+            {
+                "configMap": {
+                    "defaultMode": 420,
+                    "name": "sglang-tt-site"
+                },
+                "name": "site"
+            },
+            {
+                "name": "kube-api-access-47t7h",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "allocatedResources": {
+            "hugepages-1Gi": "1Gi",
+            "memory": "8Gi"
+        },
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-10T04:19:59Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "PodReadyToStartContainers"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-10T04:19:59Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-10T04:22:53Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-10T04:22:53Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-11-10T04:19:58Z",
+                "observedGeneration": 1,
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "allocatedResources": {
+                    "hugepages-1Gi": "1Gi",
+                    "memory": "8Gi"
+                },
+                "allocatedResourcesStatus": [
+                    {
+                        "name": "claim:n150",
+                        "resources": [
+                            {
+                                "health": "Unknown",
+                                "resourceID": "k8s.tenstorrent.com/tenstorrent=common"
+                            }
+                        ]
+                    }
+                ],
+                "containerID": "containerd://eac2debb42f1dda22a049b0274a3868e7f981381374b3ed281f8883c49cbdd5b",
+                "image": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64:0.11.1-84b4c53-222ee06",
+                "imageID": "ghcr.io/tenstorrent/tt-inference-server/vllm-tt-metal-src-release-ubuntu-22.04-amd64@sha256:4ba37cbb1d51e95fe337aa280b92e873e7a8709c285fc95813f2706f4d41fb63",
+                "lastState": {},
+                "name": "sglang",
+                "ready": true,
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ],
+                    "limits": {
+                        "hugepages-1Gi": "1Gi"
+                    },
+                    "requests": {
+                        "hugepages-1Gi": "1Gi",
+                        "memory": "8Gi"
+                    }
+                },
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2026-11-10T04:19:59Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 0,
+                        "supplementalGroups": [
+                            0,
+                            993,
+                            2150
+                        ],
+                        "uid": 0
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/home/testuser",
+                        "name": "home"
+                    },
+                    {
+                        "mountPath": "/sglang-site",
+                        "name": "site"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-47t7h",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "hostIP": "<node-ip>",
+        "hostIPs": [
+            {
+                "ip": "<node-ip>"
+            }
+        ],
+        "initContainerStatuses": [
+            {
+                "containerID": "containerd://f3096dff67096137ac48d599ed862eea082cd95b33cace126267a48044d2feff",
+                "image": "docker.io/library/busybox:1.37",
+                "imageID": "docker.io/library/busybox@sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec",
+                "lastState": {},
+                "name": "cleanup-hugepages",
+                "ready": true,
+                "resources": {
+                    "claims": [
+                        {
+                            "name": "n150"
+                        }
+                    ]
+                },
+                "restartCount": 0,
+                "started": false,
+                "state": {
+                    "terminated": {
+                        "containerID": "containerd://f3096dff67096137ac48d599ed862eea082cd95b33cace126267a48044d2feff",
+                        "exitCode": 0,
+                        "finishedAt": "2026-11-10T04:19:59Z",
+                        "reason": "Completed",
+                        "startedAt": "2026-11-10T04:19:59Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 0,
+                        "supplementalGroups": [
+                            0,
+                            10,
+                            993,
+                            2150
+                        ],
+                        "uid": 0
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-47t7h",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "observedGeneration": 1,
+        "phase": "Running",
+        "podIP": "10.42.0.34",
+        "podIPs": [
+            {
+                "ip": "10.42.0.34"
+            }
+        ],
+        "qosClass": "Burstable",
+        "resourceClaimStatuses": [
+            {
+                "name": "n150",
+                "resourceClaimName": "n150-sglang-custom-d8fkp-n150-snbf5"
+            }
+        ],
+        "resources": {
+            "requests": {
+                "memory": "8Gi"
+            }
+        },
+        "startTime": "2026-11-10T04:19:58Z"
+    }
+}

@@ -1,0 +1,25 @@
+configmap "llm-spec" deleted from u-testuser namespace
+configmap "llm-spec-seq1" deleted from u-testuser namespace
+configmap "sglang-tt-site" deleted from u-testuser namespace
+secret "hf-token" deleted from u-testuser namespace
+2026-11-10T04:33:21Z
+NAMESPACE    NAME                                           STATE                AGE
+<other-ns>   <other-workload>   allocated,reserved   2d15h
+
+NAME                         DATA   AGE
+configmap/kube-root-ca.crt   1      22d
+
+amd.com/gpu 0
+cpu 0
+hugepages-1Gi 0
+memory 0
+tenstorrent.com/chip 0
+
+NAMESPACE    NAME                       QUEUE     RESERVED IN   ADMITTED   FINISHED   AGE
+<other-ns>   <other-workload>         default   default       True       True       19d
+<other-ns>   <other-workload>   default   default       True       True       154m
+
+{"cpu":"32","ephemeral-storage":"239578254554","hugepages-1Gi":"4Gi","hugepages-2Mi":"0","memory":"61516724Ki","pods":"110"}
+tt-0
+               total        used        free      shared  buff/cache   available
+Mem:              62          30          22           0           9          32

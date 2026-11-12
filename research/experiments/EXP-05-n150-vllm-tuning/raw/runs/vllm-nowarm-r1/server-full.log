@@ -1,0 +1,331 @@
+INFO 11-11 09:40:16 [importing.py:44] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-11 09:40:16 [importing.py:68] Triton not installed or not compatible; certain GPU-related functions will not be available.
+2026-11-11 09:40:16,146 - __main__ - INFO - Using pre-resolved runtime model spec from RUNTIME_MODEL_SPEC_JSON_PATH=/spec/spec.json
+2026-11-11 09:40:16,146 - __main__ - INFO - Loading runtime model spec from: /spec/spec.json
+2026-11-11 09:40:16,146 - __main__ - INFO - Set MESH_DEVICE to N150
+2026-11-11 09:40:16,147 - __main__ - INFO - Set TT_CACHE_PATH to /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.2-1B-Instruct/N150
+2026-11-11 09:40:16,147 - __main__ - INFO - Downloading weights from meta-llama/Llama-3.2-1B-Instruct to /home/container_app_user/cache_root/weights/Llama-3.2-1B-Instruct
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:   8%|▊         | 1/13 [00:00<00:05,  2.10it/s]Fetching 13 files:  15%|█▌        | 2/13 [00:00<00:04,  2.25it/s]Fetching 13 files:  46%|████▌     | 6/13 [00:01<00:01,  6.95it/s]Fetching 13 files:  54%|█████▍    | 7/13 [02:19<02:59, 29.89s/it]Fetching 13 files:  62%|██████▏   | 8/13 [02:48<02:29, 29.85s/it]Fetching 13 files: 100%|██████████| 13/13 [02:48<00:00, 12.98s/it]
+2026-11-11 09:43:06,740 - __main__ - INFO - Using model spec: id_tt-transformers_Llama-3.2-1B-Instruct_n150
+2026-11-11 09:43:06,740 - __main__ - INFO - Set TT_METAL_OPERATION_TIMEOUT_SECONDS=5.0
+2026-11-11 09:43:06,740 - __main__ - INFO - Set TT_METAL_DISPATCH_TIMEOUT_COMMAND_TO_EXECUTE=/home/container_app_user/tt-metal/python_env/bin/python /home/container_app_user/tt-metal/tools/triage/triage.py --disable-progress > /home/container_app_user/logs/tt-triage-$(date +%Y%m%d-%H%M%S).log 2>&1
+2026-11-11 09:43:06,740 - __main__ - WARNING - env var MESH_DEVICE is already set to N150, overriding with N150
+2026-11-11 09:43:06,740 - __main__ - INFO - setting env var: MESH_DEVICE=N150
+2026-11-11 09:43:06,740 - __main__ - WARNING - env var ARCH_NAME is already set to wormhole_b0, overriding with wormhole_b0
+2026-11-11 09:43:06,740 - __main__ - INFO - setting env var: ARCH_NAME=wormhole_b0
+2026-11-11 09:43:06,740 - __main__ - INFO - setting env var: VLLM_CONFIGURE_LOGGING=1
+2026-11-11 09:43:06,740 - __main__ - INFO - setting env var: VLLM_RPC_TIMEOUT=900000
+2026-11-11 09:43:06,740 - __main__ - WARNING - env var VLLM_TARGET_DEVICE is already set to tt, overriding with tt
+2026-11-11 09:43:06,740 - __main__ - INFO - setting env var: VLLM_TARGET_DEVICE=tt
+2026-11-11 09:43:06,740 - __main__ - INFO - setting env var: TORCHDYNAMO_DISABLE=1
+2026-11-11 09:43:06,740 - __main__ - WARNING - env var value:=1 is not a string, converting to string: 1
+2026-11-11 09:43:06,740 - __main__ - INFO - setting env var: VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+2026-11-11 09:43:06,740 - __main__ - INFO - using model: id_tt-transformers_Llama-3.2-1B-Instruct_n150
+2026-11-11 09:43:06,740 - __main__ - INFO - HF_TOKEN is set
+2026-11-11 09:43:06,740 - __main__ - INFO - --no-auth is set: requests to vLLM API will not require authorization. HTTP Authorization header will not be checked.
+2026-11-11 09:43:06,741 - root - INFO - MODEL_WEIGHTS_DIR: /home/container_app_user/cache_root/weights/Llama-3.2-1B-Instruct
+2026-11-11 09:43:06,741 - root - INFO - TT_CACHE_PATH: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.2-1B-Instruct/N150
+2026-11-11 09:43:06,743 - __main__ - INFO - setting vllm logging config at: /home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-11 09:43:06,744 - __main__ - INFO - setting vllm logging file at: /home/container_app_user/cache_root/logs/vllm_2026-11-11_09-40-16.log
+2026-11-11 09:43:06,744 - root - INFO - HF model setup for meta-llama/Llama-3.2-1B-Instruct
+2026-11-11 09:43:06,744 - __main__ - INFO - setting dynamic runtime environment variables:
+2026-11-11 09:43:06,744 - __main__ - INFO - setting env var: VLLM_LOGGING_CONFIG=/home/container_app_user/cache_root/logs/vllm_logging_config.json
+2026-11-11 09:43:06,744 - __main__ - INFO - setting env var: HF_MODEL=/home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+2026-11-11 09:43:06,744 - __main__ - INFO - Model has builtin warmup (has_builtin_warmup=True), skipping background trace capture
+2026-11-11 09:43:06,744 - __main__ - INFO - Trace capture is disabled via --disable-trace-capture
+2026-11-11 09:43:06,744 - __main__ - INFO - vllm_args: {
+    "model": "meta-llama/Llama-3.2-1B-Instruct",
+    "block_size": "64",
+    "max_model_len": "8192",
+    "max_num_seqs": "32",
+    "max_num_batched_tokens": "8192",
+    "max-log-len": "32",
+    "seed": "9472",
+    "override_tt_config": "{\"enable_model_warmup\": false}"
+}
+DEBUG 11-11 09:43:08 utils.py:175] Setting VLLM_WORKER_MULTIPROC_METHOD to 'spawn'
+DEBUG 11-11 09:43:08 __init__.py:40] Available plugins for group vllm.general_plugins:
+DEBUG 11-11 09:43:08 __init__.py:42] - lora_filesystem_resolver -> vllm.plugins.lora_resolvers.filesystem_resolver:register_filesystem_resolver
+DEBUG 11-11 09:43:08 __init__.py:45] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+DEBUG 11-11 09:43:08 parallel.py:745] Disabled the custom all-reduce kernel because it is not supported on current platform.
+INFO 11-11 09:43:08 scheduler.py:225] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:43:08 api_server.py:1978] vLLM API server version 0.1.dev11674+g222ee06b9
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:43:08 utils.py:253] non-default args: {'max_log_len': 32, 'model': 'meta-llama/Llama-3.2-1B-Instruct', 'seed': 9472, 'max_model_len': 8192, 'override_tt_config': {'enable_model_warmup': False}, 'block_size': 64, 'max_num_batched_tokens': 8192, 'max_num_seqs': 32}
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:09 registry.py:599] Cached model info file for class vllm.model_executor.models.llama.LlamaForCausalLM not found
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:09 registry.py:659] Cache model info for class vllm.model_executor.models.llama.LlamaForCausalLM miss. Loading model instead.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 registry.py:669] Loaded model info for class vllm.model_executor.models.llama.LlamaForCausalLM
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 flashinfer.py:55] FlashInfer unavailable since package was not found
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 log_time.py:29] Registry inspect model class: Elapsed time 7.5547621 secs
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:43:17 model.py:649] Resolved architecture: LlamaForCausalLM
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:43:17 model.py:1777] Using max model len 8192
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 arg_utils.py:1997] Enabling chunked prefill by default
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 arg_utils.py:2015] Enabling prefix caching by default
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:43:17 arg_utils.py:2032] Chunked prefill is not yet supported for TT devices; disabling it for V1 backend.
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:43:17 arg_utils.py:1586] Using host IP 10.42.0.163 as TT data parallel address
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 parallel.py:745] Disabled the custom all-reduce kernel because it is not supported on current platform.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 parallel.py:745] Disabled the custom all-reduce kernel because it is not supported on current platform.
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:43:17 tt.py:370] Automatic prefix caching is enabled
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:17 __init__.py:32] No plugins for group vllm.stat_logger_plugins found.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:21 __init__.py:33] No IOProcessor plugins requested by the model
+INFO 11-11 09:43:27 [importing.py:44] Triton is installed but 0 active driver(s) found (expected 1). Disabling Triton to prevent runtime errors.
+INFO 11-11 09:43:27 [importing.py:68] Triton not installed or not compatible; certain GPU-related functions will not be available.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:27 utils.py:1144] HELLO from local core engine process 0.
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:43:27 [core.py:96] Initializing a V1 LLM engine (v0.1.dev11674+g222ee06b9) with config: model='meta-llama/Llama-3.2-1B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.2-1B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=None, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=9472, served_model_name=meta-llama/Llama-3.2-1B-Instruct, enable_prefix_caching=True, enable_chunked_prefill=False, pooler_config=None, override_tt_config={'enable_model_warmup': False}, compilation_config={'level': None, 'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'eager', 'custom_ops': ['all'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention_core', 'vllm::kda_attention', 'vllm::sparse_attn_indexer'], 'compile_mm_encoder': False, 'use_inductor': None, 'compile_sizes': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': None, 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {}, 'max_cudagraph_capture_size': None, 'local_cache_dir': None}
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:43:28 [tt.py:370] Automatic prefix caching is enabled
+2026-11-11 09:43:28.143 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-11 09:43:28.143 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-11 09:43:28.147 | info     |          Device | Opening user mode device driver (tt_cluster.cpp:222)
+2026-11-11 09:43:28.150 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-11 09:43:28.150 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-11 09:43:28.162 | info     |             UMD | Established firmware bundle version: 19.13.1 (topology_discovery.cpp:418)
+2026-11-11 09:43:28.162 | info     |             UMD | Firmware bundle version 19.13.1 on the system is newer than the latest fully tested version 19.5.0 for wormhole_b0 architecture. Newest features may not be supported. (topology_discovery.cpp:444)
+2026-11-11 09:43:28.165 | info     |             UMD | Harvesting masks for chip 0 tensix: 0x1 dram: 0x0 eth: 0x0 pcie: 0x0 l2cpu: 0x0 (cluster.cpp:331)
+2026-11-11 09:43:28.220 | info     |             UMD | Opening local chip ids/PCIe ids: {0}/[0] and remote chip ids {} (cluster.cpp:180)
+2026-11-11 09:43:28.220 | info     |             UMD | IOMMU: disabled (cluster.cpp:155)
+2026-11-11 09:43:28.220 | info     |             UMD | KMD version: 2.11.0 (cluster.cpp:158)
+2026-11-11 09:43:28.220 | info     |             UMD | Starting devices in cluster (cluster.cpp:964)
+2026-11-11 09:43:28.221 | info     |             UMD | Mapped hugepage 0x280000000 to NOC address 0x800000000 (silicon_sysmem_manager.cpp:217)
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:43:28 [tt_worker.py:609] Attempting to open mesh device with grid shape (1, 1)
+2026-11-11 09:43:28.253 | info     |     Distributed | Using auto discovery to generate mesh graph. (metal_context.cpp:1061)
+2026-11-11 09:43:28.253 | info     |     Distributed | Constructing control plane using auto-discovery (no mesh graph descriptor). (metal_context.cpp:1028)
+2026-11-11 09:43:28.253 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-11 09:43:28.253 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-11 09:43:28.253 | info     |          Fabric | Starting multi-mesh mapping: 1 logical mesh(es) to 1 physical mesh(es) (topology_mapper_utils.cpp:936)
+2026-11-11 09:43:28.253 | info     |          Fabric | Multi-mesh mapping attempt 1/2: Trying inter-mesh mapping (topology_mapper_utils.cpp:989)
+2026-11-11 09:43:28.253 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-11 09:43:28.253 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 0, backtracks: 0, memoization hits: 0. Required constraints satisfied: 1, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-11 09:43:28.253 | info     |          Fabric | Attempt 1: Inter-mesh mapping succeeded, found 1 mesh pair(s) (topology_mapper_utils.cpp:1018)
+2026-11-11 09:43:28.253 | info     |          Fabric | Topology mapping search starting: target_graph_nodes=1, global_graph_nodes=1, target_degree_histogram={0:1}, global_degree_histogram={0:1} (topology_solver_internal.tpp:1056)
+2026-11-11 09:43:28.253 | info     |          Fabric | Mapping validation succeeded: 1 target nodes mapped to 1 global nodes. DFS calls: 1, backtracks: 0, memoization hits: 0. Required constraints satisfied: 0, preferred constraints satisfied: 0/0 (topology_solver_internal.tpp:1697)
+2026-11-11 09:43:28.253 | info     |          Fabric | Multi-mesh mapping succeeded after 1 attempt(s): 1 mesh pair(s) mapped (topology_mapper_utils.cpp:1155)
+2026-11-11 09:43:28.258 | info     |    BuildKernels | Skipping deleting built cache (build.cpp:123)
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:43:30 [tt_worker.py:624] multidevice with 1 devices and grid (1, 1) is created
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:43:30 [tt_model_runner.py:144] TTModelRunner: trace_mode=all, sample_on_device_mode=None, enable_model_warmup=False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.935 | INFO     | models.tt_transformers.tt.model_config:__init__:472 - Inferring device name: N150
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.935 | INFO     | models.tt_transformers.tt.model_config:__init__:519 - Checkpoint directory: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.935 | INFO     | models.tt_transformers.tt.model_config:__init__:520 - Tokenizer file: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct/tokenizer.model
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.935 | INFO     | models.tt_transformers.tt.model_config:__init__:521 - Cache directory: /home/container_app_user/cache_root/tt_metal_cache/cache_Llama-3.2-1B-Instruct/N150/N150
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.935 | INFO     | models.tt_transformers.tt.model_config:__init__:522 - Model name: Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.936 | INFO     | models.tt_transformers.tt.model_config:_set_params_from_dict:2562 - Model name from config: Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.937 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3333 - Tokenizer path: /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.937 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3334 - Model name: Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:30.937 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3335 - Base model name: Llama-3.2-1B
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:31.227 | INFO     | models.tt_transformers.tt.model_config:create_tokenizer:3346 - Successfully loaded tokenizer from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:31.496 | INFO     | models.tt_transformers.tt.model_config:create_processor:3415 - Successfully loaded processor from /home/container_app_user/cache_root/model_file_symlinks_map/Llama-3.2-1B-Instruct
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:31.497 | INFO     | models.tt_transformers.tt.model_config:__init__:1020 - Attention grid: ttnn.CoreGrid(x=8, y=4)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:31.497 | INFO     | models.tt_transformers.tt.model_config:__init__:1021 - MLP grid: ttnn.CoreGrid(x=8, y=8)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:31.497 | INFO     | models.tt_transformers.tt.model_config:__init__:1022 - MLP prefill grids @ 32: w1/w3: (8, 8), w2: (8, 8)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:31.497 | INFO     | models.tt_transformers.tt.model_config:__init__:1023 - MLP prefill grids @ max_seq_len(8192): w1/w3: (8, 8), w2: (8, 8)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:43:31.497 | INFO     | models.tt_transformers.tt.model_config:__init__:1026 - LM head grid: ttnn.CoreGrid(x=8, y=8)
+[1;36m(EngineCore_DP0 pid=213)[0;0m `torch_dtype` is deprecated! Use `dtype` instead!
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:37 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:47 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=213)[0;0m   0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:20,  1.39s/it] 12%|█▎        | 2/16 [00:02<00:19,  1.39s/it] 19%|█▉        | 3/16 [00:04<00:17,  1.37s/it] 25%|██▌       | 4/16 [00:05<00:16,  1.38s/it] 31%|███▏      | 5/16 [00:06<00:15,  1.38s/it] 38%|███▊      | 6/16 [00:08<00:13,  1.36s/it] 44%|████▍     | 7/16 [00:09<00:12,  1.35s/it] 50%|█████     | 8/16 [00:10<00:10,  1.36s/it] 56%|█████▋    | 9/16 [00:12<00:09,  1.36s/it] 62%|██████▎   | 10/16 [00:13<00:08,  1.35s/it] 69%|██████▉   | 11/16 [00:14<00:06,  1.34s/it] 75%|███████▌  | 12/16 [00:16<00:05,  1.33s/it] 81%|████████▏ | 13/16 [00:17<00:04,  1.34s/it] 88%|████████▊ | 14/16 [00:18<00:02,  1.35s/it] 94%|█████████▍| 15/16 [00:20<00:01,  1.36s/it]100%|██████████| 16/16 [00:21<00:00,  1.37s/it]100%|██████████| 16/16 [00:21<00:00,  1.36s/it]
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:43:57 utils.py:1031] Waiting for 1 local, 0 remote core engine proc(s) to start.
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:44:00 [kv_cache_utils.py:800] Overriding num_gpu_blocks=140737488355328 with num_gpu_blocks_override=2080
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:44:00 [kv_cache_utils.py:1234] GPU KV cache size: 133,120 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:44:00 [kv_cache_utils.py:1239] Maximum concurrency for 8,192 tokens per request: 16.25x
+[1;36m(EngineCore_DP0 pid=213)[0;0m Allocating TT kv caches for each layer (submesh 1):   0%|          | 0/16 [00:00<?, ?it/s]Allocating TT kv caches for each layer (submesh 1):   6%|▋         | 1/16 [00:01<00:29,  1.97s/it]Allocating TT kv caches for each layer (submesh 1):  56%|█████▋    | 9/16 [00:02<00:01,  5.83it/s]Allocating TT kv caches for each layer (submesh 1): 100%|██████████| 16/16 [00:02<00:00,  7.34it/s]
+[1;36m(EngineCore_DP0 pid=213)[0;0m WARNING 11-11 09:44:02 [tt_worker.py:203] Skipping model warmup
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:44:02 [core.py:254] init engine (profile, create kv cache, warmup model) took 2.21 seconds
+[1;36m(EngineCore_DP0 pid=213)[0;0m WARNING 11-11 09:44:03 [scheduler.py:175] Using custom scheduler class vllm.v1.core.sched.ascend_scheduler.AscendScheduler. This scheduler interface is not public and compatibility may not be maintained.
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:44:04 utils.py:1144] READY from local core engine process 0.
+[1;36m(EngineCore_DP0 pid=213)[0;0m INFO 11-11 09:44:04 [tt.py:370] Automatic prefix caching is enabled
+[1;36m(APIServer pid=1)[0;0m DEBUG 11-11 09:44:04 loggers.py:246] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 2080
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:04 api_server.py:1726] Supported tasks: ['generate']
+[1;36m(APIServer pid=1)[0;0m WARNING 11-11 09:44:04 model.py:1596] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:04 serving_responses.py:154] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:04 serving_chat.py:131] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:04 serving_completion.py:73] Using default completion sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 serving_chat.py:131] Using default chat sampling params from model: {'temperature': 0.6, 'top_p': 0.9}
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 api_server.py:2056] Starting vLLM API server 0 on http://0.0.0.0:8000
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:38] Available routes are:
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /openapi.json, Methods: HEAD, GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /docs, Methods: HEAD, GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /redoc, Methods: HEAD, GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /health, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /load, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /tokenize, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /detokenize, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/models, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /version, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/responses, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/messages, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/chat/completions, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/completions, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/embeddings, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /pooling, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /classify, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /score, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/score, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/audio/transcriptions, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/audio/translations, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /rerank, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v1/rerank, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /v2/rerank, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /inference/v1/generate, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /ping, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /ping, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /invocations, Methods: POST
+[1;36m(APIServer pid=1)[0;0m INFO 11-11 09:44:05 launcher.py:46] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=1)[0;0m INFO:     Started server process [1]
+[1;36m(APIServer pid=1)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=1)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:39126 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:35886 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:35900 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:35902 - "GET /v1/models HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:18.204 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 128
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:18.205 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:18.208 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:18.208 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:46060 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:33.369 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:166 - Done Compiling Model
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:33.379 | INFO     | models.tt_transformers.tt.generator:_capture_trace_prefill:180 - Done Capturing Prefill Trace
+2026-11-11 09:44:33.379 | warning  |           Metal | Allocating device buffers is unsafe due to the existence of an active trace. These buffers may be corrupted once a trace is executed. (allocator.cpp:105)
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:52252 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:39176 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.387 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.388 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.393 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.393 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.495 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.495 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.501 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.501 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.598 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.598 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.604 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.604 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.701 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.701 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 128 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.710 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.710 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.804 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.804 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 128 with sampling params: None
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.809 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 128 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:51.809 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:52.434 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 128 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:52.434 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 1024
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:52.435 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:52.440 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 1024 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:44:52.440 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:47332 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:01.950 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 1024 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:01.951 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:01.956 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 1024 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:01.956 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.093 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 1024 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.093 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.099 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 1024 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.099 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.231 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 1024 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.231 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.237 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 1024 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.237 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.365 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 1024 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.365 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 1024 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.375 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 1024 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.375 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.504 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 1024 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.504 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 1024 with sampling params: None
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.507 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 1024 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.507 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 1024, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.601 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 1024 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.602 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 2048
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.602 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.608 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 2048 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:02.610 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:41490 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.306 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 2048 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.307 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.312 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 2048 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.312 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.536 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 2048 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.536 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.541 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 2048 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.541 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.725 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 2048 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.726 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.734 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 2048 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.734 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.921 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 2048 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.921 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 2048 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.925 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 2048 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:12.925 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.109 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 2048 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.109 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 2048 with sampling params: None
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.114 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 2048 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.114 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 2048, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.236 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 2048 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.236 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 4096
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.237 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.241 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 4096 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:13.241 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:54314 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.419 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 4096 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.419 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.431 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 4096 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.431 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.809 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 4096 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.809 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.813 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 4096 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:22.813 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.117 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 4096 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.117 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.126 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 4096 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.126 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.438 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 4096 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.438 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 4096 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.447 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 4096 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.447 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.753 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 4096 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.754 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 4096 with sampling params: None
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.762 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 4096 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.762 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 4096, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.999 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 4096 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:23.999 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:111 - Warming up prefill for sequence length: 8192
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:24.000 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:24.003 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 8192 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:24.003 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:39288 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:33.509 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 8192 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:33.510 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=1.2, frequency_penalty=1.2, repetition_penalty=1.5, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:33.518 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 8192 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:33.518 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:58350 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.187 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 8192 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.188 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=True)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.196 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 8192 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.197 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.799 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 8192 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.799 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=1.0, top_k=10, top_p=0.9, presence_penalty=None, frequency_penalty=None, repetition_penalty=None, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.803 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 8192 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:34.804 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:35.401 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 8192 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:35.401 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 8192 with sampling params: SamplingParams(temperature=0.0, top_k=1, top_p=1.0, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, seed=None, enable_log_probs=False)
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:35.409 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 8192 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:35.409 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.007 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 8192 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.007 | INFO     | models.tt_transformers.tt.generator:warmup_model_prefill:129 - Warming up prefill for sequence length: 8192 with sampling params: None
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.016 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 8192 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.016 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 8192, max_prefill_chunk_size: 131072, trace: False
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.572 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 8192 tokens, Starting decode...
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.581 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 43 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.581 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:36.627 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 43 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:60366 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:50.696 | INFO     | models.tt_transformers.tt.generator:_capture_decode_trace_text:787 - Done Compiling Model
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:50.717 | INFO     | models.tt_transformers.tt.generator:_capture_decode_trace_text:825 - Done Capturing Decode Trace
+[1;36m(APIServer pid=1)[0;0m INFO:     10.42.0.23:42666 - "GET /health HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:35918 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:55.203 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:316 - Prefilling User 1 up to 43 tokens
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:55.203 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:332 - Prefill seq len: 128, max_prefill_chunk_size: 131072, trace: True
+[1;36m(EngineCore_DP0 pid=213)[0;0m 2026-11-11 09:45:55.239 | INFO     | models.tt_transformers.tt.generator:prefill_forward_text:484 - Finished prefill for all users up to 43 tokens, Starting decode...
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34724 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=1)[0;0m INFO:     127.0.0.1:34732 - "GET /metrics HTTP/1.1" 200 OK

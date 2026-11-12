@@ -1,0 +1,9 @@
+configmap/llm-spec-len2k created
+== load vllm-len2k 1 2026-11-11T09:28:36Z
+job.batch/n150-llm created
+pod/n150-llm-q2pwj condition met
+== query vllm-len2k 1 2026-11-11T09:31:35Z
+== bench vllm-len2k 1 2026-11-11T09:31:47Z
+== unload vllm-len2k 1 2026-11-11T09:40:05Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== DONE 2026-11-11T09:40:07Z

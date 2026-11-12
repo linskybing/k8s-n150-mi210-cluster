@@ -1,0 +1,11 @@
+# kube-prometheus-stack: Prometheus, Grafana, node-exporter, kube-state-metrics. CRDs come from prometheus-operator-crds (scripts/cluster.sh).
+crds:
+  enabled: false
+prometheus:
+  prometheusSpec:
+    # scrape every ServiceMonitor/PodMonitor/Probe/rule in the cluster, users' own included
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    probeSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+    scrapeConfigSelectorNilUsesHelmValues: false

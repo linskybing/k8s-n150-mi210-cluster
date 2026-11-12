@@ -1,0 +1,1 @@
+deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/31.60/ubuntu noble main

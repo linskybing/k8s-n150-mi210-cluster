@@ -1,0 +1,21 @@
+# NOT captured by lc.sh: transcribed verbatim from the agent's ssh session output on 2026-11-10, while sglang-tt-r0
+# (SGLang with the fix, before --max-total-tokens) was loaded (Ready at 04:22:53Z, deleted at 04:23:51Z).
+# The commands ran between 04:22:59Z and 04:23:20Z.
+
+$ kubectl -n u-testuser top pod
+NAME                       CPU(cores)   MEMORY(bytes)
+n150-sglang-custom-d8fkp   3300m        26376Mi
+
+$ free -g
+               total        used        free      shared  buff/cache   available
+Mem:              62          55           1           0           6           7
+Swap:              7           1           6
+
+$ kubectl top node
+NAME          CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)
+tenstorrent   2906m        9%       43652Mi         72%
+
+# after deleting sglang-tt-r0 (about 04:24:00Z), same ssh session:
+$ free -g | head -2
+               total        used        free      shared  buff/cache   available
+Mem:              62          30          26           0           6          31

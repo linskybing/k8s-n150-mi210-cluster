@@ -1,0 +1,94 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "resource.k8s.io/v1",
+            "kind": "ResourceClaim",
+            "metadata": {
+                "annotations": {
+                    "resource.kubernetes.io/pod-claim-name": "n150"
+                },
+                "creationTimestamp": "2026-11-10T03:30:03Z",
+                "finalizers": [
+                    "resource.kubernetes.io/delete-protection"
+                ],
+                "generateName": "n150-llm-g5qv2-n150-",
+                "name": "n150-llm-g5qv2-n150-2bzw4",
+                "namespace": "u-testuser",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "controller": true,
+                        "kind": "Pod",
+                        "name": "n150-llm-g5qv2",
+                        "uid": "2a96dc68-1bfb-45f8-8cd8-c8aef6b81e24"
+                    }
+                ],
+                "resourceVersion": "6926997",
+                "uid": "9f5b60b6-f178-42a2-a20d-1833c0353026"
+            },
+            "spec": {
+                "devices": {
+                    "requests": [
+                        {
+                            "exactly": {
+                                "allocationMode": "ExactCount",
+                                "count": 1,
+                                "deviceClassName": "tenstorrent.com",
+                                "selectors": [
+                                    {
+                                        "cel": {
+                                            "expression": "device.attributes[\"tenstorrent.com\"].boardName == \"n150\""
+                                        }
+                                    }
+                                ]
+                            },
+                            "name": "board"
+                        }
+                    ]
+                }
+            },
+            "status": {
+                "allocation": {
+                    "allocationTimestamp": "2026-11-10T03:30:03Z",
+                    "devices": {
+                        "results": [
+                            {
+                                "device": "tt-0",
+                                "driver": "tenstorrent.com",
+                                "pool": "tenstorrent",
+                                "request": "board"
+                            }
+                        ]
+                    },
+                    "nodeSelector": {
+                        "nodeSelectorTerms": [
+                            {
+                                "matchFields": [
+                                    {
+                                        "key": "metadata.name",
+                                        "operator": "In",
+                                        "values": [
+                                            "tenstorrent"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "reservedFor": [
+                    {
+                        "name": "n150-llm-g5qv2",
+                        "resource": "pods",
+                        "uid": "2a96dc68-1bfb-45f8-8cd8-c8aef6b81e24"
+                    }
+                ]
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

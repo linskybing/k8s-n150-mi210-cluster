@@ -1,0 +1,47 @@
+Client Version: v1.36.5
+Kustomize Version: v5.8.1
+Server Version: v1.36.5
+
+NAME          STATUS   ROLES           AGE   VERSION   INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION             CONTAINER-RUNTIME
+tenstorrent   Ready    control-plane   22d   v1.36.5   <node-ip>   <none>        Ubuntu 24.04.4 LTS   7.0.0-38-generic (amd64)   containerd://2.4.2
+
+Kubernetes v1.36.5
+containerd containerd v2.4.2 b7a25261e029d68978bbf290df0a62fc819b3c51
+v4.3.0+gbec5b06
+
+NAME                    	NAMESPACE              	REVISION	UPDATED                                	STATUS  	CHART                                	APP VERSION
+aieg                    	envoy-ai-gateway-system	1       	2026-11-03 19:13:13.393114991 +0000 UTC	deployed	ai-gateway-helm-v1.0.0               	v1.0.0     
+aieg-crd                	envoy-ai-gateway-system	1       	2026-11-03 19:13:10.99827992 +0000 UTC 	deployed	ai-gateway-crds-helm-v1.0.0          	v1.0.0     
+cert-manager            	cert-manager           	1       	2026-11-03 19:10:20.67651538 +0000 UTC 	deployed	cert-manager-v1.20.3                 	v1.20.3    
+cilium                  	kube-system            	1       	2026-10-18 08:38:21.5505272 +0000 UTC  	deployed	cilium-1.20.3                        	1.20.3     
+eg                      	envoy-gateway-system   	2       	2026-11-03 19:16:54.680181495 +0000 UTC	deployed	gateway-helm-v1.8.1                  	v1.8.1     
+keda                    	keda                   	1       	2026-11-03 19:20:25.270185499 +0000 UTC	deployed	keda-2.20.2                          	2.20.2     
+kserve-crd              	kserve                 	1       	2026-11-03 19:46:43.431975575 +0000 UTC	deployed	kserve-crd-v0.20.0                   	v0.20.0    
+kserve-llmisvc-crd      	kserve                 	1       	2026-11-03 19:49:41.443139018 +0000 UTC	deployed	kserve-llmisvc-crd-v0.20.0           	v0.20.0    
+kserve-llmisvc-resources	kserve                 	2       	2026-11-03 19:33:08.410844451 +0000 UTC	failed  	kserve-llmisvc-resources-v0.20.0     	v0.20.0    
+kserve-runtime-configs  	kserve                 	2       	2026-11-03 19:52:47.146203642 +0000 UTC	deployed	kserve-runtime-configs-v0.20.0       	v0.20.0    
+kube-prometheus-stack   	monitoring             	1       	2026-10-18 08:39:25.332517267 +0000 UTC	deployed	kube-prometheus-stack-92.10.1        	v0.94.1    
+kueue                   	kueue-system           	2       	2026-10-19 03:39:09.568609688 +0000 UTC	deployed	kueue-0.20.1                         	v0.20.1    
+metrics-server          	kube-system            	1       	2026-10-18 08:39:47.963038004 +0000 UTC	deployed	metrics-server-3.14.0                	0.9.0      
+prometheus-operator-crds	monitoring             	1       	2026-10-18 08:38:19.486997471 +0000 UTC	deployed	prometheus-operator-crds-32.0.1      	v0.94.1    
+tt-operator             	tt-operator-system     	1       	2026-10-18 08:40:11.045995116 +0000 UTC	deployed	tt-operator-0.3.0                    	0.3.0      
+
+NAME                                                       DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE   CONTAINERS                IMAGES                                               SELECTOR
+daemonset.apps/tt-fabric-manager-agent                     1         1         1       1            1           <none>          22d   tt-fabric-manager-agent   ghcr.io/tenstorrent/tt-fabric-manager:0.2.30         app.kubernetes.io/instance=tt-operator,app.kubernetes.io/name=tt-fabric-manager
+daemonset.apps/tt-operator-node-feature-discovery-worker   1         1         1       1            1           <none>          22d   worker                    registry.k8s.io/nfd/node-feature-discovery:v0.18.3   app.kubernetes.io/instance=tt-operator,app.kubernetes.io/name=node-feature-discovery,role=worker
+daemonset.apps/tt-operator-tt-dra-driver-kubeletplugin     1         1         1       1            1           <none>          22d   plugin                    ghcr.io/tenstorrent/tt-dra-driver:0.0.65             app.kubernetes.io/component=kubeletplugin,app.kubernetes.io/instance=tt-operator,app.kubernetes.io/name=tt-dra-driver
+daemonset.apps/tt-telemetry-daemonset                      1         1         1       1            1           <none>          22d   tt-telemetry              ghcr.io/tenstorrent/tt-telemetry:0.2.0               app=tt-telemetry
+
+NAME                                                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS          IMAGES                                               SELECTOR
+deployment.apps/tt-fabric-manager-controller                1/1     1            1           22d   tt-fabric-manager   ghcr.io/tenstorrent/tt-fabric-manager:0.2.30         app.kubernetes.io/instance=tt-operator,app.kubernetes.io/name=tt-fabric-manager,ttfm.tenstorrent.com/component=controller
+deployment.apps/tt-operator-node-feature-discovery-gc       1/1     1            1           22d   gc                  registry.k8s.io/nfd/node-feature-discovery:v0.18.3   app.kubernetes.io/instance=tt-operator,app.kubernetes.io/name=node-feature-discovery,role=gc
+deployment.apps/tt-operator-node-feature-discovery-master   1/1     1            1           22d   master              registry.k8s.io/nfd/node-feature-discovery:v0.18.3   app.kubernetes.io/instance=tt-operator,app.kubernetes.io/name=node-feature-discovery,role=master
+
+NAME                                                         READY   STATUS    RESTARTS        AGE     IP            NODE          NOMINATED NODE   READINESS GATES
+tt-fabric-manager-agent-ftzdb                                1/1     Running   0               2d17h   10.42.0.84    tenstorrent   <none>           <none>
+tt-fabric-manager-controller-5cc9785bdc-qh9t9                1/1     Running   0               22d     10.42.0.85    tenstorrent   <none>           <none>
+tt-operator-node-feature-discovery-gc-694dc86c8b-c7dgs       1/1     Running   0               22d     10.42.0.161   tenstorrent   <none>           <none>
+tt-operator-node-feature-discovery-master-85d7449d77-9g4jm   1/1     Running   2 (7d15h ago)   22d     10.42.0.114   tenstorrent   <none>           <none>
+tt-operator-node-feature-discovery-worker-m699g              1/1     Running   0               2d17h   10.42.0.152   tenstorrent   <none>           <none>
+tt-operator-tt-dra-driver-kubeletplugin-7k5zb                1/1     Running   3 (22d ago)     22d     10.42.0.156   tenstorrent   <none>           <none>
+tt-telemetry-daemonset-vqzsw                                 1/1     Running   0               2d17h   10.42.0.99    tenstorrent   <none>           <none>

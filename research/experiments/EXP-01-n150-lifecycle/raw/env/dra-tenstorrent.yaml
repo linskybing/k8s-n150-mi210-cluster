@@ -1,0 +1,72 @@
+apiVersion: resource.k8s.io/v1
+kind: DeviceClass
+metadata:
+  annotations:
+    meta.helm.sh/release-name: tt-operator
+    meta.helm.sh/release-namespace: tt-operator-system
+  creationTimestamp: "2026-10-18T08:40:11Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: tenstorrent.com
+  resourceVersion: "1477"
+  uid: bc593f45-86fe-429f-a744-6b9f1a60c112
+spec:
+  extendedResourceName: tenstorrent.com/chip
+  selectors:
+  - cel:
+      expression: device.driver == 'tenstorrent.com'
+---
+apiVersion: v1
+items:
+- apiVersion: resource.k8s.io/v1
+  kind: ResourceSlice
+  metadata:
+    creationTimestamp: "2026-10-18T08:40:49Z"
+    generateName: 00000-tenstorrent.com-tenstorrent-
+    generation: 1
+    name: 00000-tenstorrent.com-tenstorrent-hgwsz
+    ownerReferences:
+    - apiVersion: v1
+      controller: true
+      kind: Node
+      name: tenstorrent
+      uid: 6455ba9a-c201-4eaa-9357-06e20778ec62
+    resourceVersion: "1760"
+    uid: 2085163b-1bb4-4cf7-83b7-7b60e8f59b3c
+  spec:
+    devices:
+    - attributes:
+        asicLocation:
+          int: 0
+        boardName:
+          string: n150
+        boardType:
+          int: 3
+        chipArch:
+          string: wormhole_b0
+        chipCount:
+          int: 1
+        chipID:
+          int: 0
+        pciAddress:
+          string: "0000:02:00.0"
+        trayID:
+          int: 2
+        uniqueID:
+          string: "72059265072934913"
+        vendor:
+          string: tenstorrent
+      capacity:
+        memory:
+          value: "140725536995392"
+      name: tt-0
+    driver: tenstorrent.com
+    nodeName: tenstorrent
+    pool:
+      generation: 1
+      name: tenstorrent
+      resourceSliceCount: 1
+kind: List
+metadata:
+  resourceVersion: ""

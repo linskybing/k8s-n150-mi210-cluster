@@ -1,0 +1,15 @@
+# kubectl apply --dry-run=server on the n150 cluster (Kubernetes v1.36.5), 2026-11-11T08:37:31Z
+# go vet / go build OK with k8s.io/dynamic-resource-allocation v0.36.5 (main.go)
+# driver.yaml: namespaced objects dry-run in namespace default (namespace chip-dra does not exist in a dry run)
+namespace/chip-dra created (server dry run)
+serviceaccount/chip-dra-kubeletplugin created (server dry run)
+clusterrole.rbac.authorization.k8s.io/chip-dra-kubeletplugin created (server dry run)
+clusterrolebinding.rbac.authorization.k8s.io/chip-dra-kubeletplugin created (server dry run)
+daemonset.apps/chip-dra-kubeletplugin created (server dry run)
+deviceclass.resource.k8s.io/chip.example.com created (server dry run)
+# claim.yaml in u-testuser
+resourceclaimtemplate.resource.k8s.io/chip created (server dry run)
+job.batch/chip-llm created (server dry run)
+# kueue.yaml, resourceslice-example.yaml
+clusterqueue.kueue.x-k8s.io/chip-example created (server dry run)
+resourceslice.resource.k8s.io/tenstorrent-chip.example.com-example created (server dry run)

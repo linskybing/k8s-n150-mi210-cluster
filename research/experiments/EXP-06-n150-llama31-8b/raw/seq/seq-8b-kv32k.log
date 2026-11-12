@@ -1,0 +1,9 @@
+configmap/llm-spec-8b-kv32k created
+== load vllm-8b-kv32k 1 2026-11-11T17:05:46Z
+job.batch/n150-llm created
+pod/n150-llm-b5n87 condition met
+== query vllm-8b-kv32k 1 2026-11-11T17:08:43Z
+== bench vllm-8b-kv32k 1 2026-11-11T17:08:56Z
+== unload vllm-8b-kv32k 1 2026-11-11T17:16:21Z
+job.batch "n150-llm" deleted from u-testuser namespace
+== DONE 2026-11-11T17:16:26Z

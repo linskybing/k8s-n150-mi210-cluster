@@ -1,0 +1,19 @@
+# Quota for the new chip. Two edits to the existing setup (config/kueue-values.yaml, config/kueue.yaml):
+# 1) Kueue controller config (helm values), next to tenstorrent.com/chip:
+#      deviceClassMappings:
+#        - name: chip.example.com/chip
+#          deviceClassNames: [chip.example.com]
+# 2) the resource in the ClusterQueue (shown as a separate queue so it can be dry-run on its own):
+apiVersion: kueue.x-k8s.io/v1beta2
+kind: ClusterQueue
+metadata:
+  name: chip-example
+spec:
+  namespaceSelector: {}
+  queueingStrategy: BestEffortFIFO
+  resourceGroups:
+    - coveredResources: [chip.example.com/chip]
+      flavors:
+        - name: default
+          resources:
+            - {name: chip.example.com/chip, nominalQuota: 4}

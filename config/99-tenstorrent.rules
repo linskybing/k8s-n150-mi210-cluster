@@ -1,0 +1,2 @@
+# only pods (via DRA + supplementalGroups 2150) may open the card, not shell users
+SUBSYSTEM=="tenstorrent", GROUP:="tenstorrent", MODE:="0660"
